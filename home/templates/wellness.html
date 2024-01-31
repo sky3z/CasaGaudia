@@ -1,0 +1,2990 @@
+{% load static %}
+<!doctype html>
+<html lang="it-IT" prefix="og: https://ogp.me/ns#">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+	<meta charset="UTF-8">
+	<style>
+		/* customizable snowflake styling */
+		.snowflake {
+		  color: #fff;
+		  font-size: 2em;
+		  font-family: Arial, sans-serif;
+		  text-shadow: 0 0 5px #000;
+		}
+		
+		.snowflake,.snowflake .inner{animation-iteration-count:infinite;animation-play-state:running}@keyframes snowflakes-fall{0%{transform:translateY(0)}100%{transform:translateY(110vh)}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;user-select:none;cursor:default;animation-name:snowflakes-shake;animation-duration:3s;animation-timing-function:ease-in-out}.snowflake .inner{animation-duration:10s;animation-name:snowflakes-fall;animation-timing-function:linear}.snowflake:nth-of-type(0){left:1%;animation-delay:0s}.snowflake:nth-of-type(0) .inner{animation-delay:0s}.snowflake:first-of-type{left:10%;animation-delay:1s}.snowflake:first-of-type .inner,.snowflake:nth-of-type(8) .inner{animation-delay:1s}.snowflake:nth-of-type(2){left:20%;animation-delay:.5s}.snowflake:nth-of-type(2) .inner,.snowflake:nth-of-type(6) .inner{animation-delay:6s}.snowflake:nth-of-type(3){left:30%;animation-delay:2s}.snowflake:nth-of-type(11) .inner,.snowflake:nth-of-type(3) .inner{animation-delay:4s}.snowflake:nth-of-type(4){left:40%;animation-delay:2s}.snowflake:nth-of-type(10) .inner,.snowflake:nth-of-type(4) .inner{animation-delay:2s}.snowflake:nth-of-type(5){left:50%;animation-delay:3s}.snowflake:nth-of-type(5) .inner{animation-delay:8s}.snowflake:nth-of-type(6){left:60%;animation-delay:2s}.snowflake:nth-of-type(7){left:70%;animation-delay:1s}.snowflake:nth-of-type(7) .inner{animation-delay:2.5s}.snowflake:nth-of-type(8){left:80%;animation-delay:0s}.snowflake:nth-of-type(9){left:90%;animation-delay:1.5s}.snowflake:nth-of-type(9) .inner{animation-delay:3s}.snowflake:nth-of-type(10){left:25%;animation-delay:0s}.snowflake:nth-of-type(11){left:65%;animation-delay:2.5s}
+		</style>
+		<div class="snowflakes" aria-hidden="true">
+		  <div class="snowflake">
+			<div class="inner">❅</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">❅</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">❅</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">❅</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">❅</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">❅</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">❅</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">❅</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">❅</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">❅</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">❅</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">❅</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">❅</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">❅</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">❅</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">❅</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">❅</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">❅</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">❅</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">❅</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">❅</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">❅</div>
+		  </div>
+		</div>
+	<script>
+		if (navigator.userAgent.match(/MSIE|Internet Explorer/i) || navigator.userAgent.match(/Trident\/7\..*?rv:11/i)) {
+			var href = document.location.href;
+			if (!href.match(/[?&]nowprocket/)) {
+				if (href.indexOf("?") == -1) {
+					if (href.indexOf("#") == -1) {
+						document.location.href = href + "?nowprocket=1"
+					} else {
+						document.location.href = href.replace("#", "?nowprocket=1#")
+					}
+				} else {
+					if (href.indexOf("#") == -1) {
+						document.location.href = href + "&nowprocket=1"
+					} else {
+						document.location.href = href.replace("#", "&nowprocket=1#")
+					}
+				}
+			}
+		}
+	</script>
+	<script>
+		class RocketLazyLoadScripts {
+			constructor() {
+				this.triggerEvents = ["keydown", "mousedown", "mousemove", "touchmove", "touchstart", "touchend", "wheel"], this.userEventHandler = this._triggerListener.bind(this), this.touchStartHandler = this._onTouchStart.bind(this), this
+					.touchMoveHandler = this._onTouchMove.bind(this), this.touchEndHandler = this._onTouchEnd.bind(this), this.clickHandler = this._onClick.bind(this), this.interceptedClicks = [], window.addEventListener("pageshow", (e => {
+						this.persisted = e.persisted
+					})), window.addEventListener("DOMContentLoaded", (() => {
+						this._preconnect3rdParties()
+					})), this.delayedScripts = {
+						normal: [],
+						async: [],
+						defer: []
+					}, this.allJQueries = []
+			}
+			_addUserInteractionListener(e) {
+				document.hidden ? e._triggerListener() : (this.triggerEvents.forEach((t => window.addEventListener(t, e.userEventHandler, {
+					passive: !0
+				}))), window.addEventListener("touchstart", e.touchStartHandler, {
+					passive: !0
+				}), window.addEventListener("mousedown", e.touchStartHandler), document.addEventListener("visibilitychange", e.userEventHandler))
+			}
+			_removeUserInteractionListener() {
+				this.triggerEvents.forEach((e => window.removeEventListener(e, this.userEventHandler, {
+					passive: !0
+				}))), document.removeEventListener("visibilitychange", this.userEventHandler)
+			}
+			_onTouchStart(e) {
+				"HTML" !== e.target.tagName && (window.addEventListener("touchend", this.touchEndHandler), window.addEventListener("mouseup", this.touchEndHandler), window.addEventListener("touchmove", this.touchMoveHandler, {
+					passive: !0
+				}), window.addEventListener("mousemove", this.touchMoveHandler), e.target.addEventListener("click", this.clickHandler), this._renameDOMAttribute(e.target, "onclick", "rocket-onclick"))
+			}
+			_onTouchMove(e) {
+				window.removeEventListener("touchend", this.touchEndHandler), window.removeEventListener("mouseup", this.touchEndHandler), window.removeEventListener("touchmove", this.touchMoveHandler, {
+					passive: !0
+				}), window.removeEventListener("mousemove", this.touchMoveHandler), e.target.removeEventListener("click", this.clickHandler), this._renameDOMAttribute(e.target, "rocket-onclick", "onclick")
+			}
+			_onTouchEnd(e) {
+				window.removeEventListener("touchend", this.touchEndHandler), window.removeEventListener("mouseup", this.touchEndHandler), window.removeEventListener("touchmove", this.touchMoveHandler, {
+					passive: !0
+				}), window.removeEventListener("mousemove", this.touchMoveHandler)
+			}
+			_onClick(e) {
+				e.target.removeEventListener("click", this.clickHandler), this._renameDOMAttribute(e.target, "rocket-onclick", "onclick"), this.interceptedClicks.push(e), e.preventDefault(), e.stopPropagation(), e.stopImmediatePropagation()
+			}
+			_replayClicks() {
+				window.removeEventListener("touchstart", this.touchStartHandler, {
+					passive: !0
+				}), window.removeEventListener("mousedown", this.touchStartHandler), this.interceptedClicks.forEach((e => {
+					e.target.dispatchEvent(new MouseEvent("click", {
+						view: e.view,
+						bubbles: !0,
+						cancelable: !0
+					}))
+				}))
+			}
+			_renameDOMAttribute(e, t, n) {
+				e.hasAttribute && e.hasAttribute(t) && (event.target.setAttribute(n, event.target.getAttribute(t)), event.target.removeAttribute(t))
+			}
+			_triggerListener() {
+				this._removeUserInteractionListener(this), "loading" === document.readyState ? document.addEventListener("DOMContentLoaded", this._loadEverythingNow.bind(this)) : this._loadEverythingNow()
+			}
+			_preconnect3rdParties() {
+				let e = [];
+				document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t => {
+					if (t.hasAttribute("src")) {
+						const n = new URL(t.src / index.html).origin;
+						n !== location.origin && e.push({
+							src: n,
+							crossOrigin: t.crossOrigin || "module" === t.getAttribute("data-rocket-type")
+						})
+					}
+				})), e = [...new Map(e.map((e => [JSON.stringify(e), e]))).values()], this._batchInjectResourceHints(e, "preconnect")
+			}
+			async _loadEverythingNow() {
+				this.lastBreath = Date.now(), this._delayEventListeners(), this._delayJQueryReady(this), this._handleDocumentWrite(), this._registerAllDelayedScripts(), this._preloadAllScripts(), await this._loadScriptsFromList(this.delayedScripts.normal),
+					await this._loadScriptsFromList(this.delayedScripts.defer), await this._loadScriptsFromList(this.delayedScripts.async);
+				try {
+					await this._triggerDOMContentLoaded(), await this._triggerWindowLoad()
+				} catch (e) {}
+				window.dispatchEvent(new Event("rocket-allScriptsLoaded")), this._replayClicks()
+			}
+			_registerAllDelayedScripts() {
+				document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e => {
+					e.hasAttribute("src") ? e.hasAttribute("async") && !1 !== e.async ? this.delayedScripts.async.push(e) : e.hasAttribute("defer") && !1 !== e.defer || "module" === e.getAttribute("data-rocket-type") ? this.delayedScripts.defer.push(e) :
+						this.delayedScripts.normal.push(e) : this.delayedScripts.normal.push(e)
+				}))
+			}
+			async _transformScript(e) {
+				return await this._littleBreath(), new Promise((t => {
+					const n = document.createElement("script");
+					[...e.attributes].forEach((e => {
+						let t = e.nodeName;
+						"type" !== t && ("data-rocket-type" === t && (t = "type"), n.setAttribute(t, e.nodeValue))
+					})), e.hasAttribute("src") ? (n.addEventListener("load", t), n.addEventListener("error", t)) : (n.text = e.text, t());
+					try {
+						e.parentNode.replaceChild(n, e)
+					} catch (e) {
+						t()
+					}
+				}))
+			}
+			async _loadScriptsFromList(e) {
+				const t = e.shift();
+				return t ? (await this._transformScript(t), this._loadScriptsFromList(e)) : Promise.resolve()
+			}
+			_preloadAllScripts() {
+				this._batchInjectResourceHints([...this.delayedScripts.normal, ...this.delayedScripts.defer, ...this.delayedScripts.async], "preload")
+			}
+			_batchInjectResourceHints(e, t) {
+				var n = document.createDocumentFragment();
+				e.forEach((e => {
+					if (e.src) {
+						const i = document.createElement("link");
+						i.href = e.src, i.rel = t, "preconnect" !== t && (i.as = "script"), e.getAttribute && "module" === e.getAttribute("data-rocket-type") && (i.crossOrigin = !0), e.crossOrigin && (i.crossOrigin = e.crossOrigin), n.appendChild(i)
+					}
+				})), document.head.appendChild(n)
+			}
+			_delayEventListeners() {
+				let e = {};
+
+				function t(t, n) {
+					! function(t) {
+						function n(n) {
+							return e[t].eventsToRewrite.indexOf(n) >= 0 ? "rocket-" + n : n
+						}
+						e[t] || (e[t] = {
+							originalFunctions: {
+								add: t.addEventListener,
+								remove: t.removeEventListener
+							},
+							eventsToRewrite: []
+						}, t.addEventListener = function() {
+							arguments[0] = n(arguments[0]), e[t].originalFunctions.add.apply(t, arguments)
+						}, t.removeEventListener = function() {
+							arguments[0] = n(arguments[0]), e[t].originalFunctions.remove.apply(t, arguments)
+						})
+					}(t), e[t].eventsToRewrite.push(n)
+				}
+
+				function n(e, t) {
+					let n = e[t];
+					Object.defineProperty(e, t, {
+						get: () => n || function() {},
+						set(i) {
+							e["rocket" + t] = n = i
+						}
+					})
+				}
+				t(document, "DOMContentLoaded"), t(window, "DOMContentLoaded"), t(window, "load"), t(window, "pageshow"), t(document, "readystatechange"), n(document, "onreadystatechange"), n(window, "onload"), n(window, "onpageshow")
+			}
+			_delayJQueryReady(e) {
+				let t = window.jQuery;
+				Object.defineProperty(window, "jQuery", {
+					get: () => t,
+					set(n) {
+						if (n && n.fn && !e.allJQueries.includes(n)) {
+							n.fn.ready = n.fn.init.prototype.ready = function(t) {
+								e.domReadyFired ? t.bind(document)(n) : document.addEventListener("rocket-DOMContentLoaded", (() => t.bind(document)(n)))
+							};
+							const t = n.fn.on;
+							n.fn.on = n.fn.init.prototype.on = function() {
+								if (this[0] === window) {
+									function e(e) {
+										return e.split(" ").map((e => "load" === e || 0 === e.indexOf("load.") ? "rocket-jquery-load" : e)).join(" ")
+									}
+									"string" == typeof arguments[0] || arguments[0] instanceof String ? arguments[0] = e(arguments[0]) : "object" == typeof arguments[0] && Object.keys(arguments[0]).forEach((t => {
+										delete Object.assign(arguments[0], {
+											[e(t)]: arguments[0][t]
+										})[t]
+									}))
+								}
+								return t.apply(this, arguments), this
+							}, e.allJQueries.push(n)
+						}
+						t = n
+					}
+				})
+			}
+			async _triggerDOMContentLoaded() {
+				this.domReadyFired = !0, await this._littleBreath(), document.dispatchEvent(new Event("rocket-DOMContentLoaded")), await this._littleBreath(), window.dispatchEvent(new Event("rocket-DOMContentLoaded")), await this._littleBreath(), document
+					.dispatchEvent(new Event("rocket-readystatechange")), await this._littleBreath(), document.rocketonreadystatechange && document.rocketonreadystatechange()
+			}
+			async _triggerWindowLoad() {
+				await this._littleBreath(), window.dispatchEvent(new Event("rocket-load")), await this._littleBreath(), window.rocketonload && window.rocketonload(), await this._littleBreath(), this.allJQueries.forEach((e => e(window).trigger(
+					"rocket-jquery-load"))), await this._littleBreath();
+				const e = new Event("rocket-pageshow");
+				e.persisted = this.persisted, window.dispatchEvent(e), await this._littleBreath(), window.rocketonpageshow && window.rocketonpageshow({
+					persisted: this.persisted
+				})
+			}
+			_handleDocumentWrite() {
+				const e = new Map;
+				document.write = document.writeln = function(t) {
+					const n = document.currentScript,
+						i = document.createRange(),
+						r = n.parentElement;
+					let o = e.get(n);
+					void 0 === o && (o = n.nextSibling, e.set(n, o));
+					const s = document.createDocumentFragment();
+					i.setStart(s, 0), s.appendChild(i.createContextualFragment(t)), r.insertBefore(s, o)
+				}
+			}
+			async _littleBreath() {
+				Date.now() - this.lastBreath > 45 && (await this._requestAnimFrame(), this.lastBreath = Date.now())
+			}
+			async _requestAnimFrame() {
+				return document.hidden ? new Promise((e => setTimeout(e))) : new Promise((e => requestAnimationFrame(e)))
+			}
+			static run() {
+				const e = new RocketLazyLoadScripts;
+				e._addUserInteractionListener(e)
+			}
+		}
+		RocketLazyLoadScripts.run();
+	</script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WPQL8QR');</script>
+	<!-- End Google Tag Manager -->
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JLT6LFSQ71"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JLT6LFSQ71');
+</script>
+	<link rel="alternate" hreflang="it" href="index.html" />
+	<link rel="alternate" hreflang="en" href="../../en/service/relax/index.html" />
+	<link rel="alternate" hreflang="de" href="../../de/serviceleistungen/wellness/index.html" />
+	<link rel="alternate" hreflang="x-default" href="index.html" />
+
+	<!-- Ottimizzazione per i motori di ricerca di Rank Math - https://s.rankmath.com/home -->
+	<title>Wellness - Casteltesino Camping</title>
+	<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
+	<link rel="canonical" href="index.html" />
+	<meta property="og:locale" content="it_IT" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Wellness - Casteltesino Camping" />
+	<meta property="og:description"
+		content="Benvenuti al Casteltesino Camping, immerso nel verde a pochi metri dal centro storico di Castello Tesino, piccolo paese sulle Dolomiti a 850 metri di altitudine." />
+	<meta property="og:url" content="https://casteltesinocamping.it/servizi/wellness/" />
+	<meta property="og:site_name" content="Casteltesino Camping" />
+	<meta property="article:tag" content="Servizi" />
+	<meta property="og:updated_time" content="2021-11-19T10:42:32+01:00" />
+	<meta property="og:image" content="https://casteltesinocamping.it/wp-content/uploads/2021/11/Wellness-Camping-Casteltesino-1024x683.jpeg" />
+	<meta property="og:image:secure_url" content="https://casteltesinocamping.it/wp-content/uploads/2021/11/Wellness-Camping-Casteltesino-1024x683.jpeg" />
+	<meta property="og:image:width" content="1600" />
+	<meta property="og:image:height" content="1067" />
+	<meta property="og:image:alt" content="Wellness Area" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Wellness - Casteltesino Camping" />
+	<meta name="twitter:description"
+		content="Benvenuti al Casteltesino Camping, immerso nel verde a pochi metri dal centro storico di Castello Tesino, piccolo paese sulle Dolomiti a 850 metri di altitudine." />
+	<meta name="twitter:image" content="https://casteltesinocamping.it/wp-content/uploads/2021/11/Wellness-Camping-Casteltesino-1024x683.jpeg" />
+	<meta name="twitter:label1" content="Tempo di lettura" />
+	<meta name="twitter:data1" content="1 minuto" />
+	<script type="application/ld+json" class="rank-math-schema">
+		{
+			"@context": "https://schema.org",
+			"@graph": [{
+				"@type": "BreadcrumbList",
+				"@id": "https://casteltesinocamping.it/servizi/wellness/#breadcrumb",
+				"itemListElement": [{
+					"@type": "ListItem",
+					"position": "1",
+					"item": {
+						"@id": "https://casteltesinocamping.it",
+						"name": "Home"
+					}
+				}, {
+					"@type": "ListItem",
+					"position": "2",
+					"item": {
+						"@id": "https://casteltesinocamping.it/servizi/",
+						"name": "Servizi"
+					}
+				}, {
+					"@type": "ListItem",
+					"position": "3",
+					"item": {
+						"@id": "https://casteltesinocamping.it/servizi/wellness/",
+						"name": "Wellness"
+					}
+				}]
+			}]
+		}
+	</script>
+	<!-- /Rank Math WordPress SEO plugin -->
+
+
+	<style type="text/css">
+		img.wp-smiley,
+		img.emoji {
+			display: inline !important;
+			border: none !important;
+			box-shadow: none !important;
+			height: 1em !important;
+			width: 1em !important;
+			margin: 0 0.07em !important;
+			vertical-align: -0.1em !important;
+			background: none !important;
+			padding: 0 !important;
+		}
+	</style>
+	<style id='global-styles-inline-css' type='text/css'>
+		body {
+			--wp--preset--color--black: #000000;
+			--wp--preset--color--cyan-bluish-gray: #abb8c3;
+			--wp--preset--color--white: #ffffff;
+			--wp--preset--color--pale-pink: #f78da7;
+			--wp--preset--color--vivid-red: #cf2e2e;
+			--wp--preset--color--luminous-vivid-orange: #ff6900;
+			--wp--preset--color--luminous-vivid-amber: #fcb900;
+			--wp--preset--color--light-green-cyan: #7bdcb5;
+			--wp--preset--color--vivid-green-cyan: #00d084;
+			--wp--preset--color--pale-cyan-blue: #8ed1fc;
+			--wp--preset--color--vivid-cyan-blue: #0693e3;
+			--wp--preset--color--vivid-purple: #9b51e0;
+			--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+			--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+			--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+			--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+			--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+			--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+			--wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+			--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+			--wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+			--wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+			--wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+			--wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+			--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');
+			--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');
+			--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');
+			--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');
+			--wp--preset--duotone--midnight: url('#wp-duotone-midnight');
+			--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');
+			--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');
+			--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');
+			--wp--preset--font-size--small: 13px;
+			--wp--preset--font-size--medium: 20px;
+			--wp--preset--font-size--large: 36px;
+			--wp--preset--font-size--x-large: 42px;
+		}
+
+		.has-black-color {
+			color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-color {
+			color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-color {
+			color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-color {
+			color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-color {
+			color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-color {
+			color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-color {
+			color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-color {
+			color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-color {
+			color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-color {
+			color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-color {
+			color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-color {
+			color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-black-background-color {
+			background-color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-background-color {
+			background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-background-color {
+			background-color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-background-color {
+			background-color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-background-color {
+			background-color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-background-color {
+			background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-background-color {
+			background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-background-color {
+			background-color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-background-color {
+			background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-background-color {
+			background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-background-color {
+			background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-background-color {
+			background-color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-black-border-color {
+			border-color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-border-color {
+			border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-border-color {
+			border-color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-border-color {
+			border-color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-border-color {
+			border-color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-border-color {
+			border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-border-color {
+			border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-border-color {
+			border-color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-border-color {
+			border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-border-color {
+			border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-border-color {
+			border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-border-color {
+			border-color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+			background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+		}
+
+		.has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+			background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+		}
+
+		.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+			background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-orange-to-vivid-red-gradient-background {
+			background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+		}
+
+		.has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+			background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+		}
+
+		.has-cool-to-warm-spectrum-gradient-background {
+			background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+		}
+
+		.has-blush-light-purple-gradient-background {
+			background: var(--wp--preset--gradient--blush-light-purple) !important;
+		}
+
+		.has-blush-bordeaux-gradient-background {
+			background: var(--wp--preset--gradient--blush-bordeaux) !important;
+		}
+
+		.has-luminous-dusk-gradient-background {
+			background: var(--wp--preset--gradient--luminous-dusk) !important;
+		}
+
+		.has-pale-ocean-gradient-background {
+			background: var(--wp--preset--gradient--pale-ocean) !important;
+		}
+
+		.has-electric-grass-gradient-background {
+			background: var(--wp--preset--gradient--electric-grass) !important;
+		}
+
+		.has-midnight-gradient-background {
+			background: var(--wp--preset--gradient--midnight) !important;
+		}
+
+		.has-small-font-size {
+			font-size: var(--wp--preset--font-size--small) !important;
+		}
+
+		.has-medium-font-size {
+			font-size: var(--wp--preset--font-size--medium) !important;
+		}
+
+		.has-large-font-size {
+			font-size: var(--wp--preset--font-size--large) !important;
+		}
+
+		.has-x-large-font-size {
+			font-size: var(--wp--preset--font-size--x-large) !important;
+		}
+	</style>
+	<link rel='stylesheet' id='wpml-legacy-horizontal-list-0-css' href='{% static "wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-list-horizontal/style.min.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='wpml-menu-item-0-css' href='{% static "wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/menu-item/style.min.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='hello-elementor-css' href='{% static "wp-content/themes/hello-elementor/style.min.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='hello-elementor-theme-style-css' href='{% static "wp-content/themes/hello-elementor/theme.min.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-icons-css' href='{% static "wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-frontend-css' href='{% static "wp-content/plugins/elementor/assets/css/frontend-lite.min.css"%}' type='text/css' media='all' />
+	<style id='elementor-frontend-inline-css' type='text/css'>
+		.elementor-189 .elementor-element.elementor-element-78ff26b:not(.elementor-motion-effects-element-type-background),
+		.elementor-189 .elementor-element.elementor-element-78ff26b>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+			background-image: url("{% static 'wp-content/uploads/2021/11/Wellness-Camping-Casteltesino-1024x683.jpeg'%}");
+		}
+	</style>
+	<link rel='stylesheet' id='elementor-post-1082-css' href='{% static "wp-content/uploads/elementor/css/post-1082.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='dce-style-css' href='{% static "wp-content/plugins/dynamic-content-for-elementor/assets/css/style.min.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='dashicons-css' href='{% static "wp-includes/css/dashicons.min.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-pro-css' href='{% static "wp-content/plugins/elementor-pro/assets/css/frontend-lite.min.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-global-css' href='{% static "wp-content/uploads/elementor/css/global.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-post-189-css' href='{% static "wp-content/uploads/elementor/css/post-189.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-post-3708-css' href='{% static "wp-content/uploads/elementor/css/post-3708.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-post-1612-css' href='{% static "wp-content/uploads/elementor/css/post-1612.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-post-12439-css' href='{% static "wp-content/uploads/elementor/css/post-12439.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-post-11379-css' href='{% static "wp-content/uploads/elementor/css/post-11379.css"%}' type='text/css' media='all' />
+	<style id='rocket-lazyload-inline-css' type='text/css'>
+		.rll-youtube-player {
+			position: relative;
+			padding-bottom: 56.23%;
+			height: 0;
+			overflow: hidden;
+			max-width: 100%;
+		}
+
+		.rll-youtube-player:focus-within {
+			outline: 2px solid currentColor;
+			outline-offset: 5px;
+		}
+
+		.rll-youtube-player iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 100;
+			background: 0 0
+		}
+
+		.rll-youtube-player img {
+			bottom: 0;
+			display: block;
+			left: 0;
+			margin: auto;
+			max-width: 100%;
+			width: 100%;
+			position: absolute;
+			right: 0;
+			top: 0;
+			border: none;
+			height: auto;
+			-webkit-transition: .4s all;
+			-moz-transition: .4s all;
+			transition: .4s all
+		}
+
+		.rll-youtube-player img:hover {
+			-webkit-filter: brightness(75%);
+			filter: brightness(75%);
+		}
+
+		.rll-youtube-player .play {
+			height: 100%;
+			width: 100%;
+			left: 0;
+			top: 0;
+			position: absolute;
+			background: url('{% static "wp-content/plugins/wp-rocket/assets/img/youtube.png"%}') no-repeat center;
+			background-color: transparent !important;
+			cursor: pointer;
+			border: none;
+		}
+	</style>
+	<link rel='stylesheet' id='elementor-icons-shared-0-css' href='{% static "wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-icons-fa-solid-css' href='{% static "wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-icons-fa-regular-css' href='{% static "wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-icons-campingtes-css' href='{% static "wp-content/uploads/elementor/custom-icons/campingtes-1/css/campingtes.css"%}' type='text/css' media='all' />
+	<script type='text/javascript' src='{% static "wp-includes/js/jquery/jquery.min.js"%}' id='jquery-core-js'></script>
+	<script type='text/javascript' src='{% static "wp-includes/js/jquery/jquery-migrate.min.js"%}' id='jquery-migrate-js'></script>
+	<link rel="https://api.w.org/" href='{% static "wp-json/index.html"%}' />
+	<link rel="alternate" type="application/json" href='{% static "wp-json/wp/v2/pages/189/index.html"%}' />
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href='{% static "wp-includes/wlwmanifest.xml"%}' />
+	<meta name="generator" content="WordPress 5.9.3" />
+	<link rel='shortlink' href='../../indexa80c.html?p=189' />
+	<link rel="alternate" type="application/json+oembed" href='{% static "wp-json/oembed/1.0/embed/indexa29e.html?url=https%3A%2F%2Fcasteltesinocamping.it%2Fservizi%2Fwellness%2F"%}' />
+	<link rel="alternate" type="text/xml+oembed" href='{% static "wp-json/oembed/1.0/embed/index96d9.html?url=https%3A%2F%2Fcasteltesinocamping.it%2Fservizi%2Fwellness%2F&amp;format=xml"%}' />
+	<meta name="generator" content="WPML ver:4.5.6 stt:1,3,27;" />
+	<script>
+		document.createElement("picture");
+		if (!window.HTMLPictureElement && document.addEventListener) {
+			window.addEventListener("DOMContentLoaded", function() {
+				var s = document.createElement("script");
+				s.src = '{% static "wp-content/plugins/webp-express/js/picturefill.min.js"%}';
+				document.body.appendChild(s);
+			});
+		}
+	</script>
+	<style>
+		.elementor-3708 .elementor-element.elementor-element-5a93a886:not(.elementor-motion-effects-element-type-background),
+		.elementor-3708 .elementor-element.elementor-element-5a93a886>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+			background-color: #FFFFFF00;
+			background-image: url('{% static "wp-content/uploads/2020/11/header-1.png"%}');
+			background-position: 0px -155px;
+			background-repeat: repeat-x;
+		}
+
+		@media screen and (min-width: 767px) {
+			.elementor-3708 .elementor-element.elementor-element-d998a35 img {
+				width: 260px;
+				height: 45.5px;
+			}
+
+			.elementor-3708 .elementor-element.elementor-element-eb74a08 .elementor-nav-menu--main .elementor-item {
+				height: 27px;
+			}
+
+		}
+	</style>
+	<link rel="preload" as="image" href="{% static '/images/logo.png'%}">
+	<link rel="apple-touch-icon" sizes="57x57" href="{% static 'favicon/apple-icon-57x57.png'%}">
+	<link rel="apple-touch-icon" sizes="60x60" href="{% static 'favicon/apple-icon-60x60.png'%}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{% static 'favicon/apple-icon-72x72.png'%}">
+	<link rel="apple-touch-icon" sizes="76x76" href="{% static 'favicon/apple-icon-76x76.png'%}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{% static 'favicon/apple-icon-114x114.png'%}">
+	<link rel="apple-touch-icon" sizes="120x120" href="{% static 'favicon/apple-icon-120x120.png'%}">
+	<link rel="apple-touch-icon" sizes="144x144" href="{% static 'favicon/apple-icon-144x144.png'%}">
+	<link rel="apple-touch-icon" sizes="152x152" href="{% static 'favicon/apple-icon-152x152.png'%}">
+	<link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-icon-180x180.png'%}">
+	<link rel="icon" type="image/png" sizes="192x192" href="{% static 'favicon/android-icon-192x192.png'%}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png'%}">
+	<link rel="icon" type="image/png" sizes="96x96" href="{% static 'favicon/favicon-96x96.png'%}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png'%}">
+	<link rel="manifest" href="{% static 'favicon/manifest.json'%}">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="{% static 'favicon/ms-icon-144x144.png'%}">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="icon" href='{% static "wp-content/uploads/2020/02/Favicon.png"%}' sizes="32x32" />
+	<link rel="icon" href='{% static "wp-content/uploads/2020/02/Favicon.png"%}' sizes="192x192" />
+	<link rel="apple-touch-icon" href='{% static "wp-content/uploads/2020/02/Favicon.png"%}' />
+	<meta name="msapplication-TileImage" content="https://casteltesinocamping.it/wp-content/uploads/2020/02/Favicon.png" />
+
+	<style media="screen">
+		@media screen and (min-width: 767px) {
+			.elementor-nav-menu--main .elementor-nav-menu>li.menu-item-has-children>a {
+				margin-right: 26px !important;
+			}
+
+			.elementor-nav-menu--main .elementor-nav-menu>li.menu-item-has-children>a>.sub-arrow {
+				position: absolute;
+				right: -11px;
+				top: 7px;
+			}
+
+			li.menu-item.wpml-ls-slot-2 {
+				max-width: 56px;
+			}
+
+			ul.sub-menu li {
+				max-width: 300px !important;
+			}
+
+			.elementor-nav-menu--layout-horizontal .elementor-nav-menu {
+				display: contents !important;
+			}
+
+			.elementor-nav-menu--layout-horizontal {
+				justify-content: center !important;
+			}
+
+			/* Altezza indicatore menu hover / active */
+			body nav ul li a::after {
+				top: 32px !important;
+			}
+
+			nav ul:nth-child(1)>li.menu-item-has-children>ul.sub-menu {
+				margin-top: 9px !important;
+			}
+
+			header .e--pointer-underline .elementor-item:after {
+				content: "";
+				bottom: 0;
+				width: calc(100% + 11px);
+			}
+
+			header .e--pointer-underline ul li.menu-item-home .elementor-item:after {
+				content: "";
+				bottom: 0;
+				width: calc(100% + 0px);
+			}
+
+			ul.sub-menu li.wpml-ls-item,
+			li.wpml-ls-item ul.sub-menu {
+				max-width: 36px !important;
+				min-width: 36px !important;
+			}
+
+			li.wpml-ls-item ul.sub-menu a.elementor-sub-item {
+				padding-left: 0px;
+			}
+
+			.wpml-ls-menu-item .wpml-ls-flag {
+				min-width: 18px;
+			}
+
+		}
+
+		@media screen and (max-width: 767px) {
+			.wpml-ls-menu-item .wpml-ls-flag {
+				margin-right: 8px;
+			}
+		}
+	</style>
+	<style type="text/css" id="wp-custom-css">
+		/*-- WEB KIT --*/
+		:focus {
+			outline: 0px !important;
+		}
+
+		/*-- TESTO --*/
+		p {
+			margin-bottom: 1em !important;
+		}
+
+		p:last-child {
+			margin-bottom: 0em !important;
+		}
+
+		.titolo h1 {
+			color: white !important;
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
+
+		/*BOTTONI*/
+		a.elementor-button-link.elementor-button {
+			font-weight: 700;
+		}
+
+		/*TEST MENU*/
+		.mega .uael-nav-menu ul li {
+			width: 100%;
+			display: block;
+			border: 0px;
+			text-align: left;
+			text-transform: capitalize !important;
+		}
+
+		.mega .uael-nav-menu .uael-menu-item {
+			width: 100%;
+			display: block;
+			border: 0px;
+			text-align: left;
+			text-transform: capitalize !important;
+		}
+
+		.mega .uael-nav-menu {
+			margin-left: 0px !important;
+		}
+
+		.mega li.menu-item {
+			border-bottom: 0px !important;
+		}
+
+		ul.sub-menu.parent-has-template {
+			background-color: transparent !important;
+		}
+
+		/*RECAPTCHA*/
+		.grecaptcha-badge {
+			visibility: hidden;
+		}
+
+		/*BANNER BONUS VACANZA*/
+		body .bannerbonus {
+			max-width: 650px !important;
+			margin: 0 auto;
+		}
+
+		/*CAROSELLI*/
+		.elementor-widget-dyncontel-acfposts .slick-dots li button:before {
+			background-color: #7f7f7f !important;
+			border-radius: 50%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 14px !important;
+			height: 14px !important;
+		}
+
+		.elementor-widget-dyncontel-acfposts .slick-dots {
+			bottom: -48px !important;
+		}
+
+		.dce-post-item .elementor-animation-grow:hover {
+			transform: scale(1.01);
+		}
+
+		/*-- CARICAMENTO LOGO --*/
+		.elementor-widget-theme-site-logo img {
+			max-height: 50px !important;
+		}
+
+		/*-- BACKGROUND BANNER --*/
+		.sectionbg {
+			background-repeat: no-repeat;
+			background-position: bottom;
+			background-size: contain;
+		}
+
+		/*-- TABELLE --*/
+		.btfull a {
+			width: 100% !important;
+		}
+
+		.slidericon svg {
+			fill: #9F9F9F;
+		}
+
+		.desctab {
+			font-size: 0.8em !important;
+			margin-top: -5px !important;
+			text-transform: uppercase;
+		}
+
+		.subtitletab {
+			font-weight: 600;
+		}
+
+		/*-- TABELLE --*/
+		.table-container {
+			overflow-x: auto;
+		}
+
+		.camping-table-season,
+		.camping-table-data {
+			width: 100%;
+			font-family: "Nunito Sans", Roboto;
+		}
+
+		/*-- TABELLA STAGIONALITA --*/
+		.camping-table-season thead tr th {
+			padding: 20px 4px;
+			background: #c5b265;
+			font-size: 13px;
+			font-weight: 800;
+			line-height: 1;
+			color: #fff;
+			border-color: #fff;
+			border-width: 1px;
+			border-style: solid;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		.camping-table-season thead tr th:last-child {
+			border-right: 0px !important;
+		}
+
+		.camping-table-season thead tr th:first-child {
+			border-left: 0px !important;
+		}
+
+		.camping-table-season tbody tr td {
+			padding: 20px 10px;
+			font-size: 13px;
+			text-transform: uppercase;
+			font-weight: 700;
+			color: #4f5a52;
+			border: 4px solid white;
+		}
+
+		.camping-table-season tbody tr td:last-child {
+			border-right: 0px !important;
+		}
+
+		.camping-table-season tbody tr td:first-child {
+			border-left: 0px !important;
+		}
+
+		.camping-table-season tbody tr td:first-child {
+			border-width: 0px;
+			border-style: solid;
+		}
+
+		.camping-table-season tbody tr:first-child td {
+			border-top: 6px solid white !important;
+		}
+
+		.lowseason {
+			background-color: #efe1a5 !important;
+			background-image: url('{% static "wp-content/uploads/price-table/lineedr.svg"%}');
+			background-size: 130%;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		.middleseason {
+			background-color: #9bb8a2 !important;
+			background-image: url('{% static "wp-content/uploads/price-table/linee.svg"%}');
+			background-size: 350%;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		.hightseason {
+			background-color: #6f7b72 !important;
+			background-image: url('{% static "wp-content/uploads/price-table/pallino.svg"%}');
+			background-size: 30%;
+			background-position: center;
+		}
+
+		/*-- TABELLA DATI --*/
+		.camping-table-data table tbody>tr:nth-child(2n+1) td {
+			color: #6D7882;
+			background-color: #FDFBEF;
+		}
+
+		.camping-table-data .data-table-price {
+			font-weight: 400;
+		}
+
+		.data-table-header th {
+			background-color: #c5b265;
+		}
+
+		.data-table-season-head th {
+			padding: 10px 0px !important;
+		}
+
+		.camping-table-data thead tr th {
+			padding: 20px 14px;
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 1;
+			color: #fff;
+			border-color: #fff;
+			border-width: 0px 1px;
+			border-style: solid;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		.camping-table-data tbody tr td {
+			padding: 20px 14px;
+			font-size: 14px;
+			text-transform: uppercase;
+			font-weight: 400;
+			color: #4f5a52;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		.date-season {
+			font-weight: 500;
+			font-size: 0.90em;
+			margin-top: 5px;
+			display: block;
+		}
+
+		.camping-table-data tbody tr:nth-child(even) {
+			background-color: #FDFBEF;
+		}
+
+		.camping-table-data tbody>tr:nth-child(odd)>td,
+		.camping-table-data table tbody>tr:nth-child(odd)>th,
+		.camping-table-season tbody>tr:nth-child(odd)>td,
+		.camping-table-season table tbody>tr:nth-child(odd)>th {
+			background-color: transparent;
+		}
+
+		table caption+thead tr:first-child td,
+		table caption+thead tr:first-child th,
+		table colgroup+thead tr:first-child td,
+		table colgroup+thead tr:first-child th,
+		table thead:first-child tr:first-child td,
+		table thead:first-child tr:first-child th {
+			border-top: 0px;
+		}
+
+		table td,
+		table th {
+			border: 0px;
+		}
+
+		.camping-table-data .data-table-custom-head {
+			min-width: 150px;
+		}
+
+		.data-table-name {
+			font-weight: 800 !important;
+		}
+
+		.camping-table-data .data-table-name .details {
+			font-size: 12px;
+			font-weight: 400;
+			text-transform: lowercase;
+			display: block;
+		}
+
+		.camping-table-data .data-table-head-icon {
+			font-size: 30px;
+		}
+
+		/*HEADER PERSONALIZZATA X STAGIONALITA*/
+		.data-table-season-head th.middleseason {
+			background-size: 120%
+		}
+
+		.data-table-season-head th.lowseason {
+			background-size: 12% !important;
+			background-repeat: repeat-x !important;
+		}
+
+		.data-table-season-head th.hightseason {
+			background-size: 4%;
+		}
+
+		/*-- CSS FORM RICHIESTA DISPO ALLOGGI --*/
+		/*GENERALE*/
+		.formdispo {
+			border-radius: 5px;
+			box-shadow: 0px 0px 15px 0px rgb(59 59 59 / 15%);
+		}
+
+		/*NASCONDI MESSAGGIO*/
+		.formdispo .elementor-message.elementor-message-success {
+			display: none;
+		}
+
+		/*LABEL*/
+		.formdispo .elementor-field-group label {
+			background-color: white;
+			padding: 5px 10px 10px;
+			border-radius: 5px 5px 0px 0px;
+			margin: 0 auto;
+			font-size: 13px;
+			text-transform: uppercase;
+			font-family: "Nunito Sans";
+			font-weight: 600;
+		}
+
+		/*BOTTONE INVIO*/
+		.formdispo .elementor-field-type-submit {
+			height: 60px;
+			bottom: -18px;
+		}
+
+		.formdispo .elementor-field-type-submit button {
+			border-radius: 0px 5px 5px 0px;
+			height: 62px;
+			/*box-shadow: -1px 5px 6px #3b3b3b40;*/
+		}
+
+		/*BOX SHADOW CAMPI*/
+		.formdispo .elementor-field-group input {
+			/*box-shadow: -1px 5px 6px #3b3b3b40;*/
+			padding: 20px 15px;
+		}
+
+		.formdispo #form-field-darrivo {
+			border-radius: 5px 0px 0px 5px;
+		}
+
+		/*LUNGHEZZA CAMPI*/
+		.formdispo .elementor-field-group-nadulti,
+		.formdispo .elementor-field-group-nbambini {
+			width: 14%;
+		}
+
+		.formdispo .elementor-field-group-nneonati {
+			width: 12%;
+			border-right: 0px !important;
+		}
+
+		.formdispo .elementor-field-group-nneonati select {
+			border-right: 0px !important;
+		}
+
+		.formdispo .elementor-field-type-select select {
+			/*box-shadow: -1px 5px 6px #3b3b3b40;*/
+			padding: 19px 15px;
+		}
+
+		/*-- FORM RICHIESTA OFFERTE --*/
+		.formoffert .elementor-message.elementor-message-success {
+			display: none;
+		}
+
+		.formoffert .elementor-field-subgroup {
+			text-align: center;
+		}
+
+		/*-- MODIFICHE PAGINA PREZZI --*/
+		/*Modifiche servizi gratuiti*/
+		.iconfreelist li span svg {
+			fill: #6A8871 !important;
+		}
+
+		/*Modifiche servizi a pagamento*/
+		.icoonpaylist li span svg {
+			fill: #B6ADFF !important;
+		}
+
+		/*-- FINE MODIFICHE PAGINA PREZZI --*/
+		/*-- REGIONDO --*/
+		#activityframe .dynamic-content-for-elementor-acf {
+			width: 100%;
+		}
+
+		#activityframe {
+			width: 100%;
+		}
+
+		#regiondo {
+			width: 100%;
+			margin: 0 auto !important;
+		}
+
+		/*-- FINE REGIONDO --*/
+		/*-- BADGE RECENSIONI--*/
+		.rplg-badge2 .rplg-badge2-border {
+			display: none !important
+		}
+
+		/*-- FORM RICHIESTA CONTATTO --*/
+		.formcontact .elementor-message.elementor-message-success {
+			display: none;
+		}
+
+		.formcontact .etaform {
+			font-size: 0.8em;
+			font-weight: 500;
+		}
+
+		.elementor-field-group-privacy,
+		.elementor-field-group-newsletter {
+			text-align: center;
+		}
+
+		/*-- MENU --*/
+		.prtmenumobile {
+			display: none !important;
+		}
+
+		span.wpml-ls-display {
+			display: none;
+		}
+
+		/*Banner cookie*/
+		.BlockedForCookiePreferences {
+			line-height: 1.5em;
+		}
+
+		.headertop .elementor-background-overlay {
+			background-position: bottom -5px center !important;
+		}
+
+		/*******************/
+		/*-- RESPONSIVE --*/
+		/*****************/
+		/*-- MOBILE --*/
+		@media only screen and (max-width: 767px) {
+			.headertop .elementor-background-overlay {
+				background-position: bottom center !important;
+			}
+
+			/*-- MENU MOBILE --*/
+			.elementor-nav-menu__container ul li ul li a {
+				font-size: 13.8px !important;
+				font-weight: 600 !important;
+			}
+
+			.elementor-nav-menu__container ul li ul li ul li:nth-child(even) {
+				background: #F3F3F387;
+				border-bottom: 0px !important;
+			}
+
+			.prtmenumobile {
+				display: block !important;
+				background-color: #c5b265;
+				color: white !important;
+				text-align: center !important;
+				border-bottom: 0px !important;
+			}
+
+			.prtmenumobile a {
+				color: white !important;
+				justify-content: center !important;
+			}
+
+			.elementor-nav-menu__containe .wpml-ls-ite li.menu-item a {
+				justify-content: center !important;
+			}
+
+			span.wpml-ls-display {
+				display: block;
+			}
+
+			.camping-table-data .data-table-head-icon {
+				display: block;
+				margin-bottom: 5px;
+			}
+
+			/*POP-UP ALLOGGI*/
+			.popmob .dialog-widget-content {
+				margin: 0px 0px 50px 0px !important;
+				bottom: 0px;
+			}
+
+			#iconaservizi .elementor-icon-box-content {
+				text-align: left;
+				display: table;
+				padding-left: 10px;
+			}
+
+			.dce-wrapper #iconaservizi .elementor-icon-box-content {
+				text-align: left;
+				display: table;
+				padding-left: 2px !important;
+			}
+
+			#iconaservizi .elementor-icon-box-icon {
+				float: left;
+			}
+
+			footer #iconaservizi .elementor-icon-box-icon {
+				float: left;
+				margin-bottom: 0px;
+				margin-top: 18px;
+			}
+
+			footer .elementor-icon-box-icon {
+				margin-bottom: -5px !important;
+			}
+
+			.sectionbg {
+				background-repeat: no-repeat;
+				background-size: 200%;
+				background-position: bottom left;
+			}
+		}
+
+		/*FIX TABELLE */
+		@media (max-width: 767px) {
+			.camping-table-data thead tr th {
+				font-size: 13px !important;
+			}
+
+			.camping-table-data tbody tr .data-table-name {
+				font-size: 11px !important;
+			}
+		}
+
+		@media (max-width: 1024px) {
+			.camping-table-data thead tr th {
+				font-size: 14px !important;
+			}
+
+			.camping-table-data tbody tr .data-table-name {
+				font-size: 12px !important;
+			}
+		}
+
+
+		/*-- CORREZZIONI SPECIFICHE --*/
+		@media (max-width: 1024px) {
+
+			/*-- MENU MOBILE --*/
+			.elementor-nav-menu__container ul li a {
+				font-weight: Bold !important;
+			}
+		}
+
+		/*FIX 1*/
+		body.page-id-3708 .elementor-page-title,
+		body.page-id-3708 h1.entry-title {
+			display: block;
+		}
+
+		/* FIX 2 */
+		@font-face {
+			font-family: FontAwesomearrow;
+			src: url('{% static "wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff2"%}');
+		}
+
+		.sub-arrow .fa,
+		.sub-arrow .fas {
+			font-family: "FontAwesomearrow";
+			font-weight: 900;
+		}
+
+		@media (max-width: 767px) {
+
+			body.home .elementor-197 .elementor-element.elementor-element-8099db1:not(.elementor-motion-effects-element-type-background),
+			.elementor-197 .elementor-element.elementor-element-8099db1>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+				background-image: url('{% static "wp-content/uploads/2020/03/Chalet-Camping-Casteltesino.jpeg"%}');
+			}
+		}
+
+		@media (min-width: 1224px) {
+			.elementor-column.elementor-col-100.elementor-top-column.elementor-element.elementor-element-a46ea05 .dce-post-item.slick-slide {
+				min-width: 365px;
+				float: left;
+			}
+
+			.elementor-column.elementor-col-100.elementor-top-column.elementor-element.elementor-element-a46ea05 .dce-post-item {
+				max-width: 367px;
+				float: left;
+			}
+
+			.elementor-column.elementor-col-100.elementor-top-column.elementor-element.elementor-element-a46ea05 .dce-post-item {
+				min-width: 365px;
+			}
+		}
+
+		@media (min-width: 767px) {
+			.elementor-section.elementor-top-section.elementor-element.elementor-element-5a93a886.elementor-section-boxed.elementor-section-height-default.elementor-sticky.elementor-sticky--active.elementor-section--handles-inside.elementor-sticky--effects {
+				max-height: 80px;
+			}
+
+			section.elementor-section.elementor-top-section.elementor-element.elementor-element-5a93a886.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default {
+				max-height: 80px;
+			}
+		}
+
+		#SCK .SCK_Banner {
+			display: block;
+		}
+
+		.elementor-location-header .elementor-column.elementor-col-25.elementor-top-column.elementor-element.elementor-element-698ecc32.elementor-hidden-phone {
+			max-height: 45px;
+		}
+
+		/*RISOLUZIONE BASSA*/
+		@media (max-width: 359px) {
+			.elementor-widget-theme-site-logo .elementor-widget-container img {
+				width: 200px !important;
+			}
+
+			.tag-servizi p.elementor-icon-box-description {
+				display: none;
+			}
+
+			.tag-servizi .elementor-widget-container img {
+				width: 95px !important;
+			}
+
+			.carosello-alloggi #iconaservizi {
+				display: none;
+			}
+
+			.carosello-alloggi .box-prezzo {
+				width: 65% !important;
+			}
+
+			.carosello-alloggi .box-prezzo .elementor-element-populated {
+				padding: 0px 0px 20px 20px !important;
+			}
+
+			.carosello-alloggi .box-info {
+				width: 35% !important;
+			}
+
+			.careosello-alloggi .box-info .elementor-element-populated {
+				padding: 0px 20px 20px 0px !important;
+			}
+
+			.carosello-esperienze .elementor-element-populated h2 {
+				font-size: 22px !important;
+			}
+
+			.elementor-widget-dyncontel-acfposts .slick-dots li {
+				margin: 0 5px !important;
+			}
+
+			.popmob {
+				display: none;
+			}
+		}
+
+		@media (max-width: 374px) {
+			.carosello-alloggi .prezzo .elementor-widget-container {
+				font-size: 13px;
+			}
+		}
+
+		@media only screen and (max-width: 1132px) and (min-width: 992px) {
+			.carosello-alloggi #iconaservizi {
+				display: none;
+			}
+
+			.carosello-alloggi .box-prezzo {
+				width: 65% !important;
+			}
+
+			.carosello-alloggi .box-prezzo .elementor-element-populated {
+				padding: 0px 0px 20px 20px !important;
+			}
+
+			.carosello-alloggi .box-info {
+				width: 35% !important;
+			}
+
+			.careosello-alloggi .box-info .elementor-element-populated {
+				padding: 0px 20px 20px 0px !important;
+			}
+
+			.carosello-esperienze .elementor-element-populated h2 {
+				font-size: 22px !important;
+			}
+		}
+
+		/*MOBILE LANDSCAPE*/
+		@media only screen and (max-device-width: 812px) and (orientation: landscape) {
+			.sectionform {
+				display: none;
+			}
+
+			.sectioncontent {
+				margin-top: -5px !important;
+			}
+		}
+
+
+		/*OPTIMIZE MENU VIEW MOBILE*/
+		@media screen and (max-width: 768px) {
+			ul.sub-menu li {
+				max-width: 100% !important;
+			}
+		}
+
+		body.page-id-18830 .fa,
+		body.page-id-18830 .fas {
+			font-family: "Font Awesome 5 Free";
+			font-weight: 900;
+		}
+	</style>
+	<style type="text/css">
+		.BlockedBySmartCookieKit {
+			display: none !important;
+		}
+
+		#SCK .SCK_Banner {
+			display: none;
+		}
+
+		#SCK .SCK_Banner.visible {
+			display: block;
+		}
+
+		.BlockedForCookiePreferences {
+			background-color: #f6f6f6;
+			border: 1px solid #c9cccb;
+			margin: 1em;
+			padding: 2em;
+			color: black;
+		}
+
+		#SCK .SCK_BannerContainer {
+			background-color: #fff;
+			position: fixed;
+			padding: 2em;
+			bottom: 0em;
+			height: auto;
+			width: 100%;
+			overflow: hidden;
+			left: 0%;
+			z-index: 99999999;
+			box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .2);
+			box-sizing: border-box;
+			height: auto;
+			top: unset;
+			border-radius: 10px 10px 0px 0px;
+		}
+
+		#SCK #SCK_BannerTextContainer {
+			color: #777777;
+			display: block;
+			line-height: 1.3em;
+			font-size: 14px;
+			font-family: 'Roboto';
+		}
+
+		#SCK #SCK_BannerActions {
+			display: block;
+			line-height: 1.2em;
+			margin-top: 2em;
+			position: relative;
+			font-size: 13px;
+		}
+
+		#SCK #SCK_BannerActionsContainer {
+			display: block;
+			text-align: right;
+			float: right;
+			width: 100%;
+		}
+
+		#SCK .SCK_Accept {
+			cursor: pointer;
+			padding: 10px 45px;
+			height: auto;
+			width: auto;
+			line-height: initial;
+			background-color: #c5b265;
+			color: #fff;
+			text-shadow: none;
+			text-transform: uppercase;
+			font-weight: 700;
+			transition: .2s;
+			margin-bottom: 0;
+			float: right;
+			font-size: 14px;
+			margin-left: 0px;
+			border-radius: 5px;
+			letter-spacing: 0.2px;
+			width: 100%;
+			font-family: "Nunito Sans", Roboto;
+			border: 0px;
+		}
+
+		#SCK .SCK_Accept:hover {
+			background-color: #a79551;
+			color: #fff;
+		}
+
+		#SCK .SCK_Close {
+			float: right;
+			padding-top: 20px;
+			color: #a6a6a6;
+			width: 100%;
+			text-align: center;
+			font-family: 'Roboto';
+		}
+
+		@media(min-width:768px) {
+			#SCK .SCK_BannerContainer {
+				background-color: #fff;
+				position: fixed;
+				padding: 2em;
+				bottom: 1em;
+				height: auto;
+				width: 94%;
+				overflow: hidden;
+				left: 3%;
+				z-index: 99999999;
+				box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .2);
+				box-sizing: border-box;
+				bottom: 1em;
+				height: auto;
+				top: unset;
+				border-radius: 10px;
+			}
+
+			#SCK #SCK_BannerTextContainer {
+				float: left;
+				width: 75%;
+			}
+
+			#SCK #SCK_BannerActions {
+				position: absolute;
+				bottom: 4em;
+				right: 2rem;
+			}
+
+			#SCK .SCK_Accept {
+				float: none;
+				margin-bottom: 15px;
+				display: block;
+				margin-left: 0;
+			}
+
+			#SCK .SCK_Close {
+				float: none;
+				padding: 0;
+				margin-right: 0;
+				color: #a6a6a6;
+			}
+		}
+
+		@media(min-width:1000px) {
+			#SCK .SCK_BannerContainer {
+				width: 1000px;
+				left: 50%;
+				margin-left: -500px;
+			}
+		}
+	</style><noscript>
+		<style id="rocket-lazyload-nojs-css">
+			.rll-youtube-player,
+			[data-lazy-src] {
+				display: none !important;
+			}
+		</style>
+	</noscript>
+</head>
+
+<body
+	class="page-template page-template-elementor_header_footer page page-id-189 page-child parent-pageid-187 wp-custom-logo elementor-default elementor-template-full-width elementor-kit-1082 elementor-page elementor-page-189 elementor-page-12709 &quot;&gt;&lt;!-- Google Tag Manager (noscript) --&gt;&lt;noscript&gt;&lt;iframe src=_https_/www.googletagmanager.com/ns.html?id=GTM-WPQL8QR width=&quot;0&quot; style=&quot;display:none;visibility:hidden&quot;&gt;&lt;/iframe&gt;&lt;/noscript&gt;&lt;!-- End Google Tag Manager (noscript) --&gt;&lt;br style=&quot;display:none">
+	{% block nav %}{% include 'navbarpages.html' %}{% endblock nav %}
+	<div data-elementor-type="wp-page" data-elementor-id="189" data-post-id="189" data-obj-id="189" class="elementor elementor-189 dce-elementor-post-189">
+		<section data-dce-background-overlay-color="#13131369" data-dce-background-image-url="https://casteltesinocamping.it/wp-content/uploads/2020/11/Wellness-Camping-Casteltesino.jpg"
+			data-dce-background-overlay-image-url="https://casteltesinocamping.it/wp-content/uploads/2021/01/bg-divider-footer.png"
+			class="elementor-section elementor-top-section elementor-element elementor-element-78ff26b elementor-section-height-min-height elementor-section-stretched elementor-section-full_width elementor-section-content-middle headertop elementor-section-height-default elementor-section-items-middle"
+			data-id="78ff26b" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+			<div class="elementor-background-overlay"></div>
+			<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6266588" data-id="6266588" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-4bef78a elementor-widget elementor-widget-theme-page-title elementor-page-title elementor-widget-heading" data-id="4bef78a" data-element_type="widget"
+							data-widget_type="theme-page-title.default">
+							<div class="elementor-widget-container">
+								<style>
+									/*! elementor - v3.6.5 - 27-04-2022 */
+									.elementor-heading-title {
+										padding: 0;
+										margin: 0;
+										line-height: 1
+									}
+
+									.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
+										color: inherit;
+										font-size: inherit;
+										line-height: inherit
+									}
+
+									.elementor-widget-heading .elementor-heading-title.elementor-size-small {
+										font-size: 15px
+									}
+
+									.elementor-widget-heading .elementor-heading-title.elementor-size-medium {
+										font-size: 19px
+									}
+
+									.elementor-widget-heading .elementor-heading-title.elementor-size-large {
+										font-size: 29px
+									}
+
+									.elementor-widget-heading .elementor-heading-title.elementor-size-xl {
+										font-size: 39px
+									}
+
+									.elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
+										font-size: 59px
+									}
+								</style>
+								<h1 class="elementor-heading-title elementor-size-default">Wellness</h1>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-1118067 elementor-widget__width-auto elementor-widget-mobile__width-auto elementor-widget elementor-widget-heading" data-id="1118067" data-element_type="widget"
+							data-widget_type="heading.default">
+							<div class="elementor-widget-container">
+								<p class="elementor-heading-title elementor-size-default">Chiudi gli occhi e rilassati</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="elementor-section elementor-top-section elementor-element elementor-element-d525d68 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d525d68" data-element_type="section">
+			<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-544d41b" data-id="544d41b" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<div data-dce-advanced-background-color="#FFFFFF" class="elementor-element elementor-element-b896aed elementor-vertical-align-middle elementor-widget__width-auto elementor-view-default elementor-widget elementor-widget-icon-box"
+							data-id="b896aed" data-element_type="widget" data-widget_type="icon-box.default">
+							<div class="elementor-widget-container">
+								<link rel="stylesheet" href='{% static "wp-content/plugins/elementor/assets/css/widget-icon-box.min.css"%}'>
+								<div class="elementor-icon-box-wrapper">
+									<div class="elementor-icon-box-content">
+										<span class="elementor-icon-box-title">
+											<span>
+												Panoramica servizi </span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="dce-dynamic-posts-collection elementor-element elementor-element-255b27e dce-posts-layout-template dce-col-6 dce-col-mobile-6 dce-col-tablet-6 elementor-widget elementor-widget-dce-dynamicposts-v2" data-id="255b27e"
+							data-element_type="widget" data-settings="{&quot;style_items&quot;:&quot;template&quot;,&quot;grid_grid_type&quot;:&quot;flex&quot;}" data-widget_type="dce-dynamicposts-v2.grid">
+							<div class="elementor-widget-container">
+
+								<div class="dce-posts-container is_infiniteScroll dce-posts  dce-skin-grid dce-skin-grid-flex">
+									<div class="dce-posts-wrapper dce-wrapper-grid">
+
+										<article class="dce-post dce-post-item dce-item-grid post-1538 camping_servizi type-camping_servizi status-publish has-post-thumbnail hentry" data-dce-post-id="1538" data-dce-post-index="0">
+											<div class="dce-post-block">
+												<div data-elementor-type="single" data-elementor-id="7611" data-post-id="1538" data-obj-id="1538"
+													class="elementor elementor-7611 dce-elementor-post-1538 dce-elementor-post-1538 post-1538 camping_servizi type-camping_servizi status-publish has-post-thumbnail hentry">
+													<section class="elementor-section elementor-top-section elementor-element elementor-element-5a3afbbf elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5a3afbbf"
+														data-element_type="section">
+														<div class="elementor-container elementor-column-gap-default">
+															<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1597b002" data-id="1597b002" data-element_type="column">
+																<div class="elementor-widget-wrap elementor-element-populated">
+																	<div class="elementor-element elementor-element-2ffd079 svgicon elementor-widget elementor-widget-image" data-id="2ffd079" data-element_type="widget" data-widget_type="image.default">
+																		<div class="elementor-widget-container">
+																			<img width="1" height="1" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" class="attachment-large size-large" alt="Wellness" title="Wellness 1"
+																				data-lazy-src="https://casteltesinocamping.it/wp-content/uploads/2020/03/Jacuzzi.svg"><noscript><img width="1" height="1" src='{% static "wp-content/uploads/2020/03/Jacuzzi.svg"%}' class="attachment-large size-large"
+																					alt="Wellness" title="Wellness 1"></noscript>
+																		</div>
+																	</div>
+																	<div class="elementor-element elementor-element-af09f92 elementor-hidden-phone elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-id="af09f92"
+																		data-element_type="widget" data-widget_type="theme-post-title.default">
+																		<div class="elementor-widget-container">
+																			<h1 class="elementor-heading-title elementor-size-default">idromassaggio</h1>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</section>
+												</div>
+											</div>
+										</article>
+
+										<article class="dce-post dce-post-item dce-item-grid post-596 camping_servizi type-camping_servizi status-publish has-post-thumbnail hentry" data-dce-post-id="596" data-dce-post-index="1">
+											<div class="dce-post-block">
+												<div data-elementor-type="single" data-elementor-id="7611" data-post-id="596" data-obj-id="596"
+													class="elementor elementor-7611 dce-elementor-post-596 dce-elementor-post-596 post-596 camping_servizi type-camping_servizi status-publish has-post-thumbnail hentry">
+													<section class="elementor-section elementor-top-section elementor-element elementor-element-5a3afbbf elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5a3afbbf"
+														data-element_type="section">
+														<div class="elementor-container elementor-column-gap-default">
+															<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1597b002" data-id="1597b002" data-element_type="column">
+																<div class="elementor-widget-wrap elementor-element-populated">
+																	<div class="elementor-element elementor-element-2ffd079 svgicon elementor-widget elementor-widget-image" data-id="2ffd079" data-element_type="widget" data-widget_type="image.default">
+																		<div class="elementor-widget-container">
+																			<img width="1" height="1" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" class="attachment-large size-large" alt="Wellness" title="Wellness 2"
+																				data-lazy-src="https://casteltesinocamping.it/wp-content/uploads/2020/03/Piscina.svg"><noscript><img width="1" height="1" src='{% static "wp-content/uploads/2020/03/Piscina.svg"%}' class="attachment-large size-large"
+																					alt="Wellness" title="Wellness 2"></noscript>
+																		</div>
+																	</div>
+																	<div class="elementor-element elementor-element-af09f92 elementor-hidden-phone elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-id="af09f92"
+																		data-element_type="widget" data-widget_type="theme-post-title.default">
+																		<div class="elementor-widget-container">
+																			<h1 class="elementor-heading-title elementor-size-default">Piscina</h1>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</section>
+												</div>
+											</div>
+										</article>
+
+										<article class="dce-post dce-post-item dce-item-grid post-1447 camping_servizi type-camping_servizi status-publish has-post-thumbnail hentry" data-dce-post-id="1447" data-dce-post-index="2">
+											<div class="dce-post-block">
+												<div data-elementor-type="single" data-elementor-id="7611" data-post-id="1447" data-obj-id="1447"
+													class="elementor elementor-7611 dce-elementor-post-1447 dce-elementor-post-1447 post-1447 camping_servizi type-camping_servizi status-publish has-post-thumbnail hentry">
+													<section class="elementor-section elementor-top-section elementor-element elementor-element-5a3afbbf elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5a3afbbf"
+														data-element_type="section">
+														<div class="elementor-container elementor-column-gap-default">
+															<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1597b002" data-id="1597b002" data-element_type="column">
+																<div class="elementor-widget-wrap elementor-element-populated">
+																	<div class="elementor-element elementor-element-2ffd079 svgicon elementor-widget elementor-widget-image" data-id="2ffd079" data-element_type="widget" data-widget_type="image.default">
+																		<div class="elementor-widget-container">
+																			<img width="1" height="1" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" class="attachment-large size-large" alt="Wellness" title="Wellness 3"
+																				data-lazy-src="https://casteltesinocamping.it/wp-content/uploads/2020/03/Sauna-1.svg"><noscript><img width="1" height="1" src='{% static "wp-content/uploads/2020/03/Sauna-1.svg"%}' class="attachment-large size-large"
+																					alt="Wellness" title="Wellness 3"></noscript>
+																		</div>
+																	</div>
+																	<div class="elementor-element elementor-element-af09f92 elementor-hidden-phone elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-id="af09f92"
+																		data-element_type="widget" data-widget_type="theme-post-title.default">
+																		<div class="elementor-widget-container">
+																			<h1 class="elementor-heading-title elementor-size-default">Sauna</h1>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</section>
+												</div>
+											</div>
+										</article>
+
+										<article class="dce-post dce-post-item dce-item-grid post-1448 camping_servizi type-camping_servizi status-publish has-post-thumbnail hentry" data-dce-post-id="1448" data-dce-post-index="3">
+											<div class="dce-post-block">
+												<div data-elementor-type="single" data-elementor-id="7611" data-post-id="1448" data-obj-id="1448"
+													class="elementor elementor-7611 dce-elementor-post-1448 dce-elementor-post-1448 post-1448 camping_servizi type-camping_servizi status-publish has-post-thumbnail hentry">
+													<section class="elementor-section elementor-top-section elementor-element elementor-element-5a3afbbf elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5a3afbbf"
+														data-element_type="section">
+														<div class="elementor-container elementor-column-gap-default">
+															<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1597b002" data-id="1597b002" data-element_type="column">
+																<div class="elementor-widget-wrap elementor-element-populated">
+																	<div class="elementor-element elementor-element-2ffd079 svgicon elementor-widget elementor-widget-image" data-id="2ffd079" data-element_type="widget" data-widget_type="image.default">
+																		<div class="elementor-widget-container">
+																			<img width="1" height="1" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" class="attachment-large size-large" alt="Wellness" title="Wellness 4"
+																				data-lazy-src="https://casteltesinocamping.it/wp-content/uploads/2020/03/Hot-Tub.svg"><noscript><img width="1" height="1" src='{% static "wp-content/uploads/2020/03/Hot-Tub.svg"%}' class="attachment-large size-large"
+																					alt="Wellness" title="Wellness 4"></noscript>
+																		</div>
+																	</div>
+																	<div class="elementor-element elementor-element-af09f92 elementor-hidden-phone elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-id="af09f92"
+																		data-element_type="widget" data-widget_type="theme-post-title.default">
+																		<div class="elementor-widget-container">
+																			<h1 class="elementor-heading-title elementor-size-default">Bagno turco</h1>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</section>
+												</div>
+											</div>
+										</article>
+
+										<article class="dce-post dce-post-item dce-item-grid post-1450 camping_servizi type-camping_servizi status-publish has-post-thumbnail hentry" data-dce-post-id="1450" data-dce-post-index="4">
+											<div class="dce-post-block">
+												<div data-elementor-type="single" data-elementor-id="7611" data-post-id="1450" data-obj-id="1450"
+													class="elementor elementor-7611 dce-elementor-post-1450 dce-elementor-post-1450 post-1450 camping_servizi type-camping_servizi status-publish has-post-thumbnail hentry">
+													<section class="elementor-section elementor-top-section elementor-element elementor-element-5a3afbbf elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5a3afbbf"
+														data-element_type="section">
+														<div class="elementor-container elementor-column-gap-default">
+															<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1597b002" data-id="1597b002" data-element_type="column">
+																<div class="elementor-widget-wrap elementor-element-populated">
+																	<div class="elementor-element elementor-element-2ffd079 svgicon elementor-widget elementor-widget-image" data-id="2ffd079" data-element_type="widget" data-widget_type="image.default">
+																		<div class="elementor-widget-container">
+																			<img width="1" height="1" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" class="attachment-large size-large" alt="Wellness" title="Wellness 5"
+																				data-lazy-src="https://casteltesinocamping.it/wp-content/uploads/2020/03/gym-2.svg"><noscript><img width="1" height="1" src='{% static "wp-content/uploads/2020/03/gym-2.svg"%}'
+																					class="attachment-large size-large" alt="Wellness" title="Wellness 5"></noscript>
+																		</div>
+																	</div>
+																	<div class="elementor-element elementor-element-af09f92 elementor-hidden-phone elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-id="af09f92"
+																		data-element_type="widget" data-widget_type="theme-post-title.default">
+																		<div class="elementor-widget-container">
+																			<h1 class="elementor-heading-title elementor-size-default">Palestra</h1>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</section>
+												</div>
+											</div>
+										</article>
+
+										<article class="dce-post dce-post-item dce-item-grid post-1451 camping_servizi type-camping_servizi status-publish has-post-thumbnail hentry" data-dce-post-id="1451" data-dce-post-index="5">
+											<div class="dce-post-block">
+												<div data-elementor-type="single" data-elementor-id="7611" data-post-id="1451" data-obj-id="1451"
+													class="elementor elementor-7611 dce-elementor-post-1451 dce-elementor-post-1451 post-1451 camping_servizi type-camping_servizi status-publish has-post-thumbnail hentry">
+													<section class="elementor-section elementor-top-section elementor-element elementor-element-5a3afbbf elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5a3afbbf"
+														data-element_type="section">
+														<div class="elementor-container elementor-column-gap-default">
+															<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1597b002" data-id="1597b002" data-element_type="column">
+																<div class="elementor-widget-wrap elementor-element-populated">
+																	<div class="elementor-element elementor-element-2ffd079 svgicon elementor-widget elementor-widget-image" data-id="2ffd079" data-element_type="widget" data-widget_type="image.default">
+																		<div class="elementor-widget-container">
+																			<img width="1" height="1" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" class="attachment-large size-large" alt="Wellness" title="Wellness 6"
+																				data-lazy-src="https://casteltesinocamping.it/wp-content/uploads/2020/03/solarium.png"><noscript><img width="1" height="1" src='{% static "wp-content/uploads/2020/03/solarium.png"%}'
+																					class="attachment-large size-large" alt="Wellness" title="Wellness 6"></noscript>
+																		</div>
+																	</div>
+																	<div class="elementor-element elementor-element-af09f92 elementor-hidden-phone elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-id="af09f92"
+																		data-element_type="widget" data-widget_type="theme-post-title.default">
+																		<div class="elementor-widget-container">
+																			<h1 class="elementor-heading-title elementor-size-default">Solarium</h1>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</section>
+												</div>
+											</div>
+										</article>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="elementor-section elementor-top-section elementor-element elementor-element-e57d7c4 elementor-reverse-tablet elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e57d7c4"
+			data-element_type="section">
+			<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-56a7485" data-id="56a7485" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-2f905c6 elementor-widget elementor-widget-gallery" data-id="2f905c6" data-element_type="widget"
+							data-settings="{&quot;content_sequenced_animation&quot;:&quot;yes&quot;,&quot;columns&quot;:2,&quot;columns_mobile&quot;:2,&quot;gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:15,&quot;sizes&quot;:[]},&quot;aspect_ratio&quot;:&quot;1:1&quot;,&quot;columns_tablet&quot;:4,&quot;gallery_layout&quot;:&quot;grid&quot;,&quot;gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;link_to&quot;:&quot;file&quot;,&quot;content_hover_animation&quot;:&quot;fade-in&quot;}"
+							data-widget_type="gallery.default">
+							<div class="elementor-widget-container">
+								<style>
+									/*! elementor-pro - v3.6.5 - 12-04-2022 */
+									.elementor-gallery__container {
+										min-height: 1px
+									}
+
+									.elementor-gallery-item {
+										position: relative;
+										overflow: hidden;
+										display: block;
+										text-decoration: none;
+										border: solid var(--image-border-width) var(--image-border-color);
+										border-radius: var(--image-border-radius)
+									}
+
+									.elementor-gallery-item__content,
+									.elementor-gallery-item__overlay {
+										height: 100%;
+										width: 100%;
+										position: absolute;
+										top: 0;
+										left: 0
+									}
+
+									.elementor-gallery-item__overlay {
+										mix-blend-mode: var(--overlay-mix-blend-mode);
+										-webkit-transition-duration: var(--overlay-transition-duration);
+										-o-transition-duration: var(--overlay-transition-duration);
+										transition-duration: var(--overlay-transition-duration);
+										-webkit-transition-property: mix-blend-mode, opacity, background-color, -webkit-transform;
+										transition-property: mix-blend-mode, opacity, background-color, -webkit-transform;
+										-o-transition-property: mix-blend-mode, transform, opacity, background-color;
+										transition-property: mix-blend-mode, transform, opacity, background-color;
+										transition-property: mix-blend-mode, transform, opacity, background-color, -webkit-transform
+									}
+
+									.elementor-gallery-item__image.e-gallery-image {
+										-webkit-transition-duration: var(--image-transition-duration);
+										-o-transition-duration: var(--image-transition-duration);
+										transition-duration: var(--image-transition-duration);
+										-webkit-transition-property: -webkit-filter, -webkit-transform;
+										transition-property: -webkit-filter, -webkit-transform;
+										-o-transition-property: filter, transform;
+										transition-property: filter, transform;
+										transition-property: filter, transform, -webkit-filter, -webkit-transform
+									}
+
+									.elementor-gallery-item__content {
+										display: -webkit-box;
+										display: -ms-flexbox;
+										display: flex;
+										-webkit-box-orient: vertical;
+										-webkit-box-direction: normal;
+										-ms-flex-direction: column;
+										flex-direction: column;
+										-webkit-box-pack: var(--content-justify-content, center);
+										-ms-flex-pack: var(--content-justify-content, center);
+										justify-content: var(--content-justify-content, center);
+										-webkit-box-align: center;
+										-ms-flex-align: center;
+										align-items: center;
+										text-align: var(--content-text-align);
+										padding: var(--content-padding)
+									}
+
+									.elementor-gallery-item__content>div {
+										-webkit-transition-duration: var(--content-transition-duration);
+										-o-transition-duration: var(--content-transition-duration);
+										transition-duration: var(--content-transition-duration)
+									}
+
+									.elementor-gallery-item__content.elementor-gallery--sequenced-animation>div:nth-child(2) {
+										-webkit-transition-delay: calc((var(--content-transition-delay) / 3));
+										-o-transition-delay: calc((var(--content-transition-delay) / 3));
+										transition-delay: calc((var(--content-transition-delay) / 3))
+									}
+
+									.elementor-gallery-item__content.elementor-gallery--sequenced-animation>div:nth-child(3) {
+										-webkit-transition-delay: calc((var(--content-transition-delay) / 3) * 2);
+										-o-transition-delay: calc((var(--content-transition-delay) / 3) * 2);
+										transition-delay: calc((var(--content-transition-delay) / 3) * 2)
+									}
+
+									.elementor-gallery-item__content.elementor-gallery--sequenced-animation>div:nth-child(4) {
+										-webkit-transition-delay: calc((var(--content-transition-delay) / 3) * 3);
+										-o-transition-delay: calc((var(--content-transition-delay) / 3) * 3);
+										transition-delay: calc((var(--content-transition-delay) / 3) * 3)
+									}
+
+									.elementor-gallery-item__description {
+										color: var(--description-text-color, #fff);
+										width: 100%
+									}
+
+									.elementor-gallery-item__title {
+										color: var(--title-text-color, #fff);
+										font-weight: 700;
+										width: 100%
+									}
+
+									.elementor-gallery__titles-container {
+										display: -webkit-box;
+										display: -ms-flexbox;
+										display: flex;
+										-ms-flex-wrap: wrap;
+										flex-wrap: wrap;
+										-webkit-box-pack: var(--titles-container-justify-content, center);
+										-ms-flex-pack: var(--titles-container-justify-content, center);
+										justify-content: var(--titles-container-justify-content, center);
+										margin-bottom: 20px
+									}
+
+									.elementor-gallery__titles-container:not(.e--pointer-framed) .elementor-item:after,
+									.elementor-gallery__titles-container:not(.e--pointer-framed) .elementor-item:before {
+										background-color: var(--galleries-pointer-bg-color-hover)
+									}
+
+									.elementor-gallery__titles-container:not(.e--pointer-framed) .elementor-item.elementor-item-active:after,
+									.elementor-gallery__titles-container:not(.e--pointer-framed) .elementor-item.elementor-item-active:before {
+										background-color: var(--galleries-pointer-bg-color-active)
+									}
+
+									.elementor-gallery__titles-container.e--pointer-framed .elementor-item:before {
+										border-color: var(--galleries-pointer-bg-color-hover);
+										border-width: var(--galleries-pointer-border-width)
+									}
+
+									.elementor-gallery__titles-container.e--pointer-framed .elementor-item:after {
+										border-color: var(--galleries-pointer-bg-color-hover)
+									}
+
+									.elementor-gallery__titles-container.e--pointer-framed .elementor-item.elementor-item-active:after,
+									.elementor-gallery__titles-container.e--pointer-framed .elementor-item.elementor-item-active:before {
+										border-color: var(--galleries-pointer-bg-color-active)
+									}
+
+									.elementor-gallery__titles-container.e--pointer-framed.e--animation-draw .elementor-item:before {
+										border-left-width: var(--galleries-pointer-border-width);
+										border-bottom-width: var(--galleries-pointer-border-width);
+										border-right-width: 0;
+										border-top-width: 0
+									}
+
+									.elementor-gallery__titles-container.e--pointer-framed.e--animation-draw .elementor-item:after {
+										border-left-width: 0;
+										border-bottom-width: 0;
+										border-right-width: var(--galleries-pointer-border-width);
+										border-top-width: var(--galleries-pointer-border-width)
+									}
+
+									.elementor-gallery__titles-container.e--pointer-framed.e--animation-corners .elementor-item:before {
+										border-left-width: var(--galleries-pointer-border-width);
+										border-bottom-width: 0;
+										border-right-width: 0;
+										border-top-width: var(--galleries-pointer-border-width)
+									}
+
+									.elementor-gallery__titles-container.e--pointer-framed.e--animation-corners .elementor-item:after {
+										border-left-width: 0;
+										border-bottom-width: var(--galleries-pointer-border-width);
+										border-right-width: var(--galleries-pointer-border-width);
+										border-top-width: 0
+									}
+
+									.elementor-gallery__titles-container .e--pointer-double-line .elementor-item:after,
+									.elementor-gallery__titles-container .e--pointer-double-line .elementor-item:before,
+									.elementor-gallery__titles-container .e--pointer-overline .elementor-item:before,
+									.elementor-gallery__titles-container .e--pointer-underline .elementor-item:after {
+										height: var(--galleries-pointer-border-width)
+									}
+
+									.elementor-gallery-title {
+										--space-between: 10px;
+										cursor: pointer;
+										color: #6d7882;
+										font-weight: 500;
+										position: relative;
+										padding: 7px 14px;
+										-webkit-transition: all .3s;
+										-o-transition: all .3s;
+										transition: all .3s
+									}
+
+									.elementor-gallery-title--active {
+										color: #495157
+									}
+
+									.elementor-gallery-title:not(:last-child) {
+										margin-right: var(--space-between)
+									}
+
+									.elementor-gallery-item__title+.elementor-gallery-item__description {
+										margin-top: var(--description-margin-top)
+									}
+
+									.e-gallery-item.elementor-gallery-item {
+										-webkit-transition-property: all;
+										-o-transition-property: all;
+										transition-property: all
+									}
+
+									.e-gallery-item.elementor-animated-content .elementor-animated-item--enter-from-bottom,
+									.e-gallery-item.elementor-animated-content .elementor-animated-item--enter-from-left,
+									.e-gallery-item.elementor-animated-content .elementor-animated-item--enter-from-right,
+									.e-gallery-item.elementor-animated-content .elementor-animated-item--enter-from-top,
+									.e-gallery-item:hover .elementor-gallery__item-overlay-bg,
+									.e-gallery-item:hover .elementor-gallery__item-overlay-content,
+									.e-gallery-item:hover .elementor-gallery__item-overlay-content__description,
+									.e-gallery-item:hover .elementor-gallery__item-overlay-content__title {
+										opacity: 1
+									}
+
+									a.elementor-item.elementor-gallery-title {
+										color: var(--galleries-title-color-normal)
+									}
+
+									a.elementor-item.elementor-gallery-title.elementor-item-active,
+									a.elementor-item.elementor-gallery-title.highlighted,
+									a.elementor-item.elementor-gallery-title:focus,
+									a.elementor-item.elementor-gallery-title:hover {
+										color: var(--galleries-title-color-hover)
+									}
+
+									a.elementor-item.elementor-gallery-title.elementor-item-active {
+										color: var(--gallery-title-color-active)
+									}
+								</style>
+								<div class="elementor-gallery__container">
+									<a class="e-gallery-item elementor-gallery-item elementor-animated-content" href='{% static "wp-content/uploads/2021/11/Wellness-Camping-Casteltesino.jpeg"%}' data-elementor-open-lightbox="yes"
+										data-elementor-lightbox-slideshow="all-2f905c6"
+										e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTczNTMsInVybCI6Imh0dHBzOlwvXC9jYW1waW5nem9vLml0XC93cC1jb250ZW50XC91cGxvYWRzXC8yMDIxXC8xMVwvNjItXHUwMGE5d2lzdGhhbGVyLmNvbV8yMV8wOV9jYW1waW5nX3pvb19fSFc2NTY3NS5qcGciLCJzbGlkZXNob3ciOiJhbGwtMmY5MDVjNiJ9">
+										<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://casteltesinocamping.it/wp-content/uploads/2021/11/Wellness-Camping-Casteltesino-768x512.jpeg" data-width="768" data-height="512" alt="">
+										</div>
+									</a>
+									<a class="e-gallery-item elementor-gallery-item elementor-animated-content" href='{% static "wp-content/uploads/2021/11/Wellness-Camping-Casteltesino.jpeg"%}' data-elementor-open-lightbox="yes"
+										data-elementor-lightbox-slideshow="all-2f905c6"
+										e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTczNTMsInVybCI6Imh0dHBzOlwvXC9jYW1waW5nem9vLml0XC93cC1jb250ZW50XC91cGxvYWRzXC8yMDIxXC8xMVwvNjItXHUwMGE5d2lzdGhhbGVyLmNvbV8yMV8wOV9jYW1waW5nX3pvb19fSFc2NTY3NS5qcGciLCJzbGlkZXNob3ciOiJhbGwtMmY5MDVjNiJ9">
+										<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://casteltesinocamping.it/wp-content/uploads/2021/11/Wellness-Camping-Casteltesino-768x512.jpeg" data-width="768" data-height="512" alt="">
+										</div>
+									</a>
+									<a class="e-gallery-item elementor-gallery-item elementor-animated-content" href='{% static "wp-content/uploads/2021/11/Wellness-Camping-Casteltesino.jpeg"%}' data-elementor-open-lightbox="yes"
+										data-elementor-lightbox-slideshow="all-2f905c6"
+										e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTczNTMsInVybCI6Imh0dHBzOlwvXC9jYW1waW5nem9vLml0XC93cC1jb250ZW50XC91cGxvYWRzXC8yMDIxXC8xMVwvNjItXHUwMGE5d2lzdGhhbGVyLmNvbV8yMV8wOV9jYW1waW5nX3pvb19fSFc2NTY3NS5qcGciLCJzbGlkZXNob3ciOiJhbGwtMmY5MDVjNiJ9">
+										<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://casteltesinocamping.it/wp-content/uploads/2021/11/Wellness-Camping-Casteltesino-768x512.jpeg" data-width="768" data-height="512" alt="">
+										</div>
+									</a>
+									<a class="e-gallery-item elementor-gallery-item elementor-animated-content" href='{% static "wp-content/uploads/2021/11/Wellness-Camping-Casteltesino.jpeg"%}' data-elementor-open-lightbox="yes"
+										data-elementor-lightbox-slideshow="all-2f905c6"
+										e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTczNTMsInVybCI6Imh0dHBzOlwvXC9jYW1waW5nem9vLml0XC93cC1jb250ZW50XC91cGxvYWRzXC8yMDIxXC8xMVwvNjItXHUwMGE5d2lzdGhhbGVyLmNvbV8yMV8wOV9jYW1waW5nX3pvb19fSFc2NTY3NS5qcGciLCJzbGlkZXNob3ciOiJhbGwtMmY5MDVjNiJ9">
+										<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://casteltesinocamping.it/wp-content/uploads/2021/11/Wellness-Camping-Casteltesino-768x512.jpeg" data-width="768" data-height="512" alt="">
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-490cff2" data-id="490cff2" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-3502358 elementor-widget elementor-widget-global elementor-global-11375 elementor-widget-text-editor" data-id="3502358" data-element_type="widget" data-widget_type="text-editor.default">
+							<div class="elementor-widget-container">
+								<style>
+									/*! elementor - v3.6.5 - 27-04-2022 */
+									.elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap {
+										background-color: #818a91;
+										color: #fff
+									}
+
+									.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap {
+										color: #818a91;
+										border: 3px solid;
+										background-color: transparent
+									}
+
+									.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap {
+										margin-top: 8px
+									}
+
+									.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter {
+										width: 1em;
+										height: 1em
+									}
+
+									.elementor-widget-text-editor .elementor-drop-cap {
+										float: left;
+										text-align: center;
+										line-height: 1;
+										font-size: 50px
+									}
+
+									.elementor-widget-text-editor .elementor-drop-cap-letter {
+										display: inline-block
+									}
+								</style>
+								<nav aria-label="breadcrumbs" class="rank-math-breadcrumb">
+									<p><a href="/wellness">Home</a><span class="separator"> &gt; </span><span class="last">Wellness</span></p>
+								</nav>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-e9fe0d1 elementor-widget elementor-widget-heading" data-id="e9fe0d1" data-element_type="widget" data-widget_type="heading.default">
+							<div class="elementor-widget-container">
+								<h2 class="elementor-heading-title elementor-size-default">Vuoi trascorrere la tua vacanza in Trentino in totale relax?
+								</h2>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-967214a elementor-widget elementor-widget-text-editor" data-id="967214a" data-element_type="widget" data-widget_type="text-editor.default">
+							<div class="elementor-widget-container">
+								<p>La <strong>natura incantevole del Trentino</strong> in cui è immerso il nostro campeggio da sola basterebbe a garantirti il relax che cerchi, ma noi per te abbiamo pensato di fare molto di più.</p>
+								<p>A vostra disposizione <strong>un'area wellness</strong> dotata di ogni genere di comfort: <strong>sauna</strong>, <strong>bagno turco</strong>, <strong>doccia solare</strong> e <strong>idromassaggio</strong>
+									disponibili durante tutto il periodo di apertura del campeggio.</p>
+								<p>Se invece preferisci un relax fatto di sole e piscina, puoi approfittare della <strong> piscina</strong> dotata di nuoto contro corrente e attrezzata da un <strong>area solarium con lettini e
+										ombrelloni</strong>.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section data-dce-background-overlay-image-url="https://casteltesinocamping.it/wp-content/uploads/2020/11/bg-divider-footer.png"
+			class="elementor-section elementor-top-section elementor-element elementor-element-82ee869 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="82ee869" data-element_type="section"
+			data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-background-overlay"></div>
+			<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-fec3186" data-id="fec3186" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-a391cbb elementor-widget elementor-widget-shortcode" data-id="a391cbb" data-element_type="widget" data-widget_type="shortcode.default">
+							<div class="elementor-widget-container">
+								<div class="elementor-shortcode">
+									<div class="rplg" itemscope="" itemtype="http://schema.org/LocalBusiness" data-id="4834">
+										<div class="rplg-slider">
+											<div class="rplgsw-container">
+												<div class="rplgsw-wrapper">
+													<div class="rplgsw-slide">
+														<div class="rplg-slider-review">
+															<div class="rplg-box">
+																<div class="rplg-box-content">
+																	<div class="rplg-stars" data-info="5,google,#777"></div><span class="rplg-review-text"> Posto ben gestito e servizi sempre puliti, i gestori sono gentilissimi.</span><span class="rplg-review-badge"
+																		data-badge="google"></span>
+																</div>
+															</div>
+															<div class="rplg-row">
+																<div class="rplg-row-right">
+																	<div class="rplg-review-name rplg-trim" title="Serenella Sparapan">Serenella Sparapan</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="rplgsw-slide">
+														<div class="rplg-slider-review">
+															<div class="rplg-box">
+																<div class="rplg-box-content">
+																	<div class="rplg-stars" data-info="5,google,#777"></div><span class="rplg-review-text"> Ottima esperienza in tutte le occasioni che siamo andati. Gestione cordiale e molto disponibile<span>... </span><span
+																			class="rplg-more"> Ristorante da 5 stelle e pizza spettacolare. I dolci fiore all'occhiello. Assolutamente nulla da seganalare in modo negativo. Bravi continuate così.</span><span class="rplg-more-toggle">leggi
+																			di più</span></span><span class="rplg-review-badge" data-badge="google"></span>
+																</div>
+															</div>
+															<div class="rplg-row">
+																<div class="rplg-row-right">
+																	<div class="rplg-review-name rplg-trim" title="Luca Di Murro">Luca Di Murro</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="rplgsw-slide">
+														<div class="rplg-slider-review">
+															<div class="rplg-box">
+																<div class="rplg-box-content">
+																	<div class="rplg-stars" data-info="5,google,#777"></div><span class="rplg-review-text"> Campeggio più che altro per stanziali. La struttura è molto efficiente... servizi igienici molto puliti. La palestra ben
+																		attrezzata<span>... </span><span class="rplg-more"> Nel ristorante/pizzeria si mangia molto bene.. i dolci poi sono uno spettacolo, lo strudel di Andrea è strepitoso. Complimneti a tutti. Lo consiglio per chi vuole
+																			fare delle belle pedalate.</span><span class="rplg-more-toggle">leggi di più</span></span><span class="rplg-review-badge" data-badge="google"></span>
+																</div>
+															</div>
+															<div class="rplg-row">
+																<div class="rplg-row-right">
+																	<div class="rplg-review-name rplg-trim" title="Marco Zanchi">Marco Zanchi</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="rplgsw-slide">
+														<div class="rplg-slider-review">
+															<div class="rplg-box">
+																<div class="rplg-box-content">
+																	<div class="rplg-stars" data-info="4,google,#777"></div><span class="rplg-review-text"> Camping eccezionale, servizi e accessori puntualmente disponibili e igienizzati. Vista mozzafiato.</span><span
+																		class="rplg-review-badge" data-badge="google"></span>
+																</div>
+															</div>
+															<div class="rplg-row">
+																<div class="rplg-row-right">
+																	<div class="rplg-review-name rplg-trim" title="Francesco Procopio">Francesco Procopio</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="rplgsw-pagination"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="elementor-section elementor-top-section elementor-element elementor-element-4033323 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4033323" data-element_type="section">
+			<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-f63b064" data-id="f63b064" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-4e1f63f elementor-widget elementor-widget-heading" data-id="4e1f63f" data-element_type="widget" data-widget_type="heading.default">
+							<div class="elementor-widget-container">
+								<h2 class="elementor-heading-title elementor-size-default">Altri servizi che ti possono interessare</h2>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-51af53d elementor-widget elementor-widget-text-editor" data-id="51af53d" data-element_type="widget" data-widget_type="text-editor.default">
+							<div class="elementor-widget-container">
+								<p>Tutto quello che possiamo offrirti al Casteltesino Camping</p>
+							</div>
+						</div>
+						<div class="dce-dynamic-posts-collection elementor-element elementor-element-5297889 dce-posts-layout-template dce-col-3 dce-col-tablet-2 dce-col-mobile-1 elementor-widget elementor-widget-dce-dynamicposts-v2" data-id="5297889"
+							data-element_type="widget" data-settings="{&quot;style_items&quot;:&quot;template&quot;,&quot;templatemode_linkable&quot;:&quot;yes&quot;,&quot;grid_grid_type&quot;:&quot;flex&quot;}" data-widget_type="dce-dynamicposts-v2.grid">
+							<div class="elementor-widget-container">
+
+								<div class="dce-posts-container is_infiniteScroll dce-posts  dce-skin-grid dce-skin-grid-flex">
+									<div class="dce-posts-wrapper dce-wrapper-grid">
+
+										<article class="dce-post dce-post-item dce-item-grid post-193 page type-page status-publish has-post-thumbnail hentry tag-servizi" data-dce-post-id="193" data-dce-post-index="0" data-post-link="/campeggio/campeggio">
+											<div class="dce-post-block">
+												<div data-elementor-type="single" data-elementor-id="2392" data-post-id="193" data-obj-id="193"
+													class="elementor elementor-2392 dce-elementor-post-193 dce-elementor-post-193 post-193 page type-page status-publish has-post-thumbnail hentry tag-servizi">
+													<section data-dce-background-color="#FFFFFF"
+														class="elementor-section elementor-top-section elementor-element elementor-element-51c9ad4 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="51c9ad4"
+														data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+														<div class="elementor-container elementor-column-gap-default">
+															<div data-dce-background-color="#FFFFFF" class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d2b99e0" data-id="d2b99e0" data-element_type="column"
+																data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+																<div class="elementor-widget-wrap elementor-element-populated">
+																	<div class="elementor-element elementor-element-552d63c elementor-widget__width-auto elementor-widget elementor-widget-image" data-id="552d63c" data-element_type="widget" data-widget_type="image.default">
+																		<div class="elementor-widget-container">
+																			<picture>
+																				<source
+																					data-lazy-srcset="https://casteltesinocamping.it/wp-content/webp-express/webp-images/uploads/2021/11/Camping-Camping-Casteltesino-300x200 300w, https://casteltesinocamping.it/wp-content/webp-express/webp-images/uploads/2021/11/Camping-Camping-Casteltesino-1024x683 1024w, https://casteltesinocamping.it/wp-content/webp-express/webp-images/uploads/2021/11/Camping-Camping-Casteltesino-768x512 768w, https://casteltesinocamping.it/wp-content/webp-express/webp-images/uploads/2021/11/Camping-Camping-Casteltesino-1536x1024 1536w, https://casteltesinocamping.it/wp-content/webp-express/webp-images/uploads/2021/11/Camping-Camping-Casteltesino-150x100 150w, https://casteltesinocamping.it/wp-content/webp-express/webp-images/uploads/2021/11/Camping-Camping-Casteltesino 1600w"
+																					sizes="(max-width: 300px) 100vw, 300px" type="image/webp"><img width="300" height="200" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20200'%3E%3C/svg%3E"
+																					class="attachment-medium size-medium webpexpress-processed" alt="Casteltesino Camping Ristorante"
+																					data-lazy-srcset="wp-content/uploads/2021/11/Camping-Camping-Casteltesino-300x200.jpeg 300w, wp-content/uploads/2021/11/Camping-Camping-Casteltesino-1024x683.jpeg 1024w, wp-content/uploads/2021/11/Camping-Camping-Casteltesino-768x512.jpeg 768w, wp-content/uploads/2021/11/Camping-Camping-Casteltesino-1536x1024.jpeg 1536w, wp-content/uploads/2021/11/Camping-Camping-Casteltesino-150x100.jpeg 150w, wp-content/uploads/2021/11/Camping-Camping-Casteltesino.jpeg 1600w"
+																					data-lazy-sizes="(max-width: 300px) 100vw, 300px" title="Home 17" data-lazy-src="wp-content/uploads/2021/11/Camping-Camping-Casteltesino.jpeg"><noscript><img width="300" height="200"
+																						src="wp-content/uploads/2021/11/Camping-Camping-Casteltesino-300x200.jpeg" class="attachment-medium size-medium webpexpress-processed" alt="Casteltesino Camping Ristorante"
+																						srcset="wp-content/uploads/2021/11/Camping-Camping-Casteltesino-300x200.jpeg 300w, wp-content/uploads/2021/11/Camping-Camping-Casteltesino-1024x683.jpeg 1024w, wp-content/uploads/2021/11/Camping-Camping-Casteltesino-768x512.jpeg 768w, wp-content/uploads/2021/11/Camping-Camping-Casteltesino-1536x1024.jpeg 1536w, wp-content/uploads/2021/11/Camping-Camping-Casteltesino-150x100.jpeg 150w, wp-content/uploads/2021/11/Camping-Camping-Casteltesino.jpeg 1600w"
+																						sizes="(max-width: 300px) 100vw, 300px" title="Home 17"></noscript>
+																			</picture>
+																		</div>
+																	</div>
+																	<div class="elementor-element elementor-element-95f55ab elementor-widget__width-auto elementor-view-default elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="95f55ab"
+																		data-element_type="widget" data-widget_type="icon-box.default">
+																		<div class="elementor-widget-container">
+																			<div class="elementor-icon-box-wrapper">
+																				<div class="elementor-icon-box-content">
+																					<h3 class="elementor-icon-box-title">
+																						<span>
+																							Campeggio </span>
+																					</h3>
+																					<p class="elementor-icon-box-description">
+																						Per non farti mancare niente </p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</section>
+												</div>
+											</div>
+										</article>
+
+										<article class="dce-post dce-post-item dce-item-grid post-191 page type-page status-publish has-post-thumbnail hentry tag-servizi" data-dce-post-id="191" data-dce-post-index="1" data-post-link="/campeggio/ristorante">
+											<div class="dce-post-block">
+												<div data-elementor-type="single" data-elementor-id="2392" data-post-id="191" data-obj-id="191"
+													class="elementor elementor-2392 dce-elementor-post-191 dce-elementor-post-191 post-191 page type-page status-publish has-post-thumbnail hentry tag-servizi">
+													<section data-dce-background-color="#FFFFFF"
+														class="elementor-section elementor-top-section elementor-element elementor-element-51c9ad4 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="51c9ad4"
+														data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+														<div class="elementor-container elementor-column-gap-default">
+															<div data-dce-background-color="#FFFFFF" class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d2b99e0" data-id="d2b99e0" data-element_type="column"
+																data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+																<div class="elementor-widget-wrap elementor-element-populated">
+																	<div class="elementor-element elementor-element-552d63c elementor-widget__width-auto elementor-widget elementor-widget-image" data-id="552d63c" data-element_type="widget" data-widget_type="image.default">
+																		<div class="elementor-widget-container">
+																			<picture>
+																				<source
+																					data-lazy-srcset="https://casteltesinocamping.it/wp-content/webp-express/webp-images/uploads/2021/11/Ristorante-Camping-Casteltesino-300x200 300w, https://casteltesinocamping.it/wp-content/webp-express/webp-images/uploads/2021/11/Ristorante-Camping-Casteltesino-1024x683 1024w, https://casteltesinocamping.it/wp-content/webp-express/webp-images/uploads/2021/11/Ristorante-Camping-Casteltesino-768x512 768w, https://casteltesinocamping.it/wp-content/webp-express/webp-images/uploads/2021/11/Ristorante-Camping-Casteltesino-1536x1024 1536w, https://casteltesinocamping.it/wp-content/webp-express/webp-images/uploads/2021/11/Ristorante-Camping-Casteltesino-150x100 150w, https://casteltesinocamping.it/wp-content/webp-express/webp-images/uploads/2021/11/Ristorante-Camping-Casteltesino 1600w"
+																					sizes="(max-width: 300px) 100vw, 300px" type="image/webp"><img width="300" height="200" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20200'%3E%3C/svg%3E"
+																					class="attachment-medium size-medium webpexpress-processed" alt="Casteltesino Camping Ristorante"
+																					data-lazy-srcset="wp-content/uploads/2021/11/Ristorante-Camping-Casteltesino-300x200.jpeg 300w, wp-content/uploads/2021/11/Ristorante-Camping-Casteltesino-1024x683.jpeg 1024w, wp-content/uploads/2021/11/Ristorante-Camping-Casteltesino-768x512.jpeg 768w, wp-content/uploads/2021/11/Ristorante-Camping-Casteltesino-1536x1024.jpeg 1536w, wp-content/uploads/2021/11/Ristorante-Camping-Casteltesino-150x100.jpeg 150w, wp-content/uploads/2021/11/Ristorante-Camping-Casteltesino.jpeg 1600w"
+																					data-lazy-sizes="(max-width: 300px) 100vw, 300px" title="Home 17" data-lazy-src="wp-content/uploads/2021/11/Ristorante-Camping-Casteltesino.jpeg"><noscript><img width="300" height="200"
+																						src="wp-content/uploads/2021/11/Ristorante-Camping-Casteltesino-300x200.jpeg" class="attachment-medium size-medium webpexpress-processed" alt="Casteltesino Camping Ristorante"
+																						srcset="wp-content/uploads/2021/11/Ristorante-Camping-Casteltesino-300x200.jpeg 300w, wp-content/uploads/2021/11/Ristorante-Camping-Casteltesino-1024x683.jpeg 1024w, wp-content/uploads/2021/11/Ristorante-Camping-Casteltesino-768x512.jpeg 768w, wp-content/uploads/2021/11/Ristorante-Camping-Casteltesino-1536x1024.jpeg 1536w, wp-content/uploads/2021/11/Ristorante-Camping-Casteltesino-150x100.jpeg 150w, wp-content/uploads/2021/11/Ristorante-Camping-Casteltesino.jpeg 1600w"
+																						sizes="(max-width: 300px) 100vw, 300px" title="Home 17"></noscript>
+																			</picture>
+																		</div>
+																	</div>
+																	<div class="elementor-element elementor-element-95f55ab elementor-widget__width-auto elementor-view-default elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="95f55ab"
+																		data-element_type="widget" data-widget_type="icon-box.default">
+																		<div class="elementor-widget-container">
+																			<div class="elementor-icon-box-wrapper">
+																				<div class="elementor-icon-box-content">
+																					<h3 class="elementor-icon-box-title">
+																						<span>
+																							Ristorazione </span>
+																					</h3>
+																					<p class="elementor-icon-box-description">
+																						Dalla colazione alla cena </p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</section>
+												</div>
+											</div>
+										</article>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	{% block footer%}{% include 'footer.html'%}{% endblock footer%}
+	<link rel='stylesheet' id='dce-dynamic-visibility-css' href='{% static "wp-content/plugins/dynamic-content-for-elementor/assets/css/dynamic-visibility.min.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-post-7611-css' href='{% static "wp-content/uploads/elementor/css/post-7611.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='dce-dynamic-posts-css' href='{% static "wp-content/plugins/dynamic-content-for-elementor/assets/css/dynamic-posts.min.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='dce-dynamicPosts-grid-css' href='{% static "wp-content/plugins/dynamic-content-for-elementor/assets/css/dynamic-posts-skin-grid.min.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-gallery-css' href='{% static "wp-content/plugins/elementor/assets/lib/e-gallery/css/e-gallery.min.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='brb-public-main-css-css' href='{% static "wp-content/plugins/business-reviews-bundle/assets/css/public-main.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='brb-public-swiper-css-css' href='{% static "wp-content/plugins/business-reviews-bundle/assets/css/public-swiper.min.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-post-2392-css' href='{% static "wp-content/uploads/elementor/css/post-2392.css"%}' type='text/css' media='all' />
+	<link rel='stylesheet' id='e-animations-css' href='{% static "wp-content/plugins/elementor/assets/lib/animations/animations.min.css"%}' type='text/css' media='all' />
+	<script type='text/javascript' src='{% static "wp-content/plugins/smart-cookie-kit/js/sck.min_2019081301.js"%}' id='nmod_sck_fe_scripts-js'></script>
+	<script type='text/javascript' src='{% static "wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js"%}' id='smartmenus-js'></script>
+	<script type='text/javascript' src='{% static "wp-content/plugins/dynamic-content-for-elementor/assets/js/dynamic-posts-base.min.js"%}' id='dce-dynamicPosts-base-js'></script>
+	<script type='text/javascript' src='{% static "wp-includes/js/imagesloaded.min.js"%}' id='imagesloaded-js'></script>
+	<script type='text/javascript' src='{% static "wp-content/plugins/dynamic-content-for-elementor/assets/js/dynamic-posts-skin-grid.min.js"%}' id='dce-dynamicPosts-grid-js'></script>
+	<script type='text/javascript' src='{% static "wp-includes/js/masonry.min.js"%}' id='masonry-js'></script>
+	<script type='text/javascript' src='{% static "wp-includes/js/jquery/jquery.masonry.min.js"%}' id='jquery-masonry-js'></script>
+	<script type='text/javascript' src='{% static "wp-content/plugins/dynamic-content-for-elementor/assets/lib/jquery-match-height/jquery.matchHeight-min.js"%}' id='dce-jquery-match-height-js'></script>
+	<script type='text/javascript' src='{% static "wp-content/plugins/elementor/assets/lib/e-gallery/js/e-gallery.min.js"%}' id='elementor-gallery-js'></script>
+	<script data-minify="1" type='text/javascript' defer="defer" src='{% static "wp-content/cache/min/1/wp-content/plugins/business-reviews-bundle/assets/js/public-main1721.js"%}' id='brb-public-main-js-js'></script>
+	<script type='text/javascript' defer="defer" src='{% static "wp-content/plugins/business-reviews-bundle/assets/js/public-swiper.min.js"%}' id='brb-public-swiper-js-js'></script>
+	<script type='text/javascript' src='{% static "wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js"%}' id='elementor-pro-webpack-runtime-js'></script>
+	<script type='text/javascript' src='{% static "wp-content/plugins/elementor/assets/js/webpack.runtime.min.js"%}' id='elementor-webpack-runtime-js'></script>
+	<script type='text/javascript' src='{% static "wp-content/plugins/elementor/assets/js/frontend-modules.min.js"%}' id='elementor-frontend-modules-js'></script>
+	<script type='text/javascript' src='{% static "wp-includes/js/dist/vendor/regenerator-runtime.min.js"%}' id='regenerator-runtime-js'></script>
+	<script type='text/javascript' src='{% static "wp-includes/js/dist/vendor/wp-polyfill.min.js"%}' id='wp-polyfill-js'></script>
+	<script type='text/javascript' src='{% static "wp-includes/js/dist/hooks.min.js"%}' id='wp-hooks-js'></script>
+	<script type='text/javascript' src='{% static "wp-includes/js/dist/i18n.min.js"%}' id='wp-i18n-js'></script>
+	<script type='text/javascript' id='wp-i18n-js-after'>
+		wp.i18n.setLocaleData({
+			'text direction\u0004ltr': ['ltr']
+		});
+	</script>
+	<script type='text/javascript' id='elementor-pro-frontend-js-translations'>
+		(function(domain, translations) {
+			var localeData = translations.locale_data[domain] || translations.locale_data.messages;
+			localeData[""].domain = domain;
+			wp.i18n.setLocaleData(localeData, domain);
+		})("elementor-pro", {
+			"locale_data": {
+				"messages": {
+					"": {}
+				}
+			}
+		});
+	</script>
+	<script type='text/javascript' id='elementor-pro-frontend-js-before'>
+		var ElementorProFrontendConfig = {
+			"ajaxurl": "https:\/\/casteltesinocamping.it\/wp-admin\/admin-ajax.php",
+			"nonce": "7c7822fd11",
+			"urls": {
+				"assets": "https:\/\/casteltesinocamping.it\/wp-content\/plugins\/elementor-pro\/assets\/",
+				"rest": "https:\/\/casteltesinocamping.it\/wp-json\/"
+			},
+			"shareButtonsNetworks": {
+				"facebook": {
+					"title": "Facebook",
+					"has_counter": true
+				},
+				"twitter": {
+					"title": "Twitter"
+				},
+				"linkedin": {
+					"title": "LinkedIn",
+					"has_counter": true
+				},
+				"pinterest": {
+					"title": "Pinterest",
+					"has_counter": true
+				},
+				"reddit": {
+					"title": "Reddit",
+					"has_counter": true
+				},
+				"vk": {
+					"title": "VK",
+					"has_counter": true
+				},
+				"odnoklassniki": {
+					"title": "OK",
+					"has_counter": true
+				},
+				"tumblr": {
+					"title": "Tumblr"
+				},
+				"digg": {
+					"title": "Digg"
+				},
+				"skype": {
+					"title": "Skype"
+				},
+				"stumbleupon": {
+					"title": "StumbleUpon",
+					"has_counter": true
+				},
+				"mix": {
+					"title": "Mix"
+				},
+				"telegram": {
+					"title": "Telegram"
+				},
+				"pocket": {
+					"title": "Pocket",
+					"has_counter": true
+				},
+				"xing": {
+					"title": "XING",
+					"has_counter": true
+				},
+				"whatsapp": {
+					"title": "WhatsApp"
+				},
+				"email": {
+					"title": "Email"
+				},
+				"print": {
+					"title": "Print"
+				}
+			},
+			"facebook_sdk": {
+				"lang": "it_IT",
+				"app_id": ""
+			},
+			"lottie": {
+				"defaultAnimationUrl": "https:\/\/casteltesinocamping.it\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"
+			}
+		};
+	</script>
+	<script type='text/javascript' src='{% static "wp-content/plugins/elementor-pro/assets/js/frontend.min.js"%}' id='elementor-pro-frontend-js'></script>
+	<script type='text/javascript' src='{% static "wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js"%}' id='elementor-waypoints-js'></script>
+	<script type='text/javascript' src='{% static "wp-includes/js/jquery/ui/core.min.js"%}' id='jquery-ui-core-js'></script>
+	<script type='text/javascript' id='elementor-frontend-js-before'>
+		var elementorFrontendConfig = {
+			"environmentMode": {
+				"edit": false,
+				"wpPreview": false,
+				"isScriptDebug": false
+			},
+			"i18n": {
+				"shareOnFacebook": "Condividi su Facebook",
+				"shareOnTwitter": "Condividi su Twitter",
+				"pinIt": "Pinterest",
+				"download": "Download",
+				"downloadImage": "Scarica immagine",
+				"fullscreen": "Schermo intero",
+				"zoom": "Zoom",
+				"share": "Condividi",
+				"playVideo": "Riproduci video",
+				"previous": "Precedente",
+				"next": "Successivo",
+				"close": "Chiudi"
+			},
+			"is_rtl": false,
+			"breakpoints": {
+				"xs": 0,
+				"sm": 480,
+				"md": 768,
+				"lg": 1025,
+				"xl": 1440,
+				"xxl": 1600
+			},
+			"responsive": {
+				"breakpoints": {
+					"mobile": {
+						"label": "Mobile",
+						"value": 767,
+						"default_value": 767,
+						"direction": "max",
+						"is_enabled": true
+					},
+					"mobile_extra": {
+						"label": "Mobile Extra",
+						"value": 880,
+						"default_value": 880,
+						"direction": "max",
+						"is_enabled": false
+					},
+					"tablet": {
+						"label": "Tablet",
+						"value": 1024,
+						"default_value": 1024,
+						"direction": "max",
+						"is_enabled": true
+					},
+					"tablet_extra": {
+						"label": "Tablet Extra",
+						"value": 1200,
+						"default_value": 1200,
+						"direction": "max",
+						"is_enabled": false
+					},
+					"laptop": {
+						"label": "Laptop",
+						"value": 1366,
+						"default_value": 1366,
+						"direction": "max",
+						"is_enabled": false
+					},
+					"widescreen": {
+						"label": "Widescreen",
+						"value": 2400,
+						"default_value": 2400,
+						"direction": "min",
+						"is_enabled": false
+					}
+				}
+			},
+			"version": "3.6.5",
+			"is_static": false,
+			"experimentalFeatures": {
+				"e_dom_optimization": true,
+				"e_optimized_assets_loading": true,
+				"e_optimized_css_loading": true,
+				"theme_builder_v2": true,
+				"page-transitions": true,
+				"e_scroll_snap": true
+			},
+			"urls": {
+				"assets": "https:\/\/casteltesinocamping.it\/wp-content\/plugins\/elementor\/assets\/"
+			},
+			"settings": {
+				"page": [],
+				"editorPreferences": [],
+				"dynamicooo": []
+			},
+			"kit": {
+				"active_breakpoints": ["viewport_mobile", "viewport_tablet"],
+				"global_image_lightbox": "yes",
+				"lightbox_enable_counter": "yes"
+			},
+			"post": {
+				"id": 189,
+				"title": "Wellness%20-%20Casteltesino%20Camping",
+				"excerpt": "",
+				"featuredImage": "https:\/\/casteltesinocamping.it\/wp-content\/uploads\/2020\/03\/Chalet-Camping-Casteltesino-1024x682.jpeg"
+			}
+		};
+	</script>
+	<script type='text/javascript' src='{% static "wp-content/plugins/elementor/assets/js/frontend.min.js"%}' id='elementor-frontend-js'></script>
+	<script type='text/javascript' src='{% static "wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js"%}' id='pro-elements-handlers-js'></script>
+	<script type='text/javascript' src='{% static "wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js"%}' id='e-sticky-js'></script>
+	<script type='text/javascript' src='{% static "wp-content/plugins/dynamic-content-for-elementor/assets/js/settings.min.js"%}' id='dce-settings-js'></script>
+	<script type='text/javascript' src='{% static "wp-content/plugins/dynamic-content-for-elementor/assets/js/fix-background-loop.min.js"%}' id='dce-fix-background-loop-js'></script>
+	<style id="dce-template-fix-78ff26b-inline">
+		.elementor .dce-elementor-post-189 .elementor-element.elementor-element-78ff26b:not(.elementor-motion-effects-element-type-background),
+		.elementor .dce-elementor-post-189 .elementor-element.elementor-element-78ff26b>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+			background-image: url('{% static "wp-content/uploads/2021/11/Wellness-Camping-Casteltesino-1024x683.jpeg"%}');
+		}
+	</style>
+	<script>
+		window.lazyLoadOptions = [{
+			elements_selector: "img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",
+			data_src: "lazy-src",
+			data_srcset: "lazy-srcset",
+			data_sizes: "lazy-sizes",
+			class_loading: "lazyloading",
+			class_loaded: "lazyloaded",
+			threshold: 300,
+			callback_loaded: function(element) {
+				if (element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible") {
+					if (element.classList.contains("lazyloaded")) {
+						if (typeof window.jQuery != "undefined") {
+							if (jQuery.fn.fitVids) {
+								jQuery(element).parent().fitVids()
+							}
+						}
+					}
+				}
+			}
+		}, {
+			elements_selector: ".rocket-lazyload",
+			data_src: "lazy-src",
+			data_srcset: "lazy-srcset",
+			data_sizes: "lazy-sizes",
+			class_loading: "lazyloading",
+			class_loaded: "lazyloaded",
+			threshold: 300,
+		}];
+		window.addEventListener('LazyLoad::Initialized', function(e) {
+			var lazyLoadInstance = e.detail.instance;
+			if (window.MutationObserver) {
+				var observer = new MutationObserver(function(mutations) {
+					var image_count = 0;
+					var iframe_count = 0;
+					var rocketlazy_count = 0;
+					mutations.forEach(function(mutation) {
+						for (var i = 0; i < mutation.addedNodes.length; i++) {
+							if (typeof mutation.addedNodes[i].getElementsByTagName !== 'function') {
+								continue
+							}
+							if (typeof mutation.addedNodes[i].getElementsByClassName !== 'function') {
+								continue
+							}
+							images = mutation.addedNodes[i].getElementsByTagName('img');
+							is_image = mutation.addedNodes[i].tagName == "IMG";
+							iframes = mutation.addedNodes[i].getElementsByTagName('iframe');
+							is_iframe = mutation.addedNodes[i].tagName == "IFRAME";
+							rocket_lazy = mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');
+							image_count += images.length;
+							iframe_count += iframes.length;
+							rocketlazy_count += rocket_lazy.length;
+							if (is_image) {
+								image_count += 1
+							}
+							if (is_iframe) {
+								iframe_count += 1
+							}
+						}
+					});
+					if (image_count > 0 || iframe_count > 0 || rocketlazy_count > 0) {
+						lazyLoadInstance.update()
+					}
+				});
+				var b = document.getElementsByTagName("body")[0];
+				var config = {
+					childList: !0,
+					subtree: !0
+				};
+				observer.observe(b, config)
+			}
+		}, !1)
+	</script>
+	<script data-no-minify="1" async src='{% static "wp-content/plugins/wp-rocket/assets/js/lazyload/17.5/lazyload.min.js"%}'></script>
+	<script>
+		function lazyLoadThumb(e) {
+			var t = '<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',
+				a = '<button class="play" aria-label="play Youtube video"></button>';
+			return t.replace("ID", e) + a
+		}
+
+		function lazyLoadYoutubeIframe() {
+			var e = document.createElement("iframe"),
+				t = "ID?autoplay=1";
+			t += 0 === this.parentNode.dataset.query.length ? '' : '&' + this.parentNode.dataset.query;
+			e.setAttribute("src", t.replace("ID", this.parentNode.dataset.src)), e.setAttribute("frameborder", "0"), e.setAttribute("allowfullscreen", "1"), e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),
+				this.parentNode.parentNode.replaceChild(e, this.parentNode)
+		}
+		document.addEventListener("DOMContentLoaded", function() {
+			var e, t, p, a = document.getElementsByClassName("rll-youtube-player");
+			for (t = 0; t < a.length; t++) e = document.createElement("div"), e.setAttribute("data-id", a[t].dataset.id), e.setAttribute("data-query", a[t].dataset.query), e.setAttribute("data-src", a[t].dataset.src), e.innerHTML = lazyLoadThumb(a[t]
+				.dataset.id), a[t].appendChild(e), p = e.querySelector('.play'), p.onclick = lazyLoadYoutubeIframe
+		});
+	</script>
+	<script>
+		class RocketElementorAnimation {
+			constructor() {
+				this.deviceMode = document.createElement("span"), this.deviceMode.id = "elementor-device-mode", this.deviceMode.setAttribute("class", "elementor-screen-only"), document.body.appendChild(this.deviceMode)
+			}
+			_detectAnimations() {
+				let t = getComputedStyle(this.deviceMode, ":after").content.replace(/"/g, "");
+				this.animationSettingKeys = this._listAnimationSettingsKeys(t), document.querySelectorAll(".elementor-invisible[data-settings]").forEach(t => {
+					const e = t.getBoundingClientRect();
+					if (e.bottom >= 0 && e.top <= window.innerHeight) try {
+						this._animateElement(t)
+					} catch (t) {}
+				})
+			}
+			_animateElement(t) {
+				const e = JSON.parse(t.dataset.settings),
+					i = e._animation_delay || e.animation_delay || 0,
+					n = e[this.animationSettingKeys.find(t => e[t])];
+				if ("none" === n) return void t.classList.remove("elementor-invisible");
+				t.classList.remove(n), this.currentAnimation && t.classList.remove(this.currentAnimation), this.currentAnimation = n;
+				let s = setTimeout(() => {
+					t.classList.remove("elementor-invisible"), t.classList.add("animated", n), this._removeAnimationSettings(t, e)
+				}, i);
+				window.addEventListener("rocket-startLoading", function() {
+					clearTimeout(s)
+				})
+			}
+			_listAnimationSettingsKeys(t = "mobile") {
+				const e = [""];
+				switch (t) {
+					case "mobile":
+						e.unshift("_mobile");
+					case "tablet":
+						e.unshift("_tablet");
+					case "desktop":
+						e.unshift("_desktop")
+				}
+				const i = [];
+				return ["animation", "_animation"].forEach(t => {
+					e.forEach(e => {
+						i.push(t + e)
+					})
+				}), i
+			}
+			_removeAnimationSettings(t, e) {
+				this._listAnimationSettingsKeys().forEach(t => delete e[t]), t.dataset.settings = JSON.stringify(e)
+			}
+			static run() {
+				const t = new RocketElementorAnimation;
+				requestAnimationFrame(t._detectAnimations.bind(t))
+			}
+		}
+		document.addEventListener("DOMContentLoaded", RocketElementorAnimation.run);
+	</script>
+</body>
+
+
+</html>

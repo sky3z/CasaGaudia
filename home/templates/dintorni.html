@@ -1,0 +1,1600 @@
+{% load static %}
+<!doctype html>
+<html lang="it-IT" prefix="og: https://ogp.me/ns#">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",(e=>{this.persisted=e.persisted})),window.addEventListener("DOMContentLoaded",(()=>{this._preconnect3rdParties()})),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){document.hidden?e._triggerListener():(this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler))}_removeUserInteractionListener(){this.triggerEvents.forEach((e=>window.removeEventListener(e,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"))}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick")}_onTouchEnd(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))}))}_renameDOMAttribute(e,t,n){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(n,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{if(t.hasAttribute("src")){const n=new URL(t.src/index.html).origin;n!==location.origin&&e.push({src:n,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}})),e=[...new Map(e.map((e=>[JSON.stringify(e),e]))).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(e){}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._replayClicks()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._littleBreath(),new Promise((t=>{const n=document.createElement("script");[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t());try{e.parentNode.replaceChild(n,e)}catch(e){t()}}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var n=document.createDocumentFragment();e.forEach((e=>{if(e.src){const i=document.createElement("link");i.href=e.src,i.rel=t,"preconnect"!==t&&(i.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(i.crossOrigin=!0),e.crossOrigin&&(i.crossOrigin=e.crossOrigin),n.appendChild(i)}})),document.head.appendChild(n)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),await this._littleBreath();const e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,i=document.createRange(),r=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const s=document.createDocumentFragment();i.setStart(s,0),s.appendChild(i.createContextualFragment(t)),r.insertBefore(s,o)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise((e=>setTimeout(e))):new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WPQL8QR');</script>
+	<!-- End Google Tag Manager -->
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JLT6LFSQ71"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JLT6LFSQ71');
+</script>
+<link rel="alternate" hreflang="it" href="index.html" />
+<link rel="alternate" hreflang="en" href="#" />
+<link rel="alternate" hreflang="de" href="#" />
+<link rel="alternate" hreflang="x-default" href="index.html" />
+
+<!-- Ottimizzazione per i motori di ricerca di Rank Math - https://s.rankmath.com/home -->
+<title>Dintorni - Casa Gaudia</title>
+<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+<link rel="canonical" href="index.html" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Dintorni - Casa Gaudia" />
+<meta property="og:url" content="https://Casagaudia.it/Dintorni/ />
+<meta property="og:site_name" content="Casa Gaudia" />
+<meta property="article:tag" content="Esperienze" />
+<meta property="og:updated_time" content="2022-06-06T21:01:00+02:00" />
+<meta property="og:image" content="https://Casagaudia.it/images/casagaudia.jpg" />
+<meta property="og:image:secure_url" content="https://Casagaudia.it/images/casagaudia.jpg" />
+<meta property="og:image:width" content="1700" />
+<meta property="og:image:height" content="1068" />
+<meta property="og:image:alt" content="Scopri cosa fare in Tesino" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Dintorni - Casa Gaudia" />
+<meta name="twitter:image" content="https://Casagaudia.it/images/casagaudia.jpg" />
+<meta name="twitter:label1" content="Tempo di lettura" />
+<meta name="twitter:data1" content="Meno di un minuto" />
+<script type="application/ld+json" class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","@id":"https://Casagaudia.it/dintorni/#breadcrumb","itemListElement":[{"@type":"ListItem","position":"1","item":{"@id":"https://Casagaudia.it","name":"Home"}},{"@type":"ListItem","position":"2","item":{"@id":"https://Casagaudia.it/dintorni/","name":"Dintorni"}}]}]}</script>
+<!-- /Rank Math WordPress SEO plugin -->
+
+
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<link rel='stylesheet' id='wpml-legacy-horizontal-list-0-css'  href='{% static "wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-list-horizontal/style.min.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='wpml-menu-item-0-css'  href='{% static "wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/menu-item/style.min.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='hello-elementor-css'  href='{% static "wp-content/themes/hello-elementor/style.min.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='hello-elementor-theme-style-css'  href='{% static "wp-content/themes/hello-elementor/theme.min.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-css'  href='{% static "wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css'  href='{% static "wp-content/plugins/elementor/assets/css/frontend-lite.min.css"%}' type='text/css' media='all' />
+<style id='elementor-frontend-inline-css' type='text/css'>
+.elementor-1932 .elementor-element.elementor-element-599d136:not(.elementor-motion-effects-element-type-background), .elementor-1932 .elementor-element.elementor-element-599d136 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:url('{% static "/images/casagaudia7.jpg"%}');}
+</style>
+<link rel='stylesheet' id='elementor-post-1082-css'  href='{% static "wp-content/uploads/elementor/css/post-1082.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='dce-style-css'  href='{% static "wp-content/plugins/dynamic-content-for-elementor/assets/css/style.min.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='{% static "wp-includes/css/dashicons.min.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-pro-css'  href='{% static "wp-content/plugins/elementor-pro/assets/css/frontend-lite.min.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-global-css'  href='{% static "wp-content/uploads/elementor/css/global.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-3708-css'  href='{% static "wp-content/uploads/elementor/css/post-3708.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-1612-css'  href='{% static "wp-content/uploads/elementor/css/post-1612.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-1932-css'  href='{% static "wp-content/uploads/elementor/css/post-1932.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-12439-css'  href='{% static "wp-content/uploads/elementor/css/post-12439.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-11379-css'  href='{% static "wp-content/uploads/elementor/css/post-11379.css"%}' type='text/css' media='all' />
+<style id='rocket-lazyload-inline-css' type='text/css'>
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url('{% static "wp-content/plugins/wp-rocket/assets/img/youtube.png"%}') no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}
+</style>
+<link rel='stylesheet' id='elementor-icons-shared-0-css'  href='{% static "wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-solid-css'  href='{% static "wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-regular-css'  href='{% static "wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-campingtes-css'  href='{% static "wp-content/uploads/elementor/custom-icons/campingtes-1/css/campingtes.css"%}' type='text/css' media='all' />
+<script type='text/javascript' src='{% static "wp-includes/js/jquery/jquery.min.js"%}' id='jquery-core-js'></script>
+<script type='text/javascript' src='{% static "wp-includes/js/jquery/jquery-migrate.min.js"%}' id='jquery-migrate-js'></script>
+<link rel="https://api.w.org/" href='{% static "wp-json/index.html"%}' />
+<link rel="alternate" type="application/json" href='{% static "wp-json/wp/v2/pages/235/index.html"%}' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href='{% static "wp-includes/wlwmanifest.xml"%}' />
+<meta name="generator" content="WordPress 5.9.3" />
+<link rel='shortlink' href='../../index5f0f.html?p=235' />
+<meta name="generator" content="WPML ver:4.5.6 stt:1,3,27;" />
+<script>document.createElement( "picture" );if(!window.HTMLPictureElement && document.addEventListener) {window.addEventListener("DOMContentLoaded", function() {var s = document.createElement("script");s.src = '{% static "wp-content/plugins/webp-express/js/picturefill.min.js"%}';document.body.appendChild(s);});}</script><style>.elementor-3708 .elementor-element.elementor-element-5a93a886:not(.elementor-motion-effects-element-type-background), .elementor-3708 .elementor-element.elementor-element-5a93a886 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+    background-color: #FFFFFF00;
+    background-image: url('{% static "wp-content/uploads/2020/11/header-1.png"%}');
+    background-position: 0px -155px;
+    background-repeat: repeat-x;
+	}
+		@media screen and (min-width: 767px) {
+	.elementor-3708 .elementor-element.elementor-element-d998a35 img {
+    width: 260px;
+    height: 45.5px;
+			}
+.elementor-3708 .elementor-element.elementor-element-eb74a08 .elementor-nav-menu--main .elementor-item {
+        height: 27px;
+}
+
+}
+	</style>
+	<link rel="preload" as="image" href="{% static 'images/logo_casagaudia.png'%}">
+<link rel="apple-touch-icon" sizes="57x57" href="{% static 'favicon/apple-icon-57x57.png'%}">
+<link rel="apple-touch-icon" sizes="60x60" href="{% static 'favicon/apple-icon-60x60.png'%}">
+<link rel="apple-touch-icon" sizes="72x72" href="{% static 'favicon/apple-icon-72x72.png'%}">
+<link rel="apple-touch-icon" sizes="76x76" href="{% static 'favicon/apple-icon-76x76.png'%}">
+<link rel="apple-touch-icon" sizes="114x114" href="{% static 'favicon/apple-icon-114x114.png'%}">
+<link rel="apple-touch-icon" sizes="120x120" href="{% static 'favicon/apple-icon-120x120.png'%}">
+<link rel="apple-touch-icon" sizes="144x144" href="{% static 'favicon/apple-icon-144x144.png'%}">
+<link rel="apple-touch-icon" sizes="152x152" href="{% static 'favicon/apple-icon-152x152.png'%}">
+<link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-icon-180x180.png'%}">
+<link rel="icon" type="image/png" sizes="192x192" href="{% static 'favicon/android-icon-192x192.png'%}">
+<link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png'%}">
+<link rel="icon" type="image/png" sizes="96x96" href="{% static 'favicon/favicon-96x96.png'%}">
+<link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png'%}">
+<link rel="manifest" href='{% static "favicon/manifest.json"%}'>
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href='{% static "wp-content/uploads/2020/02/Favicon.png"%}' sizes="32x32" />
+<link rel="icon" href='{% static "wp-content/uploads/2020/02/Favicon.png"%}' sizes="192x192" />
+<link rel="apple-touch-icon" href='{% static "wp-content/uploads/2020/02/Favicon.png"%}' />
+<meta name="msapplication-TileImage" content="https://casagaudia.it/wp-content/uploads/2020/02/Favicon.png" />
+
+ <style media="screen">
+	 	@media screen and (min-width: 767px) {
+	.elementor-nav-menu--main .elementor-nav-menu > li.menu-item-has-children > a { margin-right: 26px !important;  }
+		 .elementor-nav-menu--main .elementor-nav-menu > li.menu-item-has-children > a > .sub-arrow {
+    position: absolute;
+    right: -11px;
+    top: 7px;
+}
+	 li.menu-item.wpml-ls-slot-2 {
+    max-width: 56px;
+}
+			ul.sub-menu li {
+    max-width: 300px!important;
+}
+	 .elementor-nav-menu--layout-horizontal .elementor-nav-menu {
+        display: contents!important;
+	}
+			.elementor-nav-menu--layout-horizontal {
+         justify-content: center!important;
+}
+
+			/* Altezza indicatore menu hover / active */
+		body nav ul li a::after {
+    top: 32px!important;
+}
+			nav ul:nth-child(1) > li.menu-item-has-children > ul.sub-menu {
+    margin-top: 9px!important;
+}
+	header .e--pointer-underline .elementor-item:after {
+    content: "";
+    bottom: 0;
+    width: calc(100% + 11px);
+}
+header .e--pointer-underline ul li.menu-item-home .elementor-item:after {
+    content: "";
+    bottom: 0;
+    width: calc(100% + 0px);
+}
+			ul.sub-menu li.wpml-ls-item, li.wpml-ls-item ul.sub-menu {
+    max-width: 36px!important;
+    min-width: 36px!important;
+}
+			li.wpml-ls-item ul.sub-menu a.elementor-sub-item {
+    padding-left: 0px;
+}
+	.wpml-ls-menu-item .wpml-ls-flag {
+       min-width: 18px;
+}
+
+}
+
+@media screen and (max-width: 767px) {
+.wpml-ls-menu-item .wpml-ls-flag {
+margin-right: 8px;
+}
+}
+</style>
+		<style type="text/css" id="wp-custom-css">
+			/*-- WEB KIT --*/
+:focus {
+  outline: 0px !important;
+}
+/*-- TESTO --*/
+p {
+  margin-bottom: 1em !important;
+}
+p:last-child {
+  margin-bottom: 0em !important;
+}
+.titolo h1 {
+  color: white !important;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+/*BOTTONI*/
+a.elementor-button-link.elementor-button {
+  font-weight: 700;
+}
+/*TEST MENU*/
+.mega .uael-nav-menu ul li {
+  width: 100%;
+  display: block;
+  border: 0px;
+  text-align: left;
+  text-transform: capitalize !important;
+}
+.mega .uael-nav-menu .uael-menu-item {
+  width: 100%;
+  display: block;
+  border: 0px;
+  text-align: left;
+  text-transform: capitalize !important;
+}
+.mega .uael-nav-menu {
+  margin-left: 0px !important;
+}
+.mega li.menu-item {
+  border-bottom: 0px !important;
+}
+ul.sub-menu.parent-has-template {
+  background-color: transparent !important;
+}
+/*RECAPTCHA*/
+.grecaptcha-badge {
+  visibility: hidden;
+}
+/*BANNER BONUS VACANZA*/
+body .bannerbonus {
+  max-width: 650px !important;
+  margin: 0 auto;
+}
+/*CAROSELLI*/
+.elementor-widget-dyncontel-acfposts .slick-dots li button:before {
+  background-color: #7f7f7f !important;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px !important;
+  height: 14px !important;
+}
+.elementor-widget-dyncontel-acfposts .slick-dots {
+  bottom: -48px !important;
+}
+.dce-post-item .elementor-animation-grow:hover {
+  transform: scale(1.01);
+}
+
+/*-- CARICAMENTO LOGO --*/
+.elementor-widget-theme-site-logo img{
+	max-height:50px !important;
+}
+
+/*-- BACKGROUND BANNER --*/
+.sectionbg {
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+/*-- TABELLE --*/
+.btfull a {
+  width: 100% !important;
+}
+.slidericon svg {
+  fill: #9F9F9F;
+}
+.desctab {
+  font-size: 0.8em !important;
+  margin-top: -5px !important;
+  text-transform: uppercase;
+}
+.subtitletab {
+  font-weight: 600;
+}
+/*-- TABELLE --*/
+.table-container {
+  overflow-x: auto;
+}
+.camping-table-season, .camping-table-data {
+  width: 100%;
+  font-family: "Nunito Sans", Roboto;
+}
+/*-- TABELLA STAGIONALITA --*/
+.camping-table-season thead tr th {
+  padding: 20px 4px;
+  background: #c5b265;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+  color: #fff;
+  border-color: #fff;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  vertical-align: middle;
+}
+.camping-table-season thead tr th:last-child {
+  border-right: 0px !important;
+}
+.camping-table-season thead tr th:first-child {
+  border-left: 0px !important;
+}
+.camping-table-season tbody tr td {
+  padding: 20px 10px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #4f5a52;
+  border: 4px solid white;
+}
+.camping-table-season tbody tr td:last-child {
+  border-right: 0px !important;
+}
+.camping-table-season tbody tr td:first-child {
+  border-left: 0px !important;
+}
+.camping-table-season tbody tr td:first-child {
+  border-width: 0px;
+  border-style: solid;
+}
+.camping-table-season tbody tr:first-child td {
+  border-top: 6px solid white !important;
+}
+.lowseason {
+  background-color: #efe1a5 !important;
+  background-image: url('{% static "wp-content/uploads/price-table/lineedr.svg"%}');
+  background-size: 130%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.middleseason {
+  background-color: #9bb8a2 !important;
+  background-image: url('{% static "wp-content/uploads/price-table/linee.svg"%}');
+  background-size: 350%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hightseason {
+  background-color: #6f7b72 !important;
+  background-image: url('{% static "wp-content/uploads/price-table/pallino.svg"%}');
+  background-size: 30%;
+  background-position: center;
+}
+/*-- TABELLA DATI --*/
+.camping-table-data table tbody > tr:nth-child(2n+1) td {
+  color: #6D7882;
+  background-color: #FDFBEF;
+}
+.camping-table-data .data-table-price {
+  font-weight: 400;
+}
+.data-table-header th {
+  background-color: #c5b265;
+}
+.data-table-season-head th {
+  padding: 10px 0px !important;
+}
+.camping-table-data thead tr th {
+  padding: 20px 14px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  border-color: #fff;
+  border-width: 0px 1px;
+  border-style: solid;
+  text-align: center;
+  vertical-align: middle;
+}
+.camping-table-data tbody tr td {
+  padding: 20px 14px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #4f5a52;
+  text-align: center;
+  vertical-align: middle;
+}
+.date-season {
+  font-weight: 500;
+  font-size: 0.90em;
+  margin-top: 5px;
+  display: block;
+}
+.camping-table-data tbody tr:nth-child(even) {
+  background-color: #FDFBEF;
+}
+.camping-table-data tbody > tr:nth-child(odd) > td, .camping-table-data table tbody > tr:nth-child(odd) > th, .camping-table-season tbody > tr:nth-child(odd) > td, .camping-table-season table tbody > tr:nth-child(odd) > th {
+  background-color: transparent;
+}
+table caption + thead tr:first-child td, table caption + thead tr:first-child th, table colgroup + thead tr:first-child td, table colgroup + thead tr:first-child th, table thead:first-child tr:first-child td, table thead:first-child tr:first-child th {
+  border-top: 0px;
+}
+table td, table th {
+  border: 0px;
+}
+.camping-table-data .data-table-custom-head {
+  min-width: 150px;
+}
+.data-table-name {
+  font-weight: 800 !important;
+}
+.camping-table-data .data-table-name .details {
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: lowercase;
+  display: block;
+}
+.camping-table-data .data-table-head-icon {
+  font-size: 30px;
+}
+/*HEADER PERSONALIZZATA X STAGIONALITA*/
+.data-table-season-head th.middleseason {
+  background-size: 120%
+}
+.data-table-season-head th.lowseason {
+  background-size: 12% !important;
+  background-repeat: repeat-x !important;
+}
+.data-table-season-head th.hightseason {
+  background-size: 4%;
+}
+/*-- CSS FORM RICHIESTA DISPO ALLOGGI --*/
+/*GENERALE*/
+.formdispo {
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px 0px rgb(59 59 59 / 15%);
+}
+/*NASCONDI MESSAGGIO*/
+.formdispo .elementor-message.elementor-message-success {
+  display: none;
+}
+/*LABEL*/
+.formdispo .elementor-field-group label {
+  background-color: white;
+  padding: 5px 10px 10px;
+  border-radius: 5px 5px 0px 0px;
+  margin: 0 auto;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-family: "Nunito Sans";
+  font-weight: 600;
+}
+/*BOTTONE INVIO*/
+.formdispo .elementor-field-type-submit {
+  height: 60px;
+  bottom: -18px;
+}
+.formdispo .elementor-field-type-submit button {
+  border-radius: 0px 5px 5px 0px;
+  height: 62px;
+  /*box-shadow: -1px 5px 6px #3b3b3b40;*/
+}
+/*BOX SHADOW CAMPI*/
+.formdispo .elementor-field-group input {
+  /*box-shadow: -1px 5px 6px #3b3b3b40;*/
+  padding: 20px 15px;
+}
+.formdispo #form-field-darrivo {
+  border-radius: 5px 0px 0px 5px;
+}
+/*LUNGHEZZA CAMPI*/
+.formdispo .elementor-field-group-nadulti, .formdispo .elementor-field-group-nbambini {
+  width: 14%;
+}
+.formdispo .elementor-field-group-nneonati {
+  width: 12%;
+  border-right: 0px !important;
+}
+.formdispo .elementor-field-group-nneonati select {
+  border-right: 0px !important;
+}
+.formdispo .elementor-field-type-select select {
+  /*box-shadow: -1px 5px 6px #3b3b3b40;*/
+  padding: 19px 15px;
+}
+/*-- FORM RICHIESTA OFFERTE --*/
+.formoffert .elementor-message.elementor-message-success {
+  display: none;
+}
+.formoffert .elementor-field-subgroup {
+  text-align: center;
+}
+/*-- MODIFICHE PAGINA PREZZI --*/
+/*Modifiche servizi gratuiti*/
+.iconfreelist li span svg {
+  fill: #6A8871 !important;
+}
+/*Modifiche servizi a pagamento*/
+.icoonpaylist li span svg {
+  fill: #B6ADFF !important;
+}
+/*-- FINE MODIFICHE PAGINA PREZZI --*/
+/*-- REGIONDO --*/
+#activityframe .dynamic-content-for-elementor-acf {
+  width: 100%;
+}
+#activityframe {
+  width: 100%;
+}
+#regiondo {
+  width: 100%;
+  margin: 0 auto !important;
+}
+/*-- FINE REGIONDO --*/
+/*-- BADGE RECENSIONI--*/
+.rplg-badge2 .rplg-badge2-border {
+  display: none !important
+}
+/*-- FORM RICHIESTA CONTATTO --*/
+.formcontact .elementor-message.elementor-message-success {
+  display: none;
+}
+.formcontact .etaform {
+  font-size: 0.8em;
+  font-weight: 500;
+}
+.elementor-field-group-privacy, .elementor-field-group-newsletter {
+  text-align: center;
+}
+/*-- MENU --*/
+.prtmenumobile {
+  display: none !important;
+}
+span.wpml-ls-display {
+  display: none;
+}
+/*Banner cookie*/
+.BlockedForCookiePreferences {
+  line-height: 1.5em;
+}
+.headertop .elementor-background-overlay {
+  background-position: bottom -5px center !important;
+}
+/*******************/
+/*-- RESPONSIVE --*/
+/*****************/
+/*-- MOBILE --*/
+@media only screen and (max-width: 767px) {
+  .headertop .elementor-background-overlay {
+    background-position: bottom center !important;
+  }
+  /*-- MENU MOBILE --*/
+  .elementor-nav-menu__container ul li ul li a {
+    font-size: 13.8px !important;
+    font-weight: 600 !important;
+  }
+  .elementor-nav-menu__container ul li ul li ul li:nth-child(even) {
+    background: #F3F3F387;
+    border-bottom: 0px !important;
+  }
+  .prtmenumobile {
+    display: block !important;
+    background-color: #c5b265;
+    color: white !important;
+    text-align: center !important;
+    border-bottom: 0px !important;
+  }
+  .prtmenumobile a {
+    color: white !important;
+    justify-content: center !important;
+  }
+  .elementor-nav-menu__containe .wpml-ls-ite li.menu-item a {
+    justify-content: center !important;
+  }
+  span.wpml-ls-display {
+    display: block;
+  }
+  .camping-table-data .data-table-head-icon {
+    display: block;
+    margin-bottom: 5px;
+  }
+  /*POP-UP ALLOGGI*/
+  .popmob .dialog-widget-content {
+    margin: 0px 0px 50px 0px !important;
+    bottom: 0px;
+  }
+  #iconaservizi .elementor-icon-box-content {
+    text-align: left;
+    display: table;
+    padding-left: 10px;
+  }
+  .dce-wrapper #iconaservizi .elementor-icon-box-content {
+    text-align: left;
+    display: table;
+    padding-left: 2px !important;
+  }
+  #iconaservizi .elementor-icon-box-icon {
+    float: left;
+  }
+  footer #iconaservizi .elementor-icon-box-icon {
+    float: left;
+    margin-bottom: 0px;
+    margin-top: 18px;
+  }
+  footer .elementor-icon-box-icon {
+    margin-bottom: -5px !important;
+  }
+  .sectionbg {
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-position: bottom left;
+  }
+}
+
+/*FIX TABELLE */
+@media (max-width: 767px) {
+	 .camping-table-data thead tr th{
+		 font-size: 13px !important;
+	 }
+	 .camping-table-data tbody tr .data-table-name{
+		 font-size: 11px !important;
+	 }
+}
+
+ @media (max-width: 1024px) {
+	 .camping-table-data thead tr th{
+		 font-size: 14px !important;
+	 }
+	 .camping-table-data tbody tr .data-table-name{
+		 font-size: 12px !important;
+	 }
+}
+
+
+/*-- CORREZZIONI SPECIFICHE --*/
+@media (max-width: 1024px) {
+  /*-- MENU MOBILE --*/
+  .elementor-nav-menu__container ul li a {
+    font-weight: Bold !important;
+  }
+}
+/*FIX 1*/
+body.page-id-3708 .elementor-page-title, body.page-id-3708 h1.entry-title {
+  display: block;
+}
+/* FIX 2 */
+@font-face {
+  font-family: FontAwesomearrow;
+  src: url('{% static "wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff2"%}');
+}
+.sub-arrow .fa, .sub-arrow .fas {
+  font-family: "FontAwesomearrow";
+  font-weight: 900;
+}
+@media (max-width: 767px) {
+  body.home .elementor-197 .elementor-element.elementor-element-8099db1:not(.elementor-motion-effects-element-type-background), .elementor-197 .elementor-element.elementor-element-8099db1 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+    background-image: url('{% static "images/casagaudia.jpg"%}');
+  }
+}
+@media (min-width: 1224px) {
+  .elementor-column.elementor-col-100.elementor-top-column.elementor-element.elementor-element-a46ea05 .dce-post-item.slick-slide {
+    min-width: 365px;
+    float: left;
+  }
+  .elementor-column.elementor-col-100.elementor-top-column.elementor-element.elementor-element-a46ea05 .dce-post-item {
+    max-width: 367px;
+    float: left;
+  }
+  .elementor-column.elementor-col-100.elementor-top-column.elementor-element.elementor-element-a46ea05 .dce-post-item {
+    min-width: 365px;
+  }
+}
+@media (min-width: 767px) {
+  .elementor-section.elementor-top-section.elementor-element.elementor-element-5a93a886.elementor-section-boxed.elementor-section-height-default.elementor-sticky.elementor-sticky--active.elementor-section--handles-inside.elementor-sticky--effects {
+    max-height: 80px;
+  }
+  section.elementor-section.elementor-top-section.elementor-element.elementor-element-5a93a886.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default {
+    max-height: 80px;
+  }
+}
+#SCK .SCK_Banner {
+  display: block;
+}
+.elementor-location-header .elementor-column.elementor-col-25.elementor-top-column.elementor-element.elementor-element-698ecc32.elementor-hidden-phone {
+  max-height: 45px;
+}
+/*RISOLUZIONE BASSA*/
+@media (max-width: 359px) {
+  .elementor-widget-theme-site-logo .elementor-widget-container img {
+    width: 200px !important;
+  }
+  .tag-servizi p.elementor-icon-box-description {
+    display: none;
+  }
+  .tag-servizi .elementor-widget-container img {
+    width: 95px !important;
+  }
+  .carosello-alloggi #iconaservizi {
+    display: none;
+  }
+  .carosello-alloggi .box-prezzo {
+    width: 65% !important;
+  }
+  .carosello-alloggi .box-prezzo .elementor-element-populated {
+    padding: 0px 0px 20px 20px !important;
+  }
+  .carosello-alloggi .box-info {
+    width: 35% !important;
+  }
+  .careosello-alloggi .box-info .elementor-element-populated {
+    padding: 0px 20px 20px 0px !important;
+  }
+  .carosello-esperienze .elementor-element-populated h2 {
+    font-size: 22px !important;
+  }
+  .elementor-widget-dyncontel-acfposts .slick-dots li {
+    margin: 0 5px !important;
+  }
+  .popmob {
+    display: none;
+  }
+}
+@media (max-width: 374px) {
+  .carosello-alloggi .prezzo .elementor-widget-container {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 1132px) and (min-width: 992px) {
+  .carosello-alloggi #iconaservizi {
+    display: none;
+  }
+  .carosello-alloggi .box-prezzo {
+    width: 65% !important;
+  }
+  .carosello-alloggi .box-prezzo .elementor-element-populated {
+    padding: 0px 0px 20px 20px !important;
+  }
+  .carosello-alloggi .box-info {
+    width: 35% !important;
+  }
+  .careosello-alloggi .box-info .elementor-element-populated {
+    padding: 0px 20px 20px 0px !important;
+  }
+  .carosello-esperienze .elementor-element-populated h2 {
+    font-size: 22px !important;
+  }
+}
+/*MOBILE LANDSCAPE*/
+@media only screen and (max-device-width: 812px) and (orientation: landscape) {
+  .sectionform {
+    display: none;
+  }
+  .sectioncontent {
+    margin-top: -5px !important;
+  }
+}
+
+
+/*OPTIMIZE MENU VIEW MOBILE*/
+@media screen and (max-width: 768px) {
+ul.sub-menu li {
+    max-width: 100%!important;
+}}
+
+body.page-id-18830 .fa, body.page-id-18830 .fas {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}		</style>
+		<style type="text/css">.BlockedBySmartCookieKit{display:none !important;}#SCK .SCK_Banner{display:none;}#SCK .SCK_Banner.visible{display:block;}.BlockedForCookiePreferences{background-color:#f6f6f6;border:1px solid #c9cccb;margin:1em;padding:2em;color:black;}#SCK .SCK_BannerContainer{background-color:#fff;position:fixed;padding:2em;bottom:0em;height:auto;width:100%;overflow:hidden;left:0%;z-index:99999999;box-shadow:0 1px 10px 0 rgba(0,0,0,.2);box-sizing:border-box;height: auto; top: unset;border-radius: 10px 10px 0px 0px;}#SCK #SCK_BannerTextContainer{color:#777777;display:block;line-height:1.3em;font-size:14px;font-family:'Roboto';}#SCK #SCK_BannerActions{display:block;line-height:1.2em;margin-top:2em;position:relative;font-size:13px;}#SCK #SCK_BannerActionsContainer{display:block;text-align:right;float:right;width:100%;}#SCK .SCK_Accept{cursor:pointer;padding:10px 45px;height:auto;width:auto;line-height:initial;background-color:#c5b265;color:#fff;text-shadow:none;text-transform:uppercase;font-weight:700;transition:.2s;margin-bottom:0;float:right;font-size:14px;margin-left:0px;border-radius:5px;letter-spacing: 0.2px; width:100%; font-family: "Nunito Sans", Roboto;border:0px;}#SCK .SCK_Accept:hover{background-color:#a79551; color:#fff;}#SCK .SCK_Close{float:right;padding-top: 20px; color: #a6a6a6; width:100%; text-align:center;font-family: 'Roboto';}@media(min-width:768px){#SCK .SCK_BannerContainer{background-color:#fff;position:fixed;padding:2em;bottom:1em;height:auto;width:94%;overflow:hidden;left:3%;z-index:99999999;box-shadow:0 1px 10px 0 rgba(0,0,0,.2);box-sizing:border-box; bottom: 1em; height: auto; top: unset; border-radius:10px;}#SCK #SCK_BannerTextContainer{float:left;width:75%;}#SCK #SCK_BannerActions{position:absolute;bottom:4em;right:2rem;}#SCK .SCK_Accept{float:none;margin-bottom:15px;display:block;margin-left:0;}#SCK .SCK_Close{float:none;padding:0;margin-right:0;color: #a6a6a6;}}@media(min-width:1000px){#SCK .SCK_BannerContainer{width:1000px;left:50%;margin-left:-500px;}}</style><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript></head>
+<body class="page-template-default page page-id-235 page-child parent-pageid-231 wp-custom-logo elementor-default elementor-template-full-width elementor-kit-1082 elementor-page-1932 &quot;&gt;&lt;!-- Google Tag Manager (noscript) --&gt;&lt;noscript&gt;&lt;iframe src=_https_/www.googletagmanager.com/ns.html/index5544.html?id=GTM-NC3SZ6Z%22height=%220%22 width=&quot;0&quot; style=&quot;display:none;visibility:hidden&quot;&gt;&lt;/iframe&gt;&lt;/noscript&gt;&lt;!-- End Google Tag Manager (noscript) --&gt;&lt;br style=&quot;display:none">
+    {% block nav %}{% include 'navbarpages.html' %}{% endblock nav %}
+				<div data-elementor-type="single" data-elementor-id="1932" data-post-id="235" data-obj-id="235" class="elementor elementor-1932 dce-elementor-post-235 elementor-location-single post-235 page type-page status-publish has-post-thumbnail hentry tag-esperienze">
+								<section data-dce-background-overlay-color="#13131369" data-dce-background-image-url="https://Casagaudia.it/images/casagaudia.jpeg" data-dce-background-overlay-image-url="https://Casagaudia.it/wp-content/uploads/2021/01/bg-divider-footer.png" class="elementor-section elementor-top-section elementor-element elementor-element-599d136 elementor-section-stretched elementor-section-height-min-height elementor-section-full_width elementor-section-content-middle headertop elementor-section-height-default elementor-section-items-middle" data-id="599d136" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-19cb0e4c" data-id="19cb0e4c" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-1c7a585 titolo elementor-widget elementor-widget-text-editor" data-id="1c7a585" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.6.5 - 27-04-2022 */
+.elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{background-color:#818a91;color:#fff}.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap{color:#818a91;border:3px solid;background-color:transparent}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap{margin-top:8px}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter{width:1em;height:1em}.elementor-widget-text-editor .elementor-drop-cap{float:left;text-align:center;line-height:1;font-size:50px}.elementor-widget-text-editor .elementor-drop-cap-letter{display:inline-block}</style>				<h1>Dintorni</h1>						</div>
+				</div>
+				<div class="elementor-element elementor-element-2344f4d9 elementor-widget__width-auto elementor-widget-mobile__width-auto elementor-widget elementor-widget-heading" data-id="2344f4d9" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.6.5 - 27-04-2022 */
+.elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit}.elementor-widget-heading .elementor-heading-title.elementor-size-small{font-size:15px}.elementor-widget-heading .elementor-heading-title.elementor-size-medium{font-size:19px}.elementor-widget-heading .elementor-heading-title.elementor-size-large{font-size:29px}.elementor-widget-heading .elementor-heading-title.elementor-size-xl{font-size:39px}.elementor-widget-heading .elementor-heading-title.elementor-size-xxl{font-size:59px}</style><p class="elementor-heading-title elementor-size-default">Scopri cosa fare in Tesino</p>		</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-7efa7af8 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7efa7af8" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5e38aa76" data-id="5e38aa76" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-d6a591c elementor-widget elementor-widget-global elementor-global-11375 elementor-widget-text-editor" data-id="d6a591c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<nav style="padding-top: 10px;" aria-label="breadcrumbs" class="rank-math-breadcrumb"><p><a href="../../index.html">Home</a><span class="separator"> &gt; </span><span class="last">Dintorni</span></p></nav>						</div>
+				</div>
+				<div class="elementor-element elementor-element-19d096e elementor-widget elementor-widget-heading" data-id="19d096e" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Scopri magnifici posti in Tesino</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-334952d2 elementor-widget elementor-widget-text-editor" data-id="334952d2" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>Hai scelto il Casa Gaudia per trascorrere una<strong> vacanza indimenticabile in Tesino</strong>?</p>
+							<p>Ti elenchiamo qui di seguito alcuni luoghi che puoi visitare.</p>
+							<p>Oppure se ami lo<strong> sport all&#8217;aria aperta</strong> e in vacanza ti piace praticarlo potrai scegliere la <a href="/esperienze/mountain-bike">mountain-bike</a> o il <a href="esperienze/trekking">trekking</a>.
+						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+		<section data-dce-background-overlay-image-url="https://Casagaudia.it/wp-content/uploads/2020/11/bg-divider-footer.png" class="elementor-section elementor-top-section elementor-element elementor-element-476bc034 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="476bc034" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-68842585" data-id="68842585" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-2a12dc4c elementor-widget elementor-widget-heading" data-id="2a12dc4c" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Cosa vedere e visitare in Tesino</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-3cce823b elementor-widget elementor-widget-text-editor" data-id="3cce823b" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>Scopri il Tesino!</p>						</div>
+				</div>
+				<div class="elementor-element elementor-element-3786088 templatemode-yes arrows-acfposts-position-outside no-masking-yes elementor-widget elementor-widget-dyncontel-acfposts" data-id="3786088" data-element_type="widget" data-settings="{&quot;slides_to_scroll&quot;:&quot;2&quot;,&quot;carousel_arrow_enable_mobile&quot;:&quot;yes&quot;,&quot;masking_enable&quot;:&quot;yes&quot;,&quot;carousel_dots_enable_mobile&quot;:&quot;yes&quot;,&quot;carousel_arrow_enable_tablet&quot;:&quot;yes&quot;,&quot;carousel_dots_enable_tablet&quot;:&quot;yes&quot;,&quot;slides_to_show&quot;:&quot;4&quot;,&quot;slides_to_show_tablet&quot;:&quot;2&quot;,&quot;slides_to_show_mobile&quot;:&quot;1&quot;,&quot;slides_to_scroll_tablet&quot;:&quot;1&quot;,&quot;slides_to_scroll_mobile&quot;:&quot;1&quot;,&quot;carousel_arrow_enable&quot;:&quot;yes&quot;,&quot;carousel_speed&quot;:500}" data-widget_type="dyncontel-acfposts.default">
+				<div class="elementor-widget-container">
+						<div class="acfposts-grid dce-posts-wrap carowsel-style" data-style="carousel">
+
+
+					<div data-dce-post-id="150" class="dce-post-item dce-post-item-150 dce-elementor-150 column-">
+
+
+						<div class="dce-wrapper elementor-animation-grow">
+
+									<div data-elementor-type="single" data-elementor-id="727" data-post-id="150" data-obj-id="150" class="elementor elementor-727 dce-elementor-post-150 dce-elementor-post-150 elementor-location-single post-150 page type-page status-publish has-post-thumbnail hentry tag-alloggi tag-case-mobili">
+								<section class="elementor-section elementor-top-section elementor-element elementor-element-d6e987f carosello-alloggi elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d6e987f" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div data-dce-background-color="#FFFFFF" class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-38bde9f" data-id="38bde9f" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-e815125 imgcarosell elementor-widget elementor-widget-image" data-id="e815125" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+				<a href="#"><picture>
+					<source
+						data-lazy-srcset='{% static "images/grifonetesino.webp"%}'
+						sizes="(max-width: 300px) 100vw, 300px" type="image/webp"><img width="300" height="200" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20200'%3E%3C/svg%3E"
+						class="attachment-medium size-medium webpexpress-processed" alt=""
+						data-lazy-srcset="../../wp-content/uploads/2020/03/Chalet-Camping-Casteltesino-300x200.jpeg 300w, ../../wp-content/uploads/2020/03/Chalet-Camping-Casteltesino-1024x682.jpeg 1024w, ../../wp-content/uploads/2020/03/Chalet-Camping-Casteltesino-768x511.jpeg 768w, ../../wp-content/uploads/2020/03/Chalet-Camping-Casteltesino-1536x1022.jpeg 1536w, ../../wp-content/uploads/2020/03/Chalet-Camping-Casteltesino.jpeg 1920w"
+						data-lazy-sizes="(max-width: 300px) 100vw, 300px" title="Home 8" data-lazy-src='{% static "images/grifonetesino.webp"%}'><noscript><img width="300" height="200"
+							src='{% static "images/grifonetesino.webp"%}' class="attachment-medium size-medium webpexpress-processed" alt=""
+							srcset="../../wp-content/uploads/2020/03/Chalet-Camping-Casteltesino-300x200.jpeg 300w, ../../wp-content/uploads/2020/03/Chalet-Camping-Casteltesino-1024x682.jpeg 1024w, ../../wp-content/uploads/2020/03/Chalet-Camping-Casteltesino-768x511.jpeg 768w, ../../wp-content/uploads/2020/03/Chalet-Camping-Casteltesino-1536x1022.jpeg 1536w, ../../wp-content/uploads/2020/03/Chalet-Camping-Casteltesino.jpeg 1920w"
+							sizes="(max-width: 300px) 100vw, 300px" title="Home 8"></noscript>
+				</picture>		</a>													</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-055fb46 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="055fb46" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-dac3581" data-id="dac3581" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-f950417 elementor-widget elementor-widget-heading" data-id="f950417" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Grifone del Tesino</h2>		</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-43ec4b1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="43ec4b1" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-a76489b box-prezzo" data-id="a76489b" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-a26b1e3 elementor-widget elementor-widget-heading" data-id="a26b1e3" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<span class="elementor-heading-title elementor-size-default"></span>		</div>
+				</div>
+				<div class="elementor-element elementor-element-ac4b86c prezzo elementor-widget elementor-widget-text-editor" data-id="ac4b86c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+						Trekking					</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-28a091c box-info" data-id="28a091c" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-3bd155e elementor-position-right elementor-vertical-align-middle elementor-widget__width-auto elementor-view-default elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="3bd155e" data-element_type="widget" id="iconaservizi" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-" >
+				<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 250 250"><defs></defs><path d="M171.9 81.6c-4.6-13.7-24.2-14.3-31.5-14.6h-1c17.4-7.9 25.1-28.4 17.2-45.9-8-17.4-28.5-25.1-46-17.2S85.5 32.4 93.4 49.8c3.5 7.6 9.6 13.8 17.2 17.2-2.9 0-6 0-8.9.1-7.1.2-19 .6-23.6 14.6-6.4 19.1-21.4 64-21.4 67.1 0 8.8 7.1 15.9 15.9 15.9 3.7 0 7.4-1.3 10.2-3.7v68.8c0 11 8.9 19.8 19.8 19.8s19.8-8.9 19.8-19.8v-50.6l3.5.1v50.4c0 10.6 10 19.8 21.4 19.8 10.9 0 19.8-8.9 19.8-19.8v-68.8c6.7 5.7 16.7 4.8 22.4-1.9 2.4-2.9 3.7-6.5 3.7-10.2 0-3.2-14.9-48.1-21.3-67.2zm-70.6-46.2c0-13.1 10.6-23.6 23.6-23.6s23.6 10.6 23.6 23.6c0 13-10.6 23.6-23.6 23.6-13 0-23.6-10.5-23.6-23.6zm76.1 118.1c-2.1 0-3.9-1.3-4.6-3.3l-16.6-41.1v120.5c0 4.9-3.9 8.8-8.8 8.8-5.3 0-10.4-4.4-10.4-8.8v-61.3l-25.3-.4-.2 5.4v56.3c0 4.9-4 8.8-8.8 8.8s-8.8-4-8.8-8.8V109l-16.5 40.7-.1.4c-.8 2.5-3.6 3.9-6.1 3.1-1.8-.6-3.1-2.3-3.3-4.2 1.4-5.4 14.1-43.9 20.8-64 1.8-5.4 4.5-6.8 13.5-7.1 4.7-.1 10.3-.1 14.2 0h23.7c15.9.5 20.5 4.1 21.4 7.1 6.7 20.1 19.4 58.6 20.8 64-.3 2.5-2.4 4.5-4.9 4.5z"></path></svg>				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<span class="elementor-icon-box-title">
+					<span  ></span>
+				</span>
+							</div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-6e9290c elementor-position-left elementor-vertical-align-middle elementor-widget__width-auto slidericon elementor-view-default elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="6e9290c" data-element_type="widget" data-settings="{&quot;enabled_visibility&quot;:&quot;yes&quot;}" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-" >
+				<svg xmlns="http://www.w3.org/2000/svg" id="Livello_1" x="0" y="0" version="1.1" viewbox="0 0 250 250" xml:space="preserve" fill="#8AADAC" class="iconservice">
+  <defs/>
+  <path d="M187.5 160.8c-9.1-7.4-15.1-16.7-20.9-25.7-4.4-6.8-8.6-13.3-13.9-18.4-10.4-10.1-22.8-10.7-28-10.5-4.2-.2-17.2.2-28 10.5-5.2 5.1-9.5 11.5-13.9 18.4C77 144 71 153.3 61.9 160.8c-17.6 14.5-23.9 36.6-16 56.5 6.6 16.5 25.8 32 45.5 32 2.7 0 5.5-.3 8.2-.9 4.8-1.1 8.5-2 11.5-2.7 7.1-1.7 9.6-2.3 13.5-2.5 4.1.1 6.7.8 15.1 2.8 2.7.6 5.9 1.4 9.9 2.4 22.3 5.1 46.2-12.3 53.6-31 8.1-19.9 1.9-42.1-15.7-56.6zm6.5 52.8c-6 15-25.3 28.8-42.1 25-4-.9-7.2-1.7-9.8-2.3-8.7-2.1-12-2.9-17.3-3.1h-.4c-5 .2-8.1.9-15.7 2.7-2.9.7-6.6 1.6-11.4 2.7-16.8 3.9-36.1-9.9-42.1-25-6.3-15.7-1.1-33.4 13-45.1 10.3-8.4 17-18.8 22.9-27.9 4.1-6.4 8-12.4 12.4-16.6 7.2-6.9 15.7-7.8 19.5-7.8h1.8c3.7-.2 13 .2 20.8 7.7 4.4 4.3 8.3 10.3 12.4 16.6 5.9 9.2 12.7 19.6 23 28 14.3 11.7 19.4 29.4 13 45.1zM55 149.4c4.4-8.9 4.2-22.9-.5-36.5-7.4-21.6-22.4-34.7-35-30.5-4 1.3-7.4 4.9-10.2 10.6-5.4 10.9-8.1 29.8-3 44.7 5.6 16.2 18.8 22.1 30 22.1 3.3 0 6.4-.5 9.1-1.4 4.1-1.4 7.4-4.5 9.6-9zm-12.8-.5c-7.4 2.5-21.2.8-26.5-14.5-4-11.7-1.9-28 2.5-37 1.8-3.6 3.5-5.2 4.4-5.5.5-.2 1.1-.3 1.7-.3 6.1 0 15.5 9.2 20.7 24.5 3.8 11 4.2 22.3 1 28.8-1 2.1-2.3 3.5-3.8 4zM88.4 101.6c18.3 0 32.6-19.9 32.6-45.3 0-8.4-1.1-37-14.8-49.7C101.5 2.3 95.8.3 89.5.8 79.2 1.6 70 6.6 63.1 15.1c-10.8 13.3-14.9 34-13.3 46.7 3.6 26.1 22.1 39.8 38.6 39.8zM70.9 21.4c5.2-6.5 11.8-10 19.4-10.7h1.1c3 0 5.6 1.1 8 3.2 8.6 8 11.6 27.8 11.6 42.4 0 19.1-10.3 35.3-22.6 35.3-12.1 0-25.9-10.7-28.6-31.1-1.2-9.1 1.5-27.2 11.1-39.1zM240.3 93c-2.8-5.7-6.2-9.2-10.2-10.6-12.6-4.1-27.6 9-35 30.5-4.7 13.6-4.8 27.6-.5 36.5 2.2 4.5 5.5 7.6 9.6 9 2.7.9 5.8 1.4 9.1 1.4 11.2 0 24.5-5.9 30-22.1 5.2-15 2.4-33.9-3-44.7zm-6.4 41.4c-5.3 15.3-19 17-26.5 14.5-1.5-.5-2.8-1.8-3.8-3.9-3.2-6.5-2.8-17.8 1-28.8 5.2-15.3 14.6-24.5 20.7-24.5.6 0 1.1.1 1.7.3 1 .3 2.7 2 4.4 5.5 4.4 8.8 6.5 25.1 2.5 36.9zM164.3 101.6c16.5 0 35.1-13.7 38.7-39.9 1.7-12.5-2.3-33-13.1-46.4C183 6.7 173.8 1.6 163.4.7c-6.3-.5-12.1 1.6-16.8 5.9-13.8 12.8-14.9 41.2-14.9 49.6 0 25.5 14.3 45.4 32.6 45.4zM153.4 14c2.4-2.2 5.1-3.3 8.2-3.3h1c7.7.6 14.2 4.3 19.5 10.8 9.6 11.9 12.2 29.9 11 38.8-2.8 20.5-16.6 31.3-28.7 31.3-12.3 0-22.6-16.2-22.6-35.3-.1-14.5 3-34.3 11.6-42.3z"/>
+</svg>
+				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<span class="elementor-icon-box-title">
+					<span  >
+											</span>
+				</span>
+							</div>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+					</div>
+		</div>
+							</div>
+		</section>
+						</div>						</div><!-- end wrapper -->
+
+					</div><!-- end item -->
+
+
+					<div data-dce-post-id="152" class="dce-post-item dce-post-item-152 dce-elementor-152 column-">
+
+
+						<div class="dce-wrapper elementor-animation-grow">
+
+									<div data-elementor-type="single" data-elementor-id="727" data-post-id="152" data-obj-id="152" class="elementor elementor-727 dce-elementor-post-152 dce-elementor-post-152 elementor-location-single post-152 page type-page status-publish has-post-thumbnail hentry tag-alloggi tag-case-mobili">
+								<section class="elementor-section elementor-top-section elementor-element elementor-element-d6e987f carosello-alloggi elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d6e987f" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div data-dce-background-color="#FFFFFF" class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-38bde9f" data-id="38bde9f" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-e815125 imgcarosell elementor-widget elementor-widget-image" data-id="e815125" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+				<a href="#"><picture>
+					<source
+						data-lazy-srcset='{% static "images/osservatoriocelado.webp"%}'
+						sizes="(max-width: 300px) 100vw, 300px" type="image/webp"><img width="300" height="200" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20200'%3E%3C/svg%3E"
+						class="attachment-medium size-medium webpexpress-processed" alt=""
+						data-lazy-srcset="../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-300x200.jpeg 300w, ../..wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-1024x682.jpeg 1024w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-768x511.jpeg 768w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-1536x1022.jpeg 1536w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino.jpeg 1920w"
+						data-lazy-sizes="(max-width: 300px) 100vw, 300px" title="Home 8" data-lazy-src='{% static "images/osservatoriocelado.webp"%}'><noscript><img width="300" height="200"
+							src='{% static "images/osservatoriocelado.webp"%}' class="attachment-medium size-medium webpexpress-processed" alt=""
+							srcset="../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-300x200.jpeg 300w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-1024x682.jpeg 1024w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-768x511.jpeg 768w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-1536x1022.jpeg 1536w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino.jpeg 1920w"
+							sizes="(max-width: 300px) 100vw, 300px" title="Home 8"></noscript>
+				</picture>	</a>														</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-055fb46 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="055fb46" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-dac3581" data-id="dac3581" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-f950417 elementor-widget elementor-widget-heading" data-id="f950417" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Osservatorio astronomico</h2>		</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-43ec4b1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="43ec4b1" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-a76489b box-prezzo" data-id="a76489b" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-a26b1e3 elementor-widget elementor-widget-heading" data-id="a26b1e3" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<span class="elementor-heading-title elementor-size-default"></span>		</div>
+				</div>
+				<div class="elementor-element elementor-element-ac4b86c prezzo elementor-widget elementor-widget-text-editor" data-id="ac4b86c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							Attività						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-28a091c box-info" data-id="28a091c" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-3bd155e elementor-position-right elementor-vertical-align-middle elementor-widget__width-auto elementor-view-default elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="3bd155e" data-element_type="widget" id="iconaservizi" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-" >
+				<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 250 250"><defs></defs><path d="M171.9 81.6c-4.6-13.7-24.2-14.3-31.5-14.6h-1c17.4-7.9 25.1-28.4 17.2-45.9-8-17.4-28.5-25.1-46-17.2S85.5 32.4 93.4 49.8c3.5 7.6 9.6 13.8 17.2 17.2-2.9 0-6 0-8.9.1-7.1.2-19 .6-23.6 14.6-6.4 19.1-21.4 64-21.4 67.1 0 8.8 7.1 15.9 15.9 15.9 3.7 0 7.4-1.3 10.2-3.7v68.8c0 11 8.9 19.8 19.8 19.8s19.8-8.9 19.8-19.8v-50.6l3.5.1v50.4c0 10.6 10 19.8 21.4 19.8 10.9 0 19.8-8.9 19.8-19.8v-68.8c6.7 5.7 16.7 4.8 22.4-1.9 2.4-2.9 3.7-6.5 3.7-10.2 0-3.2-14.9-48.1-21.3-67.2zm-70.6-46.2c0-13.1 10.6-23.6 23.6-23.6s23.6 10.6 23.6 23.6c0 13-10.6 23.6-23.6 23.6-13 0-23.6-10.5-23.6-23.6zm76.1 118.1c-2.1 0-3.9-1.3-4.6-3.3l-16.6-41.1v120.5c0 4.9-3.9 8.8-8.8 8.8-5.3 0-10.4-4.4-10.4-8.8v-61.3l-25.3-.4-.2 5.4v56.3c0 4.9-4 8.8-8.8 8.8s-8.8-4-8.8-8.8V109l-16.5 40.7-.1.4c-.8 2.5-3.6 3.9-6.1 3.1-1.8-.6-3.1-2.3-3.3-4.2 1.4-5.4 14.1-43.9 20.8-64 1.8-5.4 4.5-6.8 13.5-7.1 4.7-.1 10.3-.1 14.2 0h23.7c15.9.5 20.5 4.1 21.4 7.1 6.7 20.1 19.4 58.6 20.8 64-.3 2.5-2.4 4.5-4.9 4.5z"></path></svg>				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<span class="elementor-icon-box-title">
+					<span  >	</span>
+				</span>
+							</div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-f6ef667 elementor-position-left elementor-vertical-align-middle elementor-widget__width-auto slidericon elementor-view-default elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="f6ef667" data-element_type="widget" data-settings="{&quot;enabled_visibility&quot;:&quot;yes&quot;}" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-" >
+				
+				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<span class="elementor-icon-box-title">
+					<span  >
+											</span>
+				</span>
+							</div>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+					</div>
+		</div>
+							</div>
+		</section>
+						</div>						</div><!-- end wrapper -->
+
+					</div><!-- end item -->
+					<div data-dce-post-id="153" class="dce-post-item dce-post-item-153 dce-elementor-153 column-">
+
+
+<div class="dce-wrapper elementor-animation-grow">
+
+			<div data-elementor-type="single" data-elementor-id="727" data-post-id="153" data-obj-id="153" class="elementor elementor-727 dce-elementor-post-152 dce-elementor-post-152 elementor-location-single post-152 page type-page status-publish has-post-thumbnail hentry tag-alloggi tag-case-mobili">
+		<section class="elementor-section elementor-top-section elementor-element elementor-element-d6e987f carosello-alloggi elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d6e987f" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div data-dce-background-color="#FFFFFF" class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-38bde9f" data-id="38bde9f" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-widget-wrap elementor-element-populated">
+		<div class="elementor-element elementor-element-e815125 imgcarosell elementor-widget elementor-widget-image" data-id="e815125" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<a href="#"><picture>
+<source
+data-lazy-srcset='{% static "images/museocasadegasperi.webp"%}'
+sizes="(max-width: 300px) 100vw, 300px" type="image/webp"><img width="300" height="200" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20200'%3E%3C/svg%3E"
+class="attachment-medium size-medium webpexpress-processed" alt=""
+data-lazy-srcset="../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-300x200.jpeg 300w, ../..wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-1024x682.jpeg 1024w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-768x511.jpeg 768w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-1536x1022.jpeg 1536w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino.jpeg 1920w"
+data-lazy-sizes="(max-width: 300px) 100vw, 300px" title="Home 8" data-lazy-src='{% static "images/museocasadegasperi.webp"%}'><noscript><img width="300" height="200"
+	src='{% static "images/museocasadegasperi.webp"%}' class="attachment-medium size-medium webpexpress-processed" alt=""
+	srcset="../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-300x200.jpeg 300w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-1024x682.jpeg 1024w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-768x511.jpeg 768w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-1536x1022.jpeg 1536w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino.jpeg 1920w"
+	sizes="(max-width: 300px) 100vw, 300px" title="Home 8"></noscript>
+</picture>	</a>														</div>
+</div>
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-055fb46 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="055fb46" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-dac3581" data-id="dac3581" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+		<div class="elementor-element elementor-element-f950417 elementor-widget elementor-widget-heading" data-id="f950417" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Museo Casa Degasperi</h2>		</div>
+</div>
+</div>
+</div>
+	</div>
+</section>
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-43ec4b1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="43ec4b1" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-a76489b box-prezzo" data-id="a76489b" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+		<div class="elementor-element elementor-element-a26b1e3 elementor-widget elementor-widget-heading" data-id="a26b1e3" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<span class="elementor-heading-title elementor-size-default"></span>		</div>
+</div>
+<div class="elementor-element elementor-element-ac4b86c prezzo elementor-widget elementor-widget-text-editor" data-id="ac4b86c" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+	Museo						</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-28a091c box-info" data-id="28a091c" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+		<div class="elementor-element elementor-element-3bd155e elementor-position-right elementor-vertical-align-middle elementor-widget__width-auto elementor-view-default elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="3bd155e" data-element_type="widget" id="iconaservizi" data-widget_type="icon-box.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-box-wrapper">
+<div class="elementor-icon-box-icon">
+<span class="elementor-icon elementor-animation-" >
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 250 250"><defs></defs><path d="M171.9 81.6c-4.6-13.7-24.2-14.3-31.5-14.6h-1c17.4-7.9 25.1-28.4 17.2-45.9-8-17.4-28.5-25.1-46-17.2S85.5 32.4 93.4 49.8c3.5 7.6 9.6 13.8 17.2 17.2-2.9 0-6 0-8.9.1-7.1.2-19 .6-23.6 14.6-6.4 19.1-21.4 64-21.4 67.1 0 8.8 7.1 15.9 15.9 15.9 3.7 0 7.4-1.3 10.2-3.7v68.8c0 11 8.9 19.8 19.8 19.8s19.8-8.9 19.8-19.8v-50.6l3.5.1v50.4c0 10.6 10 19.8 21.4 19.8 10.9 0 19.8-8.9 19.8-19.8v-68.8c6.7 5.7 16.7 4.8 22.4-1.9 2.4-2.9 3.7-6.5 3.7-10.2 0-3.2-14.9-48.1-21.3-67.2zm-70.6-46.2c0-13.1 10.6-23.6 23.6-23.6s23.6 10.6 23.6 23.6c0 13-10.6 23.6-23.6 23.6-13 0-23.6-10.5-23.6-23.6zm76.1 118.1c-2.1 0-3.9-1.3-4.6-3.3l-16.6-41.1v120.5c0 4.9-3.9 8.8-8.8 8.8-5.3 0-10.4-4.4-10.4-8.8v-61.3l-25.3-.4-.2 5.4v56.3c0 4.9-4 8.8-8.8 8.8s-8.8-4-8.8-8.8V109l-16.5 40.7-.1.4c-.8 2.5-3.6 3.9-6.1 3.1-1.8-.6-3.1-2.3-3.3-4.2 1.4-5.4 14.1-43.9 20.8-64 1.8-5.4 4.5-6.8 13.5-7.1 4.7-.1 10.3-.1 14.2 0h23.7c15.9.5 20.5 4.1 21.4 7.1 6.7 20.1 19.4 58.6 20.8 64-.3 2.5-2.4 4.5-4.9 4.5z"></path></svg>				</span>
+</div>
+<div class="elementor-icon-box-content">
+<span class="elementor-icon-box-title">
+<span  >	</span>
+</span>
+	</div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-f6ef667 elementor-position-left elementor-vertical-align-middle elementor-widget__width-auto slidericon elementor-view-default elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="f6ef667" data-element_type="widget" data-settings="{&quot;enabled_visibility&quot;:&quot;yes&quot;}" data-widget_type="icon-box.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-box-wrapper">
+<div class="elementor-icon-box-icon">
+<span class="elementor-icon elementor-animation-" >
+
+</span>
+</div>
+<div class="elementor-icon-box-content">
+<span class="elementor-icon-box-title">
+<span  >
+					</span>
+</span>
+	</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+	</div>
+</section>
+</div>
+</div>
+	</div>
+</section>
+</div>						</div><!-- end wrapper -->
+
+</div>
+<div data-dce-post-id="152" class="dce-post-item dce-post-item-152 dce-elementor-152 column-">
+
+
+<div class="dce-wrapper elementor-animation-grow">
+
+			<div data-elementor-type="single" data-elementor-id="727" data-post-id="152" data-obj-id="152" class="elementor elementor-727 dce-elementor-post-152 dce-elementor-post-152 elementor-location-single post-152 page type-page status-publish has-post-thumbnail hentry tag-alloggi tag-case-mobili">
+		<section class="elementor-section elementor-top-section elementor-element elementor-element-d6e987f carosello-alloggi elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d6e987f" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div data-dce-background-color="#FFFFFF" class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-38bde9f" data-id="38bde9f" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-widget-wrap elementor-element-populated">
+		<div class="elementor-element elementor-element-e815125 imgcarosell elementor-widget elementor-widget-image" data-id="e815125" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<a href="#"><picture>
+<source
+data-lazy-srcset='{% static "images/parcoavventura.webp"%}'
+sizes="(max-width: 300px) 100vw, 300px" type="image/webp"><img width="300" height="200" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20200'%3E%3C/svg%3E"
+class="attachment-medium size-medium webpexpress-processed" alt=""
+data-lazy-srcset="../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-300x200.jpeg 300w, ../..wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-1024x682.jpeg 1024w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-768x511.jpeg 768w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-1536x1022.jpeg 1536w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino.jpeg 1920w"
+data-lazy-sizes="(max-width: 300px) 100vw, 300px" title="Home 8" data-lazy-src='{% static "images/parcoavventura.webp"%}'><noscript><img width="300" height="200"
+	src='{% static "images/parcoavventurawebp"%}' class="attachment-medium size-medium webpexpress-processed" alt=""
+	srcset="../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-300x200.jpeg 300w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-1024x682.jpeg 1024w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-768x511.jpeg 768w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-1536x1022.jpeg 1536w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino.jpeg 1920w"
+	sizes="(max-width: 300px) 100vw, 300px" title="Home 8"></noscript>
+</picture>	</a>														</div>
+</div>
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-055fb46 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="055fb46" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-dac3581" data-id="dac3581" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+		<div class="elementor-element elementor-element-f950417 elementor-widget elementor-widget-heading" data-id="f950417" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Adventure Dolomiti</h2>		</div>
+</div>
+</div>
+</div>
+	</div>
+</section>
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-43ec4b1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="43ec4b1" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-a76489b box-prezzo" data-id="a76489b" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+		<div class="elementor-element elementor-element-a26b1e3 elementor-widget elementor-widget-heading" data-id="a26b1e3" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<span class="elementor-heading-title elementor-size-default"></span>		</div>
+</div>
+<div class="elementor-element elementor-element-ac4b86c prezzo elementor-widget elementor-widget-text-editor" data-id="ac4b86c" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+	Attività						</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-28a091c box-info" data-id="28a091c" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+		<div class="elementor-element elementor-element-3bd155e elementor-position-right elementor-vertical-align-middle elementor-widget__width-auto elementor-view-default elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="3bd155e" data-element_type="widget" id="iconaservizi" data-widget_type="icon-box.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-box-wrapper">
+<div class="elementor-icon-box-icon">
+<span class="elementor-icon elementor-animation-" >
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 250 250"><defs></defs><path d="M171.9 81.6c-4.6-13.7-24.2-14.3-31.5-14.6h-1c17.4-7.9 25.1-28.4 17.2-45.9-8-17.4-28.5-25.1-46-17.2S85.5 32.4 93.4 49.8c3.5 7.6 9.6 13.8 17.2 17.2-2.9 0-6 0-8.9.1-7.1.2-19 .6-23.6 14.6-6.4 19.1-21.4 64-21.4 67.1 0 8.8 7.1 15.9 15.9 15.9 3.7 0 7.4-1.3 10.2-3.7v68.8c0 11 8.9 19.8 19.8 19.8s19.8-8.9 19.8-19.8v-50.6l3.5.1v50.4c0 10.6 10 19.8 21.4 19.8 10.9 0 19.8-8.9 19.8-19.8v-68.8c6.7 5.7 16.7 4.8 22.4-1.9 2.4-2.9 3.7-6.5 3.7-10.2 0-3.2-14.9-48.1-21.3-67.2zm-70.6-46.2c0-13.1 10.6-23.6 23.6-23.6s23.6 10.6 23.6 23.6c0 13-10.6 23.6-23.6 23.6-13 0-23.6-10.5-23.6-23.6zm76.1 118.1c-2.1 0-3.9-1.3-4.6-3.3l-16.6-41.1v120.5c0 4.9-3.9 8.8-8.8 8.8-5.3 0-10.4-4.4-10.4-8.8v-61.3l-25.3-.4-.2 5.4v56.3c0 4.9-4 8.8-8.8 8.8s-8.8-4-8.8-8.8V109l-16.5 40.7-.1.4c-.8 2.5-3.6 3.9-6.1 3.1-1.8-.6-3.1-2.3-3.3-4.2 1.4-5.4 14.1-43.9 20.8-64 1.8-5.4 4.5-6.8 13.5-7.1 4.7-.1 10.3-.1 14.2 0h23.7c15.9.5 20.5 4.1 21.4 7.1 6.7 20.1 19.4 58.6 20.8 64-.3 2.5-2.4 4.5-4.9 4.5z"></path></svg>				</span>
+</div>
+<div class="elementor-icon-box-content">
+<span class="elementor-icon-box-title">
+<span  >	</span>
+</span>
+	</div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-f6ef667 elementor-position-left elementor-vertical-align-middle elementor-widget__width-auto slidericon elementor-view-default elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="f6ef667" data-element_type="widget" data-settings="{&quot;enabled_visibility&quot;:&quot;yes&quot;}" data-widget_type="icon-box.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-box-wrapper">
+<div class="elementor-icon-box-icon">
+<span class="elementor-icon elementor-animation-" >
+
+</span>
+</div>
+<div class="elementor-icon-box-content">
+<span class="elementor-icon-box-title">
+<span  >
+					</span>
+</span>
+	</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+	</div>
+</section>
+</div>
+</div>
+	</div>
+</section>
+</div>						</div><!-- end wrapper -->
+
+</div>
+<div data-dce-post-id="152" class="dce-post-item dce-post-item-152 dce-elementor-152 column-">
+
+
+<div class="dce-wrapper elementor-animation-grow">
+
+			<div data-elementor-type="single" data-elementor-id="727" data-post-id="152" data-obj-id="152" class="elementor elementor-727 dce-elementor-post-152 dce-elementor-post-152 elementor-location-single post-152 page type-page status-publish has-post-thumbnail hentry tag-alloggi tag-case-mobili">
+		<section class="elementor-section elementor-top-section elementor-element elementor-element-d6e987f carosello-alloggi elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d6e987f" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div data-dce-background-color="#FFFFFF" class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-38bde9f" data-id="38bde9f" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-widget-wrap elementor-element-populated">
+		<div class="elementor-element elementor-element-e815125 imgcarosell elementor-widget elementor-widget-image" data-id="e815125" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<a href="#"><picture>
+<source
+data-lazy-srcset='{% static "images/grottecastello.webp"%}'
+sizes="(max-width: 300px) 100vw, 300px" type="image/webp"><img width="300" height="200" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20200'%3E%3C/svg%3E"
+class="attachment-medium size-medium webpexpress-processed" alt=""
+data-lazy-srcset="../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-300x200.jpeg 300w, ../..wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-1024x682.jpeg 1024w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-768x511.jpeg 768w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-1536x1022.jpeg 1536w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino.jpeg 1920w"
+data-lazy-sizes="(max-width: 300px) 100vw, 300px" title="Home 8" data-lazy-src='{% static "images/grottecastello.webp"%}'><noscript><img width="300" height="200"
+	src='{% static "images/grottecastellowebp"%}' class="attachment-medium size-medium webpexpress-processed" alt=""
+	srcset="../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-300x200.jpeg 300w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-1024x682.jpeg 1024w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-768x511.jpeg 768w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-1536x1022.jpeg 1536w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino.jpeg 1920w"
+	sizes="(max-width: 300px) 100vw, 300px" title="Home 8"></noscript>
+</picture>	</a>														</div>
+</div>
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-055fb46 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="055fb46" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-dac3581" data-id="dac3581" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+		<div class="elementor-element elementor-element-f950417 elementor-widget elementor-widget-heading" data-id="f950417" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Grotte di Castello Tesino</h2>		</div>
+</div>
+</div>
+</div>
+	</div>
+</section>
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-43ec4b1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="43ec4b1" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-a76489b box-prezzo" data-id="a76489b" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+		<div class="elementor-element elementor-element-a26b1e3 elementor-widget elementor-widget-heading" data-id="a26b1e3" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<span class="elementor-heading-title elementor-size-default"></span>		</div>
+</div>
+<div class="elementor-element elementor-element-ac4b86c prezzo elementor-widget elementor-widget-text-editor" data-id="ac4b86c" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+	Attività						</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-28a091c box-info" data-id="28a091c" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+		<div class="elementor-element elementor-element-3bd155e elementor-position-right elementor-vertical-align-middle elementor-widget__width-auto elementor-view-default elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="3bd155e" data-element_type="widget" id="iconaservizi" data-widget_type="icon-box.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-box-wrapper">
+<div class="elementor-icon-box-icon">
+<span class="elementor-icon elementor-animation-" >
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 250 250"><defs></defs><path d="M171.9 81.6c-4.6-13.7-24.2-14.3-31.5-14.6h-1c17.4-7.9 25.1-28.4 17.2-45.9-8-17.4-28.5-25.1-46-17.2S85.5 32.4 93.4 49.8c3.5 7.6 9.6 13.8 17.2 17.2-2.9 0-6 0-8.9.1-7.1.2-19 .6-23.6 14.6-6.4 19.1-21.4 64-21.4 67.1 0 8.8 7.1 15.9 15.9 15.9 3.7 0 7.4-1.3 10.2-3.7v68.8c0 11 8.9 19.8 19.8 19.8s19.8-8.9 19.8-19.8v-50.6l3.5.1v50.4c0 10.6 10 19.8 21.4 19.8 10.9 0 19.8-8.9 19.8-19.8v-68.8c6.7 5.7 16.7 4.8 22.4-1.9 2.4-2.9 3.7-6.5 3.7-10.2 0-3.2-14.9-48.1-21.3-67.2zm-70.6-46.2c0-13.1 10.6-23.6 23.6-23.6s23.6 10.6 23.6 23.6c0 13-10.6 23.6-23.6 23.6-13 0-23.6-10.5-23.6-23.6zm76.1 118.1c-2.1 0-3.9-1.3-4.6-3.3l-16.6-41.1v120.5c0 4.9-3.9 8.8-8.8 8.8-5.3 0-10.4-4.4-10.4-8.8v-61.3l-25.3-.4-.2 5.4v56.3c0 4.9-4 8.8-8.8 8.8s-8.8-4-8.8-8.8V109l-16.5 40.7-.1.4c-.8 2.5-3.6 3.9-6.1 3.1-1.8-.6-3.1-2.3-3.3-4.2 1.4-5.4 14.1-43.9 20.8-64 1.8-5.4 4.5-6.8 13.5-7.1 4.7-.1 10.3-.1 14.2 0h23.7c15.9.5 20.5 4.1 21.4 7.1 6.7 20.1 19.4 58.6 20.8 64-.3 2.5-2.4 4.5-4.9 4.5z"></path></svg>				</span>
+</div>
+<div class="elementor-icon-box-content">
+<span class="elementor-icon-box-title">
+<span  >	</span>
+</span>
+	</div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-f6ef667 elementor-position-left elementor-vertical-align-middle elementor-widget__width-auto slidericon elementor-view-default elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="f6ef667" data-element_type="widget" data-settings="{&quot;enabled_visibility&quot;:&quot;yes&quot;}" data-widget_type="icon-box.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-box-wrapper">
+<div class="elementor-icon-box-icon">
+<span class="elementor-icon elementor-animation-" >
+
+</span>
+</div>
+<div class="elementor-icon-box-content">
+<span class="elementor-icon-box-title">
+<span  >
+					</span>
+</span>
+	</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+	</div>
+</section>
+</div>
+</div>
+	</div>
+</section>
+</div>						</div><!-- end wrapper -->
+
+</div>
+<div data-dce-post-id="152" class="dce-post-item dce-post-item-152 dce-elementor-152 column-">
+
+
+<div class="dce-wrapper elementor-animation-grow">
+
+			<div data-elementor-type="single" data-elementor-id="727" data-post-id="152" data-obj-id="152" class="elementor elementor-727 dce-elementor-post-152 dce-elementor-post-152 elementor-location-single post-152 page type-page status-publish has-post-thumbnail hentry tag-alloggi tag-case-mobili">
+		<section class="elementor-section elementor-top-section elementor-element elementor-element-d6e987f carosello-alloggi elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d6e987f" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div data-dce-background-color="#FFFFFF" class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-38bde9f" data-id="38bde9f" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-widget-wrap elementor-element-populated">
+		<div class="elementor-element elementor-element-e815125 imgcarosell elementor-widget elementor-widget-image" data-id="e815125" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<a href="#"><picture>
+<source
+data-lazy-srcset='{% static "images/tempiobuddista.webp"%}'
+sizes="(max-width: 300px) 100vw, 300px" type="image/webp"><img width="300" height="200" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20200'%3E%3C/svg%3E"
+class="attachment-medium size-medium webpexpress-processed" alt=""
+data-lazy-srcset="../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-300x200.jpeg 300w, ../..wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-1024x682.jpeg 1024w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-768x511.jpeg 768w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-1536x1022.jpeg 1536w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino.jpeg 1920w"
+data-lazy-sizes="(max-width: 300px) 100vw, 300px" title="Home 8" data-lazy-src='{% static "images/tempiobuddista.webp"%}'><noscript><img width="300" height="200"
+	src='{% static "images/tempiobuddista.webp"%}' class="attachment-medium size-medium webpexpress-processed" alt=""
+	srcset="../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-300x200.jpeg 300w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-1024x682.jpeg 1024w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-768x511.jpeg 768w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino-1536x1022.jpeg 1536w, ../../wp-content/uploads/2020/03/Piazzola-Camping-Casteltesino.jpeg 1920w"
+	sizes="(max-width: 300px) 100vw, 300px" title="Home 8"></noscript>
+</picture>	</a>														</div>
+</div>
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-055fb46 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="055fb46" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-dac3581" data-id="dac3581" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+		<div class="elementor-element elementor-element-f950417 elementor-widget elementor-widget-heading" data-id="f950417" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Tempio buddista Tenryuzanji</h2>		</div>
+</div>
+</div>
+</div>
+	</div>
+</section>
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-43ec4b1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="43ec4b1" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-a76489b box-prezzo" data-id="a76489b" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+		<div class="elementor-element elementor-element-a26b1e3 elementor-widget elementor-widget-heading" data-id="a26b1e3" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<span class="elementor-heading-title elementor-size-default"></span>		</div>
+</div>
+<div class="elementor-element elementor-element-ac4b86c prezzo elementor-widget elementor-widget-text-editor" data-id="ac4b86c" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+	Attività						</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-28a091c box-info" data-id="28a091c" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+		<div class="elementor-element elementor-element-3bd155e elementor-position-right elementor-vertical-align-middle elementor-widget__width-auto elementor-view-default elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="3bd155e" data-element_type="widget" id="iconaservizi" data-widget_type="icon-box.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-box-wrapper">
+<div class="elementor-icon-box-icon">
+<span class="elementor-icon elementor-animation-" >
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 250 250"><defs></defs><path d="M171.9 81.6c-4.6-13.7-24.2-14.3-31.5-14.6h-1c17.4-7.9 25.1-28.4 17.2-45.9-8-17.4-28.5-25.1-46-17.2S85.5 32.4 93.4 49.8c3.5 7.6 9.6 13.8 17.2 17.2-2.9 0-6 0-8.9.1-7.1.2-19 .6-23.6 14.6-6.4 19.1-21.4 64-21.4 67.1 0 8.8 7.1 15.9 15.9 15.9 3.7 0 7.4-1.3 10.2-3.7v68.8c0 11 8.9 19.8 19.8 19.8s19.8-8.9 19.8-19.8v-50.6l3.5.1v50.4c0 10.6 10 19.8 21.4 19.8 10.9 0 19.8-8.9 19.8-19.8v-68.8c6.7 5.7 16.7 4.8 22.4-1.9 2.4-2.9 3.7-6.5 3.7-10.2 0-3.2-14.9-48.1-21.3-67.2zm-70.6-46.2c0-13.1 10.6-23.6 23.6-23.6s23.6 10.6 23.6 23.6c0 13-10.6 23.6-23.6 23.6-13 0-23.6-10.5-23.6-23.6zm76.1 118.1c-2.1 0-3.9-1.3-4.6-3.3l-16.6-41.1v120.5c0 4.9-3.9 8.8-8.8 8.8-5.3 0-10.4-4.4-10.4-8.8v-61.3l-25.3-.4-.2 5.4v56.3c0 4.9-4 8.8-8.8 8.8s-8.8-4-8.8-8.8V109l-16.5 40.7-.1.4c-.8 2.5-3.6 3.9-6.1 3.1-1.8-.6-3.1-2.3-3.3-4.2 1.4-5.4 14.1-43.9 20.8-64 1.8-5.4 4.5-6.8 13.5-7.1 4.7-.1 10.3-.1 14.2 0h23.7c15.9.5 20.5 4.1 21.4 7.1 6.7 20.1 19.4 58.6 20.8 64-.3 2.5-2.4 4.5-4.9 4.5z"></path></svg>				</span>
+</div>
+<div class="elementor-icon-box-content">
+<span class="elementor-icon-box-title">
+<span  >	</span>
+</span>
+	</div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-f6ef667 elementor-position-left elementor-vertical-align-middle elementor-widget__width-auto slidericon elementor-view-default elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="f6ef667" data-element_type="widget" data-settings="{&quot;enabled_visibility&quot;:&quot;yes&quot;}" data-widget_type="icon-box.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-box-wrapper">
+<div class="elementor-icon-box-icon">
+<span class="elementor-icon elementor-animation-" >
+
+</span>
+</div>
+<div class="elementor-icon-box-content">
+<span class="elementor-icon-box-title">
+<span  >
+					</span>
+</span>
+	</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+	</div>
+</section>
+</div>
+</div>
+	</div>
+</section>
+</div>						</div><!-- end wrapper -->
+
+</div>
+
+
+			</div><!-- end grid -->
+
+
+
+					</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section data-dce-background-image-url="https://Casagaudia.it/wp-content/uploads/2020/05/footer-camp6.jpg" class="elementor-section elementor-top-section elementor-element elementor-element-31ee94b sectionbg elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="31ee94b" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-17ddc5a" data-id="17ddc5a" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+
+				<div class="elementor-element elementor-element-5c7f323 elementor-align-center elementor-widget elementor-widget-button" data-id="5c7f323" data-element_type="widget" data-settings="{&quot;enabled_visibility&quot;:&quot;yes&quot;}" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+						</div>
+                        {% block footer%}{% include 'footer.html'%}{% endblock footer%}
+
+		<link rel='stylesheet' id='dce-dynamic-visibility-css'  href='{% static "wp-content/plugins/dynamic-content-for-elementor/assets/css/dynamic-visibility.min.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-7611-css'  href='{% static "wp-content/uploads/elementor/css/post-7611.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='dce-dynamic-posts-css'  href='{% static "wp-content/plugins/dynamic-content-for-elementor/assets/css/dynamic-posts.min.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='dce-dynamicPosts-grid-css'  href='{% static "wp-content/plugins/dynamic-content-for-elementor/assets/css/dynamic-posts-skin-grid.min.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-gallery-css'  href='{% static "wp-content/plugins/elementor/assets/lib/e-gallery/css/e-gallery.min.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-727-css'  href='{% static "wp-content/uploads/elementor/css/post-727.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='dce-dynamicPosts_slick-css'  href='{% static "wp-content/plugins/dynamic-content-for-elementor/assets/css/dynamic-posts-slick.min.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='dce-dynamicPosts_swiper-css'  href='{% static "wp-content/plugins/dynamic-content-for-elementor/assets/css/dynamic-posts-swiper.min.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='dce-dynamic-posts-old-version-css'  href='{% static "wp-content/plugins/dynamic-content-for-elementor/assets/css/dynamic-posts-old-version.min.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='brb-public-main-css-css'  href='{% static "wp-content/plugins/business-reviews-bundle/assets/css/public-main.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-1919-css'  href='{% static "wp-content/uploads/elementor/css/post-1919.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-2392-css'  href='{% static "wp-content/uploads/elementor/css/post-2392.css"%}' type='text/css' media='all' />
+<link rel='stylesheet' id='e-animations-css'  href='{% static "wp-content/plugins/elementor/assets/lib/animations/animations.min.css"%}' type='text/css' media='all' />
+<script type='text/javascript' src='{% static "wp-content/plugins/smart-cookie-kit/js/sck.min_2019081301.js"%}' id='nmod_sck_fe_scripts-js'></script>
+<script type='text/javascript' src='{% static "wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js"%}' id='smartmenus-js'></script>
+<script type='text/javascript' src='{% static "wp-content/plugins/dynamic-content-for-elementor/assets/js/dynamic-posts-base.min.js"%}' id='dce-dynamicPosts-base-js'></script>
+<script type='text/javascript' src='{% static "wp-includes/js/imagesloaded.min.js"%}' id='imagesloaded-js'></script>
+<script type='text/javascript' src='{% static "wp-content/plugins/dynamic-content-for-elementor/assets/js/dynamic-posts-skin-grid.min.js"%}' id='dce-dynamicPosts-grid-js'></script>
+<script type='text/javascript' src='{% static "wp-includes/js/masonry.min.js"%}' id='masonry-js'></script>
+<script type='text/javascript' src='{% static "wp-includes/js/jquery/jquery.masonry.min.js"%}' id='jquery-masonry-js'></script>
+<script type='text/javascript' src='{% static "wp-content/plugins/dynamic-content-for-elementor/assets/lib/jquery-match-height/jquery.matchHeight-min.js"%}' id='dce-jquery-match-height-js'></script>
+<script type='text/javascript' src='{% static "wp-content/plugins/elementor/assets/lib/e-gallery/js/e-gallery.min.js"%}' id='elementor-gallery-js'></script>
+<script type='text/javascript' src='{% static "wp-content/plugins/dynamic-content-for-elementor/assets/lib/slick/slick.min.js"%}' id='dce-jquery-slick-js'></script>
+<script type='text/javascript' src='{% static "wp-content/plugins/dynamic-content-for-elementor/assets/js/dynamic-posts-old-version.min.js"%}' id='dce-dynamic-posts-old-version-js'></script>
+<script data-minify="1" type='text/javascript' defer="defer" src='{% static "wp-content/cache/min/1/wp-content/plugins/business-reviews-bundle/assets/js/public-main1721.js"%}' id='brb-public-main-js-js'></script>
+<script type='text/javascript' src='{% static "wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js"%}' id='elementor-pro-webpack-runtime-js'></script>
+<script type='text/javascript' src='{% static "wp-content/plugins/elementor/assets/js/webpack.runtime.min.js"%}' id='elementor-webpack-runtime-js'></script>
+<script type='text/javascript' src='{% static "wp-content/plugins/elementor/assets/js/frontend-modules.min.js"%}' id='elementor-frontend-modules-js'></script>
+<script type='text/javascript' src='{% static "wp-includes/js/dist/vendor/regenerator-runtime.min.js"%}' id='regenerator-runtime-js'></script>
+<script type='text/javascript' src='{% static "wp-includes/js/dist/vendor/wp-polyfill.min.js"%}' id='wp-polyfill-js'></script>
+<script type='text/javascript' src='{% static "wp-includes/js/dist/hooks.min.js"%}' id='wp-hooks-js'></script>
+<script type='text/javascript' src='{% static "wp-includes/js/dist/i18n.min.js"%}' id='wp-i18n-js'></script>
+<script type='text/javascript' id='wp-i18n-js-after'>
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script type='text/javascript' id='elementor-pro-frontend-js-translations'>
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "elementor-pro", { "locale_data": { "messages": { "": {} } } } );
+</script>
+<script type='text/javascript' id='elementor-pro-frontend-js-before'>
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/casteltesinocamping.it\/wp-admin\/admin-ajax.php","nonce":"7c7822fd11","urls":{"assets":"https:\/\/casteltesinocamping.it\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/casteltesinocamping.it\/wp-json\/"},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"it_IT","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/casteltesinocamping.it\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script type='text/javascript' src='{% static "wp-content/plugins/elementor-pro/assets/js/frontend.min.js"%}' id='elementor-pro-frontend-js'></script>
+<script type='text/javascript' src='{% static "wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js"%}' id='elementor-waypoints-js'></script>
+<script type='text/javascript' src='{% static "wp-includes/js/jquery/ui/core.min.js"%}' id='jquery-ui-core-js'></script>
+<script type='text/javascript' id='elementor-frontend-js-before'>
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Condividi su Facebook","shareOnTwitter":"Condividi su Twitter","pinIt":"Pinterest","download":"Download","downloadImage":"Scarica immagine","fullscreen":"Schermo intero","zoom":"Zoom","share":"Condividi","playVideo":"Riproduci video","previous":"Precedente","next":"Successivo","close":"Chiudi"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Extra","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Extra","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.6.5","is_static":false,"experimentalFeatures":{"e_dom_optimization":true,"e_optimized_assets_loading":true,"e_optimized_css_loading":true,"theme_builder_v2":true,"page-transitions":true,"e_scroll_snap":true},"urls":{"assets":"https:\/\/casteltesinocamping.it\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[],"dynamicooo":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes"},"post":{"id":235,"title":"Famiglia%20-%20Casteltesino%20Camping","excerpt":"","featuredImage":"https:\/\/casteltesinocamping.it\/wp-content\/uploads\/2021\/11\/famiglia.jpg"}};
+</script>
+<script type='text/javascript' src='{% static "wp-content/plugins/elementor/assets/js/frontend.min.js"%}' id='elementor-frontend-js'></script>
+<script type='text/javascript' src='{% static "wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js"%}' id='pro-elements-handlers-js'></script>
+<script type='text/javascript' src='{% static "wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js"%}' id='e-sticky-js'></script>
+<script type='text/javascript' src='{% static "wp-content/plugins/dynamic-content-for-elementor/assets/js/settings.min.js"%}' id='dce-settings-js'></script>
+<script type='text/javascript' src='{% static "wp-content/plugins/dynamic-content-for-elementor/assets/js/fix-background-loop.min.js"%}' id='dce-fix-background-loop-js'></script>
+<style id="dce-template-fix-599d136-inline">.elementor .dce-elementor-post-235 .elementor-element.elementor-element-599d136:not(.elementor-motion-effects-element-type-background), .elementor .dce-elementor-post-235 .elementor-element.elementor-element-599d136 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: url('{% static "wp-content/uploads/2021/11/famiglia.jpg"%}');}</style><style id="dce-template-fix-38bde9f-inline">.elementor .dce-elementor-post-239 .elementor-element.elementor-element-38bde9f:not(.elementor-motion-effects-element-type-background) > .elementor-widget-wrap, .elementor .dce-elementor-post-239 .elementor-element.elementor-element-38bde9f > .elementor-widget-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: url('{% static "wp-content/uploads/2021/11/famiglia.jpg"%}');}.elementor .dce-elementor-post-241 .elementor-element.elementor-element-38bde9f:not(.elementor-motion-effects-element-type-background) > .elementor-widget-wrap, .elementor .dce-elementor-post-241 .elementor-element.elementor-element-38bde9f > .elementor-widget-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: url('{% static "wp-content/uploads/2021/11/famiglia.jpg"%}');}.elementor .dce-elementor-post-243 .elementor-element.elementor-element-38bde9f:not(.elementor-motion-effects-element-type-background) > .elementor-widget-wrap, .elementor .dce-elementor-post-243 .elementor-element.elementor-element-38bde9f > .elementor-widget-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: url('{% static "wp-content/uploads/2020/03/Chalet-Camping-Casteltesino-768x512.jpeg"%}');}.elementor .dce-elementor-post-245 .elementor-element.elementor-element-38bde9f:not(.elementor-motion-effects-element-type-background) > .elementor-widget-wrap, .elementor .dce-elementor-post-245 .elementor-element.elementor-element-38bde9f > .elementor-widget-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: url('{% static "wp-content/uploads/2020/03/Chalet-Camping-Casteltesino-768x512.jpeg"%}');}</style><script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src='{% static "wp-content/plugins/wp-rocket/assets/js/lazyload/17.5/lazyload.min.js"%}'></script><script>
+		function lazyLoadThumb(e) {
+			var t =
+				'<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',
+				a = '<button class="play" aria-label="play Youtube video"></button>';
+			return t.replace("ID", e) + a
+		}
+
+		function lazyLoadYoutubeIframe() {
+			var e = document.createElement("iframe"),
+				t = "ID?autoplay=1";
+			t += 0 === this.parentNode.dataset.query.length ? '' : '&' + this.parentNode.dataset.query;
+			e.setAttribute("src", t.replace("ID", this.parentNode.dataset.src)), e.setAttribute("frameborder", "0"), e
+				.setAttribute("allowfullscreen", "1"), e.setAttribute("allow",
+					"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),
+				this.parentNode.parentNode.replaceChild(e, this.parentNode)
+		}
+		document.addEventListener("DOMContentLoaded", function () {
+			var e, t, p, a = document.getElementsByClassName("rll-youtube-player");
+			for (t = 0; t < a.length; t++) e = document.createElement("div"), e.setAttribute("data-id", a[t].dataset
+				.id), e.setAttribute("data-query", a[t].dataset.query), e.setAttribute("data-src", a[t].dataset
+				.src), e.innerHTML = lazyLoadThumb(a[t]
+				.dataset.id), a[t].appendChild(e), p = e.querySelector('.play'), p.onclick = lazyLoadYoutubeIframe
+		});
+	</script>
+	<script>
+		class RocketElementorAnimation {
+			constructor() {
+				this.deviceMode = document.createElement("span"), this.deviceMode.id = "elementor-device-mode", this
+					.deviceMode.setAttribute("class", "elementor-screen-only"), document.body.appendChild(this.deviceMode)
+			}
+			_detectAnimations() {
+				let t = getComputedStyle(this.deviceMode, ":after").content.replace(/"/g, "");
+				this.animationSettingKeys = this._listAnimationSettingsKeys(t), document.querySelectorAll(
+					".elementor-invisible[data-settings]").forEach(t => {
+					const e = t.getBoundingClientRect();
+					if (e.bottom >= 0 && e.top <= window.innerHeight) try {
+						this._animateElement(t)
+					} catch (t) {}
+				})
+			}
+			_animateElement(t) {
+				const e = JSON.parse(t.dataset.settings),
+					i = e._animation_delay || e.animation_delay || 0,
+					n = e[this.animationSettingKeys.find(t => e[t])];
+				if ("none" === n) return void t.classList.remove("elementor-invisible");
+				t.classList.remove(n), this.currentAnimation && t.classList.remove(this.currentAnimation), this
+					.currentAnimation = n;
+				let s = setTimeout(() => {
+					t.classList.remove("elementor-invisible"), t.classList.add("animated", n), this
+						._removeAnimationSettings(t, e)
+				}, i);
+				window.addEventListener("rocket-startLoading", function () {
+					clearTimeout(s)
+				})
+			}
+			_listAnimationSettingsKeys(t = "mobile") {
+				const e = [""];
+				switch (t) {
+					case "mobile":
+						e.unshift("_mobile");
+					case "tablet":
+						e.unshift("_tablet");
+					case "desktop":
+						e.unshift("_desktop")
+				}
+				const i = [];
+				return ["animation", "_animation"].forEach(t => {
+					e.forEach(e => {
+						i.push(t + e)
+					})
+				}), i
+			}
+			_removeAnimationSettings(t, e) {
+				this._listAnimationSettingsKeys().forEach(t => delete e[t]), t.dataset.settings = JSON.stringify(e)
+			}
+			static run() {
+				const t = new RocketElementorAnimation;
+				requestAnimationFrame(t._detectAnimations.bind(t))
+			}
+		}
+		document.addEventListener("DOMContentLoaded", RocketElementorAnimation.run);
+	</script>
+</body>
+
+</html>
